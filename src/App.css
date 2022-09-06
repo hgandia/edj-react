@@ -5,11 +5,24 @@ body {
   color: darkblue;
 }
 
+.papyrus {
+  font-family: papyrus, sans-serif;
+  color: darkblue;
+  font-weight: bold; 
+}
+
+.jumbotron {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to right, #00008B, #D3D3D3, #F5FFFA);
+  color: darkblue;
+}
+
 h1,
 h2,
 h3,
 .card-body > .card-title {
-  font-family: 'Lobster', cursive;
+  font-family: papyrus, sans-serif;
 }
 
 .card-title {
@@ -34,7 +47,7 @@ h2 {
 
 .site-footer {
   background-image: linear-gradient(#cec8ff, white);
-  padding: 20px 0;
+  padding: 20px 20px;
   margin-top: 2rem;
 }
 
@@ -51,8 +64,8 @@ h2 {
 }
 
 .navbar-dark {
-  background-color: #901cad;
-  background-image: linear-gradient(to right, #5637dd, #3046c5, #510e5a);
+  background-color: lightgray;
+  /* background-image: linear-gradient(to right, #5637dd, #3046c5, #510e5a); */
   margin-bottom: 2rem;
   min-height: 8rem;
 }
@@ -75,4 +88,29 @@ h2 {
 .page-exit-active {
   opacity: 0;
   transition: 300ms ease-in;
+}
+
+#footerIcon {
+  color: darkblue;
+
+}
+
+#contact {
+  padding: 10px;
+  color: lightgray;
+  font-family: Papyrus, 'Times New Roman', Times, serif;
+  font-size: 20px;
+  background-color: darkblue;
+  border-radius: 40px;
+}
+
+.jumbotronFooter {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to right, #F5FFFA, #D3D3D3, #00008B);
+  color: darkblue;
+}
+
+#follow {
+  text-align: center;
 }

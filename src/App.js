@@ -1,56 +1,38 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
+import { Routes, Route } from 'react-router-dom';
+import HomePage from '../src/app/pages/HomePage';
+import Header from '../src/components/Header';
+import Footer from '../src/components/Footer';
+import Caballeros from '../src/app/pages/Caballeros';
+import Damas from '../src/app/pages/Damas';
+import Jovenes from '../src/app/pages/Jovenes';
+import Ninos from '../src/app/pages/Ninos';
+import Events from '../src/app/pages/Events';
+import Calendar from '../src/app/pages/Calendar';
+import AboutUs from '../src/app/pages/AboutUs';
+import ContactUs from '../src/app/pages/ContactUs';
+import Credo from '../src/app/pages/Credo';
+import Navigator from '../src/components/Navigator';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+      <Header />
+      <Navigator />
+      <Routes>
+          <Route path='/' element={<HomePage />} />
+          <Route path='caballeros' element={<Caballeros />} />
+          <Route path='damas' element={<Damas />} />
+          <Route path='jovenes' element={<Jovenes />} />
+          <Route path='ninos' element={<Ninos />} />
+          <Route path='events' element={<Events />} />
+          <Route path='calendar' element={<Calendar />} />
+          <Route path='aboutUs' element={<AboutUs />} />
+          <Route path='contactUs' element={<ContactUs />} />
+          <Route path='credo' element={<Credo />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }
