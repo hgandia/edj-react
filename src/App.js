@@ -1,12 +1,8 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import HomePage from '../src/app/pages/HomePage';
 import Header from '../src/components/Header';
 import Footer from '../src/components/Footer';
-import Caballeros from '../src/app/pages/Caballeros';
-import Damas from '../src/app/pages/Damas';
-import Jovenes from '../src/app/pages/Jovenes';
-import Ninos from '../src/app/pages/Ninos';
+import LeadersPage from '../src/app/pages/LeadersPage';
 import Events from '../src/app/pages/Events';
 import Calendar from '../src/app/pages/Calendar';
 import AboutUs from '../src/app/pages/AboutUs';
@@ -21,11 +17,7 @@ function App() {
       <Header />
       <Navigator />
       <Routes>
-          <Route path='/' element={<HomePage />} />
-          <Route path='caballeros' element={<Caballeros />} />
-          <Route path='damas' element={<Damas />} />
-          <Route path='jovenes' element={<Jovenes />} />
-          <Route path='ninos' element={<Ninos />} />
+          <Route path='/leader/:leaderId' element={<LeadersPage />} />
           <Route path='events' element={<Events />} />
           <Route path='calendar' element={<Calendar />} />
           <Route path='aboutUs' element={<AboutUs />} />

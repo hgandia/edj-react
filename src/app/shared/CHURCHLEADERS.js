@@ -11,7 +11,8 @@ export const CHURCHLEADERS = [
         title: 'Home',
         content:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio exercitationem nulla doloribus, vel perspiciatis maiores animi praesentium. Officiis reprehenderit assumenda quam amet mollitia repudiandae iusto, dignissimos quos. Totam, eaque vel. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio exercitationem nulla doloribus, vel perspiciatis maiores animi praesentium. Officiis reprehenderit assumenda quam amet mollitia repudiandae iusto, dignissimos quos. Totam, eaque vel. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio exercitationem nulla doloribus, vel perspiciatis maiores animi praesentium. Officiis reprehenderit assumenda quam amet mollitia repudi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio exercitationem nulla doloribus, vel perspiciatis maiores animi praesentium. Officiis reprehenderit assumenda quam amet mollitia repudiandae iusto, dignissimos quos. Totam, eaque vel. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio exercitationem nulla doloribus, vel perspiciatis maiores animi praesentium. Officiis reprehenderit assumenda quam amet mollitia repudiandae iusto, dignissimos quos. Totam, eaque vel.',
         image: pastorsPic,
-        path:'./home'
+        path:'./home',
+        icon: 'fa-home'
     },
     {
         id: 1,

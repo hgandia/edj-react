@@ -2,19 +2,19 @@ import { CHURCHLEADERS } from '../app/shared/CHURCHLEADERS';
 import { Row, Col } from 'reactstrap';
 
 const Body = () => {
-    const { image, content } = CHURCHLEADERS;
     
-    
-
-    return(
+    CHURCHLEADERS.map(leader => {
+        const { image, content } = leader;
+        return(
             <Row>
-                <Col>
-                    {image}
-                </Col>
-                <Col>
-                    {content}
-                </Col>
-            </Row>
-    );
+                 <Col>
+                     {image}
+                 </Col>
+                 <Col>
+                     {content}
+                 </Col>
+            </Row> 
+         );
+    });
 }
 export default Body;
