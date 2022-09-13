@@ -1,8 +1,16 @@
 import churchLogo from '../app/assets/img/churchlogo1.png';
+import { HEADERDETAILS } from '../app/shared/HEADERDETAILS';
+//import LeadersPage from '../app/pages/LeadersPage';
 import { Row, Col } from 'reactstrap';
 
 
 const Header = () => {
+
+    // const headerDetails = HEADERDETAILS.find(details => {
+
+    //     const { id } = details;
+    // })
+
     return(
             <Row className='row-content jumbotron'>
                 <Col sm='12' md='4' className='text-center'>
