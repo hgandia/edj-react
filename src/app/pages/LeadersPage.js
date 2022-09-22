@@ -1,13 +1,13 @@
- import { Col, Row } from 'reactstrap';
+import { Col, Row } from 'reactstrap';
 import { useParams } from 'react-router-dom';
 import { NAVPAGES } from '../shared/NAVPAGES';
 
 const LeadersPage = () => {
+    
     const { leaderId } = useParams();
     console.log('leader ID is: ', leaderId);
 
-const leader = NAVPAGES.find((leader) => {
-    
+    const leader = NAVPAGES.find((leader) => {
     const { id } = leader;
     
     return +leaderId === id; //The + sign does the same thing as the ParseInt function
@@ -20,7 +20,7 @@ console.log('leader is: ', leader);
         return (
             <Row>
                 <Col>
-                    <img src={leader.image} alt='picture of group leader' />
+                    <img src={leader.image} alt='group leader' />
                 </Col>
                 <Col>
                     {leader.content}
@@ -30,7 +30,10 @@ console.log('leader is: ', leader);
     }
     else{
         return(
-        <div>{leader.path}</div>
+        <>
+            <div>{leader.id}</div>
+            <div>{leader.path}</div>
+        </>
         );
     }
     
