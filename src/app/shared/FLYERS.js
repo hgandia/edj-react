@@ -20,7 +20,7 @@ export const FLYERS = [
         image: flyerThree,
         title: 'Salida a Israel!',
         description: 'Unase a nosotros para caminar donde nuestro Señor Jesucristo camino.'
-    },
+     },
     {
         id: 3,
         image: flyerOne,

@@ -19,9 +19,9 @@ const AnimatedFlyerCard = ({ item }) => {
     return (
         <animated.div style={animatedStyle}>
             <Card>
+                <CardTitle className='mx-auto'>{title}</CardTitle>
                 <CardImg src={image} alt={title} />
                 <CardBody>
-                    <CardTitle>{title}</CardTitle>
                     <CardText>{description}</CardText>
                 </CardBody>
             </Card>
