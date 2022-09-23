@@ -20,9 +20,9 @@ const Header = (props) => {
     })
 
     return(
-        <Row className='row-content jumbotron'>
+        <Row className='row-content jumbotron mx-auto'>
             <Col sm='12' md='4' className='text-center'>
-                <img src={churchLogo} alt='church logo' height='300' width='300' />
+                <img src={churchLogo} alt='church logo' height='400' width='400' />
             </Col>
             <Col md='8' className='align-self-center text-center'>
                 <Row>
