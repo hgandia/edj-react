@@ -9,7 +9,7 @@ const DisplayFlyers = () => {
            {FLYERS.map((item, idx) => {
                 console.log('idx: ', idx);
                 return(
-                    <Col key={idx} md='4' sm='6' className='my-4' >
+                    <Col md='4' sm='6' className='my-4' >
                         <AnimatedFlyerCard item={item} />
                     </Col>
                 );

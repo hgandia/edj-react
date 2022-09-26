@@ -1,4 +1,4 @@
-import flyerOne from '../assets/img/campanaJovenes.jpg';
+import flyerOne from '..//assets/img/campanaJovenes.jpg';
 import flyerTwo from '../assets/img/campanaDeCaballeros.jpg';
 import flyerThree from '../assets/img/salidaIsrael.jpg';
 

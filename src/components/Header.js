@@ -24,8 +24,8 @@ const Header = (props) => {
             <Col sm='12' md='4' className='text-center'>
                 <img src={churchLogo} alt='church logo' height='400' width='400' />
             </Col>
-            <Col md='8' className='align-self-center text-center'>
-                <Row>
+            <Col md='8' className='align-self-center'>
+                <Row className='mx-auto text-center'>
                     {leader.title}
                 </Row>
                 <Row>

@@ -29,12 +29,12 @@ const AnimatedFlyerCard = ({ item }) => {
                     </CardBody>
                 </Card>
             </animated.div>
-            <Modal isOpen={modalOpen}>
+            <Modal isOpen={modalOpen} size='xl'>
                 <ModalHeader className='mx-auto' toggle={() => setModalOpen(false)}>
                     {title}
-                </ModalHeader>
+                </ModalHeader >
                 <ModalBody>
-                    {image}
+                    <CardImg src={image}  alt={title} />
                 </ModalBody>
                 <Button centered color='secondary' onClick={() => setModalOpen(false)}>
                     Close
