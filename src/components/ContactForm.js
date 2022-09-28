@@ -8,7 +8,7 @@ const ContactForm = () => {
         console.log('in JSON format: ', JSON.stringify(values));
         resetForm();
     }
-    
+
   return (
     <Formik
       initialValues={{
@@ -34,6 +34,9 @@ const ContactForm = () => {
                 placeholder='Nombre'
                 className='form-control'
             />
+            <ErrorMessage name='firstName'>
+                {(msg) => <p className='text-danger'>{msg}</p>}
+            </ErrorMessage>
           </Col>
         </FormGroup>
         <FormGroup row>
@@ -46,6 +49,9 @@ const ContactForm = () => {
                     placeholder='Apellido' 
                     className='form-control'
             />
+            <ErrorMessage name='lastName'>
+                {(msg) => <p className='text-danger'>{msg}</p>}
+            </ErrorMessage>
           </Col>
         </FormGroup>
         <FormGroup row>
@@ -58,6 +64,9 @@ const ContactForm = () => {
                     placeholder='Telefono' 
                     className='form-control'
             />
+            <ErrorMessage name='phoneNum'>
+                {(msg) => <p className='text-danger'>{msg}</p>}
+            </ErrorMessage>
           </Col>
         </FormGroup>
         <FormGroup row>
@@ -71,25 +80,28 @@ const ContactForm = () => {
                     type='email' 
                     className='form-control'
             />
+            <ErrorMessage name='email'>
+                {(msg) => <p className='text-danger'>{msg}</p>}
+            </ErrorMessage>
           </Col>
         </FormGroup>
         <FormGroup row>
-          <Label check md={{ size: 4, offset: 2 }}>
+          <Label check md={{ size: 2, offset: 2 }}>
             <Field 
                 name='agree'
                 type='checkbox'
                 className='form-check-input'
             />{' '}
-            Podremos Contactarle?
+            Contacteme Por:
           </Label>
-          <Col md='4'>
+          <Col md='2'>
           <Field
                 name='contactType'
                 as='select' 
                 className='form-control'
             >
-                <option>Por Telefono</option>
-                <option>Por E-Mail</option>
+                <option>Telefono</option>
+                <option>E-Mail</option>
             </Field>
           </Col>
         </FormGroup>
