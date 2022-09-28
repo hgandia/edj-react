@@ -20,7 +20,7 @@ console.log('leader is: ', leader);
         return (
             <Row>
                 <Col>
-                    <img src={leader.image} alt='group leader' />
+                    <img src={leader.image} alt='group leader' height='400' />
                 </Col>
                 <Col>
                     {leader.content}
