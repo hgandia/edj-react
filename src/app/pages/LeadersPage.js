@@ -19,11 +19,12 @@ console.log('leader is: ', leader);
         console.log('leader.id is: ', leader.id);
         return (
             <Row>
-                <Col>
-                    <img src={leader.image} alt='group leader' height='400' />
+                <Col md='5' style={{ flex: 1, justifyContent: 'center', textAlign:'center' }}>
+                    <img src={leader.image} alt='group leader' height='600' style={{ border: '10px darkblue double' }}/>
                 </Col>
-                <Col>
+                <Col style={{ flex: 1, justifyContent: 'center', fontSize: '30px', fontFamily: 'papyrus', color: 'darkblue', fontWeight: 'bold'}}>
                     {leader.content}
+                    <hr />{leader.content2}
                 </Col> 
             </Row> 
         );

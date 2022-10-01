@@ -20,22 +20,22 @@ const Header = (props) => {
     })
 
     return(
-        <Row className='row-content jumbotron mx-auto'>
-            <Col sm='12' md='4' className='text-center'>
-                <img src={churchLogo} alt='church logo' height='400' width='400' />
-            </Col>
-            <Col md='8' className='align-self-center'>
-                <Row className='mx-auto text-center'>
-                    {leader.title}
-                </Row>
-                <Row>
-                    {leader.subTitle}
-                </Row>
-                <Row>
-                    {leader.verse}
-                </Row>
-            </Col>   
-        </Row>
+            <Row className='row-content jumbotron mx-auto' style={{ flex: 1, alignItems:'center'}}>
+                <Col sm='12' md='4' className='text-center'>
+                    <img src={churchLogo} alt='church logo' height='400' width='400' />
+                </Col>
+                <Col md='8' style={{fontWeight: 'bold', fontFamily: 'papyrus', justifyContent: 'center'}}>
+                    <Row style={{ flex: 1, justifyContent: 'center', fontSize: '118px', }}>
+                        {leader.title}{leader.title1}<br />{leader.title2}
+                    </Row>
+                    <Row style={{ flex: 1, justifyContent: 'center', fontSize: '40px'}}>
+                        {leader.subTitle}
+                    </Row>
+                    <Row style={{ flex: 1, justifyContent: 'center', fontSize: '30px' }}>
+                        {leader.verse}
+                    </Row>
+                </Col>   
+            </Row>
     )
 }
 export default Header;
