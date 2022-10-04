@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 const Navigator = () => {
     return(
         <Navbar dark sticky='top' expand='md'>
-            <Nav className='mx-auto' style={{ fontSize: 25 }} >
+            <Nav className='mx-auto' style={{ fontSize: 20 }} >
                 {
                     NAVPAGES.map((leader) => ( 
                     <NavItem>

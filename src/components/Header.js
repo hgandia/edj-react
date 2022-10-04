@@ -24,7 +24,7 @@ const Header = (props) => {
                 <Col sm='12' md='4' className='text-center'>
                     <img src={churchLogo} alt='church logo' height='400' width='400' />
                 </Col>
-                <Col md='8' style={{fontWeight: 'bold', fontFamily: 'papyrus', justifyContent: 'center'}}>
+                <Col md='8' style={{fontWeight: '', fontFamily: 'papyrus', justifyContent: 'center'}}>
                     <Row style={{ flex: 1, justifyContent: 'center', fontSize: '118px', }}>
                         {leader.title}{leader.title1}<br />{leader.title2}
                     </Row>

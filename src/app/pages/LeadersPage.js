@@ -20,9 +20,12 @@ console.log('leader is: ', leader);
         return (
             <Row>
                 <Col md='5' style={{ flex: 1, justifyContent: 'center', textAlign:'center' }}>
-                    <img src={leader.image} alt='group leader' height='600' style={{ border: '10px darkblue double' }}/>
+                    <img src={leader.image} alt='group leader' height='500' style={{ border: '10px darkblue double' }}/>
+                    <Row className='mt-3' style={{ flex: 1, justifyContent: 'center'}}>
+                        {leader.leaderName}<br />{leader.leaderTitle}
+                    </Row>
                 </Col>
-                <Col style={{ flex: 1, justifyContent: 'center', fontSize: '30px', fontFamily: 'papyrus', color: 'darkblue', fontWeight: 'bold'}}>
+                <Col style={{ flex: 1, justifyContent: 'center', fontSize: '25px', fontFamily: 'papyrus', color: 'darkblue', fontWeight: 'bold'}}>
                     {leader.content}
                     <hr />{leader.content2}
                 </Col> 
@@ -32,8 +35,7 @@ console.log('leader is: ', leader);
     else{
         return(
         <>
-            <div>{leader.id}</div>
-            <div>{leader.path}</div>
+            
         </>
         );
     }

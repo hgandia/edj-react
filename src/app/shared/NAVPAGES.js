@@ -15,7 +15,9 @@ export const NAVPAGES = [
         content:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio exercitationem nulla doloribus, vel perspiciatis maiores animi praesentium. Officiis reprehenderit assumenda quam amet mollitia repudiandae iusto, dignissimos quos. Totam, eaque vel. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio exercitationem nulla doloribus, vel perspiciatis maiores animi praesentium. Officiis reprehenderit assumenda quam amet mollitia repudiandae iusto, dignissimos quos. Totam, eaque vel. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio exercitationem nulla doloribus, vel perspiciatis maiores animi praesentium. Officiis reprehenderit assumenda quam amet mollitia repudi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio exercitationem nulla doloribus, vel perspiciatis maiores animi praesentium. Officiis reprehenderit assumenda quam amet mollitia repudiandae iusto, dignissimos quos. Totam, eaque vel. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio exercitationem nulla doloribus, vel perspiciatis maiores animi praesentium. Officiis reprehenderit assumenda quam amet mollitia repudiandae iusto, dignissimos quos. Totam, eaque vel.',
         image: pastorsPic,
         path:'./home',
-        icon: 'fa-home'
+        icon: 'fa-home',
+        leaderTitle: 'Pastor',
+        leaderName: 'Rev. Aurelio y Gladys Rexach'
     },
     {
         id: 1,
@@ -25,7 +27,9 @@ export const NAVPAGES = [
         verse: '~ 2 Timoteo 2:15',
         content:'Reciban saludos de nuestra socided de caballeros, Heraldos de Cristo. Nuestra sociedad esta compuesta de hombres de diferentes antecedentes, hombres imperfectos, que hemos sido alcanzado por la gracia y misericordia de Dios, quien nos ha dado nueva vida y vida en abundancia.  Cada día vivimos tratando de avanzer más en cumplir con la gran comisión de "ir por el mundo y predicar el evangelio a toda criatura," ofreciéndole al mundo la única esperanza que hay para los seres humanos. Reconocemos el peso de responsabildad que car sobre nosotros en una sociedad carente de hombres de carárter y valores cristianos, que representen a Dios en este mundo perverso, herido y necesitado de la misericordia y gracia de nuestro Dios. Si quieres ser parte de este ejército de hombres que día tras día tratamos de hacer una diferencia en este mundo, siendo luz en medio de las tinieblas y sirviendo como sal, dándole sabor a través de nuestra influencia en el mundo, te invito a nuestra congragación, donde vas a ser bienvenido, y dónde recibiras el apoyo y la preparación por medio de la palabra de Dios y la enseñanza de nuestros maestros y pastores para marcar la diferencia en este mundo; y como metal final un día estar eternamente en la presencia de Dios.',
         image: caballerosPresidentPic,
-        path:'./caballeros'
+        path:'./caballeros',
+        leaderTitle: 'Presidente de Caballeros',
+        leaderName: 'Yunid Tavarez'
     },
     {
         id: 2,
@@ -35,7 +39,9 @@ export const NAVPAGES = [
         verse: '~ Proverbios 31:30',
         content:'Eres bienvenida a adorar al Señor con tu familia y tus hermanos y hermanas en Cristo.  Creemos que cada mujer debe tener la oportunidad de alcanzar su potenical dado por Dios en la socidedad de damas. Por lo tanto, brindamos oportunidades durante todo el año para que las damas se reúnan para compartir, orar, llegar a la comunidad, retiros, conferencias y mucho más.  Nuestro objetivo es que las mujeres de Dios marquen una diferencia en el mundo. Creemos que Dios quiere que tomemos el lugar que nos corresponde. Al desarrollar valores findamentales de oración, estudio de la biblía y una vida justa.  Todo el mundo ha pecado y necesita salvación. La salvación viene por gracia mediante la fe basada en el sacrificio expiatorio de Jesucristo.  Si no puede venir, puede unirse a nosotros virtualmente a través de nuestras transmisiones en vivo por Youtube y Facbook Live.  Esperamos verte pronto y que Dios te bendiga.',
         image: damasPresidentPic,
-        path:'./damas'
+        path:'./damas',
+        leaderTitle: 'Presidenta de Damas',
+        leaderName: 'Isabel Cosme'
     },
     {
         id: 3,
@@ -46,7 +52,9 @@ export const NAVPAGES = [
         content:'El camino que nuestra juventud toma hoy determina el futuro que viviremos mañana.  Nuestro objetivo es buscar al Señor con toda nuestra fuerza, nuestra mente y nuestro corazón, con la esperanza de impactar al mundo de una manera positiva. Nosotros nos oponemos contra las maldades de este mundo, predicando las buenas nuevas de salvación atravez de nuestro testimonio. Llvaremos estas buenas nuevas a toda parte del mundo, anunciando la segunda venida de Cristo.  Ya es tiempo que Dios tome control sobre nuestras casas, nuestras sociedad, y nuestra nacion. La juventud de Estrella de Jacob esta unidos para levantar esta generacion y para traer cambio a este mundo. Vamos a dejar al mundo saber que Cristo no es un camino a la salvacion, sino que Cristo ES el unico caminoa la salvacion y a la vida eterna. Cristo no es una salavacion a nuestros problemas y pecados, Cristo ES la unica salvacion a nuestros problemas y pecados. El es el unico que nos puede librar del pecado.  Joel profetizo que Dios derramaria de su Espiritu Santo en los ultimos tiempos, el cual fue confirmado en el dia de pentecostes y ha seguido a cumplirse en nosotros.  Anhelamos que usted se una a nosotros, porque el fin se acerca!!',
         content2: 'The path that the youth of today take will determine the future we live in tomorrow. This is the reason we have made it our mission to seek the Lord with all of our strength, with all of our mind and with all of our hearts, with the hope of bringing a positive impact to world. We stand against all the wickedness the wolrd has to offer and spread the good news of salvation through our lifestyle and testimony. We are committed to preach the good news and announce the coming of Christ to all corners of the world. It is time for God to, once again, take contraol of our society, our families and our nation. The youth of Star of Jacob has united itself to lift this generation up and bring change to this world. We will let the world know that Christ is not a way to salvation, he is THE way to salvation and eternal life. Christ is not a solution to our sins and our problems, he is THE ONLY solution that can solve our problems and free us of our sins. Joel prophesied an outpouring of the Holy Spirit, which was confirmed on pentecost and has continued to confirm and fulfill itself through us. We would like for you to join us!',
         image: jovenesPresidentPic,
-        path:'./jovenes'
+        path:'./jovenes',
+        leaderTitle: 'Presidente de Jovenes',
+        leaderName: 'Javier Rivera Jr.'
     },
     {
         id: 4,
@@ -56,7 +64,9 @@ export const NAVPAGES = [
         verse: '~ Jericob 3:15',
         content:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio exercitationem nulla doloribus, vel perspiciatis maiores animi praesentium. Officiis reprehenderit assumenda quam amet mollitia repudiandae iusto, dignissimos quos. Totam, eaque vel. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio exercitationem nulla doloribus, vel perspiciatis maiores animi praesentium. Officiis reprehenderit assumenda quam amet mollitia repudiandae iusto, dignissimos quos. Totam, eaque vel. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio exercitationem nulla doloribus, vel perspiciatis maiores animi praesentium. Officiis reprehenderit assumenda quam amet mollitia repudi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio exercitationem nulla doloribus, vel perspiciatis maiores animi praesentium. Officiis reprehenderit assumenda quam amet mollitia repudiandae iusto, dignissimos quos. Totam, eaque vel. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio exercitationem nulla doloribus, vel perspiciatis maiores animi praesentium. Officiis reprehenderit assumenda quam amet mollitia repudiandae iusto, dignissimos quos. Totam, eaque vel.',
         image: ninosPresidentPic,
-        path:'./ninos'
+        path:'./ninos',
+        leaderTitle: 'Presidente de Niños',
+        leaderName: 'Jacob Lucho'
     },
     {
         id: 5,
