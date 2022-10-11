@@ -20,7 +20,7 @@ const Header = (props) => {
     })
 
     return(
-            <Row className='row-content jumbotron mx-auto' style={{ flex: 1, alignItems:'center'}}>
+            <Row className='jumbotron mx-auto' style={{ flex: 1, alignItems:'center'}}>
                 <Col sm='12' md='4' className='text-center'>
                     <img src={churchLogo} alt='church logo' height='400' width='400' />
                 </Col>

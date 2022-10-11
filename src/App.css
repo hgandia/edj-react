@@ -12,8 +12,6 @@ body {
 }
 
 .jumbotron {
-  margin: 0;
-  padding: 0;
   background-image: linear-gradient(to right, #00008B, #D3D3D3, #F5FFFA);
   color: darkblue;
 }
@@ -56,7 +54,7 @@ h2 {
   margin-right: 2rem;
 }
 
-.navbar-brand img {
+ .navbar-brand img {
   width: 100%;
   height: 100%;
   margin-right: 2rem;
@@ -68,6 +66,7 @@ h2 {
   /* background-image: linear-gradient(to right, #5637dd, #3046c5, #510e5a); */
   margin-bottom: 2rem;
   min-height: 8rem;
+  margin-top:0;
 }
 
 .page-enter {

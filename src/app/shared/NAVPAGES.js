@@ -4,6 +4,9 @@ import damasPresidentPic from '../assets/img/isabel3.jpg';
 import jovenesPresidentPic from '../assets/img/javier2.jpg';
 import ninosPresidentPic from '../assets/img/monkey.jpg';
 import churchPic from '../assets/img/churchFront.jpg';
+import caballerosGroupPic from '../assets/img/caballeros3.jpg';
+import damasGroupPic from '../assets/img/damasGroup2.jpg';
+import jovenesGroupPic from '../assets/img/jovenes2022.jpg';
 
 export const NAVPAGES = [
     {
@@ -29,7 +32,12 @@ export const NAVPAGES = [
         image: caballerosPresidentPic,
         path:'./caballeros',
         leaderTitle: 'Presidente de Caballeros',
-        leaderName: 'Yunid Tavarez'
+        leaderName: 'Yunid Tavarez',
+        vpName: 'David Membreño',
+        vpTitle: 'Vice Presidente',
+        secName: 'Jose Rodriguez',
+        secTitle: 'Secretario',
+        groupImage: caballerosGroupPic
     },
     {
         id: 2,
@@ -41,7 +49,12 @@ export const NAVPAGES = [
         image: damasPresidentPic,
         path:'./damas',
         leaderTitle: 'Presidenta de Damas',
-        leaderName: 'Isabel Cosme'
+        leaderName: 'Isabel Cosme',
+        vpName: 'Mariluz Carrales',
+        vpTitle: 'Vice Presidenta',
+        secName: 'Gerolyn Membreño',
+        secTitle: 'Secretaria',
+        groupImage: damasGroupPic
     },
     {
         id: 3,
@@ -54,7 +67,12 @@ export const NAVPAGES = [
         image: jovenesPresidentPic,
         path:'./jovenes',
         leaderTitle: 'Presidente de Jovenes',
-        leaderName: 'Javier Rivera Jr.'
+        leaderName: 'Javier Rivera Jr.',
+        vpName: 'Dileny Veloz',
+        vpTitle: 'Vice Presidenta',
+        secName: 'Keileen B. Cabezas',
+        secTitle: 'Secretaria',
+        groupImage: jovenesGroupPic
     },
     {
         id: 4,
@@ -66,7 +84,11 @@ export const NAVPAGES = [
         image: ninosPresidentPic,
         path:'./ninos',
         leaderTitle: 'Presidente de Niños',
-        leaderName: 'Jacob Lucho'
+        leaderName: 'Jacob Lucho',
+        vpName: 'David Membreño',
+        vpTitle: 'Vice Presidente',
+        secName: 'Jose Rodriguez',
+        secTitle: 'Secretario'
     },
     {
         id: 5,
@@ -74,6 +96,7 @@ export const NAVPAGES = [
         title: 'Quienes Somos?',
         content:'Estando el Pastor, Juan Corales residiendo en Nueva York, tuvo la siguiente revelación mientras dormía: De momento vio a un joven que llegaba hasta donde él y le dijo estas palabras: "Vamos a levatarle una obra a Jehová;" el pastor Corales le contestó: "Vamos." Luego los dos se motaron en un camión militar y al llegar a cierto lugar, el joven lo dejó solo. Al encontrarse solo, el Pastor Corales se sintió muy triste y dijo estas palabras: "Si apareciera el Apóstol Pablo y me diera una campaña!" Luego que él hablo estas palabras oyó una voz que le dijo, "Pero el Apóstol Pablo está muerto." De momento el miró para todos lados y vio una biblía a través de una vitrina cerrada, cuyas páginas empezaban a cambiarse por sí solas, proyectando una luz propia de ellas. Inmediatemente, despertó y se preguntó que sería aquello, y el Señor le mostro que él tenía que depender solamente de su Palabra.  Después de esto, el Pastor Corales y su esposa, Justina, se trasladaron a Puerto Rico y mientras atendía una obra en el pueblo de Aguadilla, su pueblo natal, el Señor le habló en revelación usando a un joven como de 14 años, quien le dijo estas palabras: "tienes que volver a Nueva York." El Pastor Corales había pensado quedarse en su pueblo, pero al oír la voz del Señor sintió temor y regresó.  Una mañana, los pastores Corales se hallaban en la calle 156 y 3ra avenida, y se encontraron con el joven de la visión. El joven le dijo al Pastor Corales las mismas palabras que ya él había escuchado en aquella revelación primera, "vamos a levantar una obra a Jehová por la calle 183 y 184." Por la tarde hicieron los arreglos y se reunieron en el hogar de un inconverso que le gustaba oír de la Palabra de Dios. A la semana dieron un servicio en este hogar y los dueños del hogar se convirtieron al Señor. Siguieron dando cultos en los hogares y almas se convertían y el joven de la visión los acompañaba a todos los servicios. Más luego, teniendo un grupo de aproximadamente 11 almas decidieron buscar un lugar con mayores facilidades para adorar a Dios. Encontraron un lugar pequeño en el 54 E. de la calle 184 y cuando empezaron a arreglar este lugar, el joven se marchó a Boston y nunca más se supo de él.  El día 20 de Febrero de 1971 se celebró el servicio de inaugración de la Iglesia Estrella de Jacob. Habían 11 hermanos presentes y el Señor siguió bendiciendo la obra de manera especial, añadiendo muchas almas. Viendo el crecimiento, era preciso buscar otro lugar más amplio para congregarse. Así se le fue añadiendo al templo, comprando los negocios vecinos. En el mes de Noviembre del 1979, salieron los Pastores Corales a Puerto Rico, dajando así la Iglesia Estrella de Jacob afiliada al Concilio Latino Americano en común acuerdo con la oficialidad y la congregación.',
         image: churchPic,
+        leaderName: 'Iglesia Pentecostal Estrella de Jacob',
         path:'./aboutUs',
         icon:'fa-info'
     },
