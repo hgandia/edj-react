@@ -3,7 +3,7 @@ import DisplayFlyers from '../../components/DisplayFlyers';
 
 const Events = () => {
     return (
-           <Row>
+           <Row className='mx-auto'>
                 <Col>
                     <DisplayFlyers />
                 </Col>

@@ -23,7 +23,7 @@ const Credo = () => {
                     </ul>
                 </Col>
             </Row>
-        </Container> 
+        </Container>
     );
 }
 

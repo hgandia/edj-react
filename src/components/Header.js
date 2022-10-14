@@ -8,16 +8,17 @@ const Header = (props) => {
     if(props.match === null ){
         return null;
     }
-
     const { leaderId } = props.match.params;
     console.log("leaderId in header is:", leaderId);
 
     const leader = NAVPAGES.find((leader) => {
             
-    const { id } = leader;
+        const { id } = leader;
+
+        return +leaderId === id //The + sign does the same thing as the ParseInt function
+    
         
-    return +leaderId === id //The + sign does the same thing as the ParseInt function
-    })
+    });
 
     return(
             <Row className='jumbotron mx-auto' style={{ flex: 1, alignItems:'center'}}>

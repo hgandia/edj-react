@@ -3,7 +3,7 @@ import { Navbar, /*NavbarBrand, Collapse, NavabarToggler,*/ Nav, NavItem } from 
 import { NavLink } from 'react-router-dom';
 
 const Navigator = () => {
-    return(
+    return(   
         <Navbar dark sticky='top' expand='md'>
             <Nav className='mx-auto' style={{ fontSize: 20 }} >
                 {

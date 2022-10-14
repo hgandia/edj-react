@@ -3,8 +3,8 @@ import { Row, Col } from 'reactstrap';
 
 const Footer = () => {
     return (
-            <Row className='site-footer row-content'>
-                <Col>
+            <Row className='site-footer row-content mx-auto mt-5'>
+                <Col style={{ justifyContent:'center'}}>
                     <p className='papyrus'>Iglesia Pentecostal Estrlla de Jacob, Inc</p>
                     <p className='papyrus'>53 East 184th Street</p>
                     <p className='papyrus'>Bronx, New York 10468</p>
@@ -18,8 +18,8 @@ const Footer = () => {
                 <Col>
                     <p className='papyrus' id='follow'>
                         <h4>Siganos por:</h4><br />
-                        <a className='btn btn-social-icon btn-facebook btn-lg mx-4' target='_blank' href='https://www.facebook.com/estrelladjacob'><i class='fa fa-facebook-official' /></a>   
-                        <a className='btn btn-social-icon btn-google btn-lg' target='_blank' href='https://www.youtube.com/c/PrimeraEstrellaDeJacob/featured'><i class='fa fa-youtube-play' /></a>
+                        <a className='btn btn-social-icon btn-facebook btn-lg mx-4' target='blank' href='https://www.facebook.com/estrelladjacob'><i class='fa fa-facebook-official' /></a>   
+                        <a className='btn btn-social-icon btn-google btn-lg' target='blank' href='https://www.youtube.com/c/PrimeraEstrellaDeJacob/featured'><i class='fa fa-youtube-play' /></a>
                     </p>
                 </Col>
             </Row>
