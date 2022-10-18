@@ -45,8 +45,11 @@ console.log('leader is: ', leader);
                                 color: 'darkblue', 
                                 fontWeight: 'bold'
                             }}><em>Bienvenidos!</em></p>
-                    {leader.content}
-                    <hr />{leader.content2}
+                    {leader.content.split('\n').map((t, key) => {
+                        return <p key={key}>{t}</p>;
+                    })}
+                    <hr />
+                    {/* {leader.content2} */}
                 </Col> 
             </Row>
             <Row className='mx-auto my-5'>
@@ -110,7 +113,9 @@ console.log('leader is: ', leader);
                                         fontWeight: 'bold'
                                     }}><em>Nuestra Historia!</em>
                     </p>
-                    {leader.content}
+                    {leader.content.split('\n').map((t, key) => {
+                        return <p key={key}>{t}</p>;
+                    })}
                 </Col> 
             </Row>
         );
@@ -130,6 +135,14 @@ console.log('leader is: ', leader);
                     </Row>
                 </Col>
                 <Col style={{ flex: 1, justifyContent: 'center', fontSize: '25px', fontFamily: 'papyrus', color: 'darkblue', fontWeight: 'bold'}}>
+                <p style={{ 
+                                flex: 1,
+                                textAlign:'center', 
+                                fontSize: '40px', 
+                                fontFamily: 'papyrus', 
+                                color: 'darkblue', 
+                                fontWeight: 'bold'
+                            }}><em>Bienvenidos!</em></p>
                     {leader.content}
                 </Col> 
             </Row> 
