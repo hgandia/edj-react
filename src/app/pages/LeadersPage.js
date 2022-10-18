@@ -143,7 +143,9 @@ console.log('leader is: ', leader);
                                 color: 'darkblue', 
                                 fontWeight: 'bold'
                             }}><em>Bienvenidos!</em></p>
-                    {leader.content}
+                    {leader.content.split('\n').map((t, key) => {
+                        return <p key={key}>{t}</p>;
+                    })}
                 </Col> 
             </Row> 
         );
