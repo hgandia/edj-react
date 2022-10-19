@@ -112,3 +112,7 @@ h2 {
 #follow {
   text-align: center;
 }
+
+.navbar .navbar-toggler:focus{
+  color: darkblue;
+}

@@ -20,7 +20,7 @@ console.log('leader is: ', leader);
         return (
             <>
             <Row className='mx-auto'>
-                <Col md='5' style={{ flex: 1, justifyContent: 'center', textAlign:'center' }}>
+                <Col md='5' sm='12'style={{ flex: 1, justifyContent: 'center', textAlign:'center' }}>
                     <img src={leader.image} alt='group leader' height='500' style={{ border: '10px darkblue double' }}/>
                     <Row className='mt-3' style={{ flex: 1, justifyContent: 'center', fontSize: '20px', fontFamily: 'papyrus', color: 'darkblue', fontWeight: 'bold'}}>
                         {leader.leaderName}<br />{leader.leaderTitle}
@@ -36,7 +36,7 @@ console.log('leader is: ', leader);
                         {leader.secName}<br />{leader.secTitle}
                     </Row>
                 </Col>
-                <Col style={{ flex: 1, fontSize: '25px', fontFamily: 'papyrus', color: 'darkblue', fontWeight: 'bold' }}>
+                <Col sm='12' style={{ flex: 1, fontSize: '25px', fontFamily: 'papyrus', color: 'darkblue', fontWeight: 'bold' }}>
                     <p style={{ 
                                 flex: 1,
                                 textAlign:'center', 
@@ -122,7 +122,7 @@ console.log('leader is: ', leader);
     } else if (leader.id === 0){
         return (
             <Row className='mx-auto'>
-                <Col md='5' style={{ flex: 1, justifyContent: 'center', textAlign:'center' }}>
+                <Col md='5'  style={{ flex: 1, justifyContent: 'center', textAlign:'center' }}>
                     <img src={leader.image} alt='group leader' height='500' style={{ border: '10px darkblue double' }}/>
                     <Row className='mt-3' style={{ flex: 1, justifyContent: 'center', fontSize: '20px', fontFamily: 'papyrus', color: 'darkblue', fontWeight: 'bold'}}>
                         {leader.leaderName}<br />{leader.leaderTitle}
@@ -134,7 +134,7 @@ console.log('leader is: ', leader);
                         <p>Oficiales</p>
                     </Row>
                 </Col>
-                <Col style={{ flex: 1, justifyContent: 'center', fontSize: '25px', fontFamily: 'papyrus', color: 'darkblue', fontWeight: 'bold'}}>
+                <Col sm='12' style={{ flex: 1, justifyContent: 'center', fontSize: '25px', fontFamily: 'papyrus', color: 'darkblue', fontWeight: 'bold'}}>
                 <p style={{ 
                                 flex: 1,
                                 textAlign:'center', 
