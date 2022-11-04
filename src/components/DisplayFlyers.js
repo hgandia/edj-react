@@ -5,11 +5,11 @@ import { Row, Col } from 'reactstrap';
 const DisplayFlyers = () => {
    
   return(
-        <Row className='mx-auto' width='200' height='200'>
+        <Row width='200' height='200'>
            {FLYERS.map((item, idx) => {
                 console.log('idx: ', idx);
                 return(
-                    <Col md='4' sm='6' className='my-4' >
+                    <Col md='4' sm='6' className='my-4'>
                         <AnimatedFlyerCard item={item} />
                     </Col>
                 );

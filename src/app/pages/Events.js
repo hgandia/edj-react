@@ -1,4 +1,4 @@
-import { Row, Col, } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import DisplayFlyers from '../../components/DisplayFlyers';
 
 const Events = () => {

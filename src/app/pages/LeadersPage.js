@@ -1,4 +1,4 @@
-import { Col, Row } from 'reactstrap';
+import { Col, Row, CardImg, CardBody, CardText, Card, CardTitle } from 'reactstrap';
 import { useParams } from 'react-router-dom';
 import { NAVPAGES } from '../shared/NAVPAGES';
 
@@ -18,10 +18,20 @@ console.log('leader is: ', leader);
     if(leader.id > 0 && leader.id < 5 ) {
         console.log('leader.id is: ', leader.id);
         return (
-            <>
+        <>
             <Row className='mx-auto'>
-                <Col md='5' sm='12'style={{ flex: 1, justifyContent: 'center', textAlign:'center' }}>
-                    <img src={leader.image} alt='group leader' height='500' style={{ border: '10px darkblue double' }}/>
+                <Col md='5' sm='12' style={{ flex: 1, justifyContent: 'center', textAlign:'center' }}>
+                    <Row className='' alt='group leader' height='500'>
+                        <Card style={{ width: 500, border: '10px darkblue double', backgroundColor: 'white' }} className='mx-auto'>
+                            <CardTitle className='mx-auto mt-4'>
+                                {/* {leader.leaderTitle} */}
+                            </CardTitle>
+                            <CardImg src={leader.image} alt={leader.leaderTitle} />
+                            <CardBody>
+                                <CardText></CardText>
+                            </CardBody>
+                        </Card>
+                    </Row>
                     <Row className='mt-3' style={{ flex: 1, justifyContent: 'center', fontSize: '20px', fontFamily: 'papyrus', color: 'darkblue', fontWeight: 'bold'}}>
                         {leader.leaderName}<br />{leader.leaderTitle}
                     </Row>
@@ -35,16 +45,20 @@ console.log('leader is: ', leader);
                     <Row className='mt-5' style={{ flex: 1, justifyContent: 'center', fontSize: '20px', fontFamily: 'papyrus', color: 'darkblue', fontWeight: 'bold'}}>
                         {leader.secName}<br />{leader.secTitle}
                     </Row>
+                    <Row style={{ flex: 1, justifyContent: 'center', fontSize: '20px', fontFamily: 'papyrus', color: 'darkblue', fontWeight: 'bold'}}>
+                        <hr className='mt-4' style={{ justifyContent: 'center', border: 'solid 2px darkblue', width: '60%' }}/>
+                    </Row>
                 </Col>
-                <Col sm='12' style={{ flex: 1, fontSize: '25px', fontFamily: 'papyrus', color: 'darkblue', fontWeight: 'bold' }}>
+                <Col sm='12' style={{ flex: 1, fontSize: '25px', fontFamily: 'papyrus', color: 'darkblue', fontWeight: 'bold', textAlign:'center'}}>
                     <p style={{ 
                                 flex: 1,
                                 textAlign:'center', 
                                 fontSize: '40px', 
                                 fontFamily: 'papyrus', 
                                 color: 'darkblue', 
-                                fontWeight: 'bold'
-                            }}><em>Bienvenidos!</em></p>
+                                fontWeight: 'bold',
+                            }} className='mt-4'><em>Bienvenidos!</em>
+                    </p>
                     {leader.content.split('\n').map((t, key) => {
                         return <p key={key}>{t}</p>;
                     })}
@@ -52,23 +66,46 @@ console.log('leader is: ', leader);
                     {/* {leader.content2} */}
                 </Col> 
             </Row>
-            <Row className='mx-auto my-5'>
-                <Col className='mt-5' style={{ textAlign: 'center' }}>
-                    <img src={leader.groupImage} alt='Group Pic' height='900' style={{ border: '10px darkblue double' }} />
-                </Col>
+            <Row className=' mx-auto my-5'>
+                <Card style={{ width: 1500, border: '10px white double', backgroundColor: 'darkblue' }} className='mx-auto'>
+                    <CardTitle className='mx-auto mt-2' 
+                            style = {{
+                                 flex: 1, 
+                                 fontSize: '25px', 
+                                 fontFamily: 'papyrus', 
+                                 color: 'white', 
+                                 fontWeight: 'bold'
+                                }}>
+                                    {leader.title}
+                    </CardTitle>
+                    <CardImg src={leader.groupImage} alt={leader.title} />
+                    <CardBody>
+                        <CardText></CardText>
+                    </CardBody>
+                </Card>
             </Row>
-            </>
-        );
+        </>
+    );
     }
     else if (leader.id === 5){
         return(
             <Row className='mx-auto'>
                 <Col md='5' style={{ flex: 1, justifyContent: 'center', textAlign:'center' }}>
-                    <img src={leader.image} alt='group leader' height='500' style={{ border: '10px darkblue double' }}/>
-                    <Row className='mt-3' style={{ flex: 1, justifyContent: 'center', fontSize: '20px', fontFamily: 'papyrus', color: 'darkblue', fontWeight: 'bold'}}>
+                    <Row className='' alt='group leader' height='500'>
+                        <Card style={{ width: 800, border: '10px darkblue double', backgroundColor: 'white' }} className='mx-auto'>
+                            <CardTitle className='mx-auto mt-4'>
+                                {/* {leader.leaderTitle} */}
+                            </CardTitle>
+                            <CardImg src={leader.image} alt={leader.leaderTitle} />
+                            <CardBody>
+                                <CardText></CardText>
+                            </CardBody>
+                        </Card>
+                    </Row>
+                    <Row className='mt-4' style={{ flex: 1, justifyContent: 'center', fontSize: '25px', fontFamily: 'papyrus', color: 'darkblue', fontWeight: 'bold'}}>
                         {leader.leaderName}
                     </Row>
-                    <Row className='mt-5'>
+                    <Row className='mt-5 mb-5'>
                         <Col md='8' className='mx-auto'>
                             <h2 style={{ flex: 1, 
                                         fontFamily: 'Papyrus, Times New Roman, Times, serif', 
@@ -103,7 +140,7 @@ console.log('leader is: ', leader);
                         </Col>
                     </Row>
                 </Col>
-                <Col style={{ flex: 1, justifyContent: 'center', fontSize: '25px', fontFamily: 'papyrus', color: 'darkblue', fontWeight: 'bold'}}>
+                <Col style={{ flex: 1, justifyContent: 'center', fontSize: '25px', fontFamily: 'papyrus', color: 'darkblue', fontWeight: 'bold',  textAlign:'center'}}>
                     <p style={{ 
                                         flex: 1,
                                         textAlign:'center', 
@@ -111,11 +148,13 @@ console.log('leader is: ', leader);
                                         fontFamily: 'papyrus', 
                                         color: 'darkblue', 
                                         fontWeight: 'bold'
-                                    }}><em>Nuestra Historia!</em>
+                                    }}><em><u>Nuestra Historia!</u></em>
                     </p>
                     {leader.content.split('\n').map((t, key) => {
                         return <p key={key}>{t}</p>;
-                    })}
+                    })
+                    
+                    }
                 </Col> 
             </Row>
         );
@@ -123,7 +162,17 @@ console.log('leader is: ', leader);
         return (
             <Row className='mx-auto'>
                 <Col md='5'  style={{ flex: 1, justifyContent: 'center', textAlign:'center' }}>
-                    <img src={leader.image} alt='group leader' height='500' style={{ border: '10px darkblue double' }}/>
+                    <Row className='' alt='group leader' height='500'>
+                        <Card style={{ width: 500, border: '10px darkblue double', backgroundColor: 'white' }} className='mx-auto'>
+                            <CardTitle className='mx-auto mt-4'>
+                                {/* {leader.leaderTitle} */}
+                            </CardTitle>
+                            <CardImg src={leader.image} alt={leader.leaderTitle} />
+                            <CardBody>
+                                <CardText></CardText>
+                            </CardBody>
+                        </Card>
+                    </Row>
                     <Row className='mt-3' style={{ flex: 1, justifyContent: 'center', fontSize: '20px', fontFamily: 'papyrus', color: 'darkblue', fontWeight: 'bold'}}>
                         {leader.leaderName}<br />{leader.leaderTitle}
                     </Row>

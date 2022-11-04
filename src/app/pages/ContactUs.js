@@ -5,8 +5,8 @@ const ContactUs = () => {
     return (
         <Container>
             <h1>Contactenos</h1><hr />
-            <Row>
-                <Col>
+            <Row className='mx-auto'style={{ textAlign:'center'}}>
+                <Col sm='12' lg='6'>
                    <h5>Dirrección</h5>
                    <address>
                         53 E. 184 Street<br />
@@ -15,9 +15,9 @@ const ContactUs = () => {
                    </address>
                 </Col>
                 <Col>
-                    <a role='button' className='btn btn-link' href='tel:+12065551234'><i className='fa fa-phone' /> 1-718-733-9714</a>
+                    <a role='button' className='btn btn-link' href='tel:+17187339714'><i className='fa fa-phone' /> 1-718-733-9714</a>
                     <br />
-                    <a role='button' className='btn btn-link' href='mailto:fakeemail@fakeemail.co'><i className='fa fa-envelope-o' />la1raestrelladejabcob@gmail.com</a>
+                    <a role='button' className='btn btn-link' href='mailto:la1raestrelladejabcob@gmail.com'><i className='fa fa-envelope-o' />la1raestrelladejabcob@gmail.com</a>
                 </Col>
                 <hr />
             </Row>

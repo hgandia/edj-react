@@ -22,18 +22,24 @@ const Header = (props) => {
 
     return(
             <Row className='jumbotron mx-auto' style={{ flex: 1, alignItems:'center'}}>
-                <Col sm='12' md='4' className='text-center'>
+                <Col sm='12' lg='4' className='text-center'>
                     <img src={churchLogo} alt='church logo' height='400' width='400' />
                 </Col>
-                <Col md='8' style={{fontWeight: '', fontFamily: 'papyrus', justifyContent: 'center'}}>
-                    <Row style={{ flex: 1, justifyContent: 'center', fontSize: '118px', }}>
-                        {leader.title}{leader.title1}<br />{leader.title2}
+                <Col sm='12' lg='8' style={{  flex: 1, fontFamily: 'papyrus', justifyContent: 'center' }}>
+                    <Row lg='8' style={{ flex: 1, justifyContent: 'center', fontSize: '73px', textAlign: 'center' }}>
+                        {leader.title}
                     </Row>
-                    <Row style={{ flex: 1, justifyContent: 'center', fontSize: '40px'}}>
-                        {leader.subTitle}
+                    <Row lg='8' style={{ flex: 1, justifyContent: 'center', fontSize: '78px', textAlign: 'center' }}>
+                        {leader.title1}
                     </Row>
-                    <Row style={{ flex: 1, justifyContent: 'center', fontSize: '30px' }}>
-                        {leader.verse}
+                    <Row lg='8' style={{ flex: 1, justifyContent: 'center', fontSize: '78px', textAlign: 'center' }}>
+                        {leader.title2}
+                    </Row>
+                    <Row lg='8' style={{ flex: 1, justifyContent: 'center', fontSize: '40px', textAlign: 'center' }}>
+                            {leader.subTitle}
+                    </Row>
+                    <Row lg='8' style={{ flex: 1, justifyContent: 'center', fontSize: '30px', textAlign: 'center' }}>
+                            {leader.verse}
                     </Row>
                 </Col>   
             </Row>
