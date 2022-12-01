@@ -22,7 +22,7 @@ export const validateContactForm = (values) => {
    
     if(!reg.test(values.phoneNum)){
         errors.phoneNum = 'El numero de telefono debe de contener solo numeros.';       
-    } else if(values.phoneNum.length != 10){
+    } else if(values.phoneNum.length !== 10){
         errors.phoneNum = 'El numero de telefono debe de ser de 10 digitos'
     }
 
