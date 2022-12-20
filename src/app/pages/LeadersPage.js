@@ -1,6 +1,8 @@
 import { Col, Row, CardImg, CardBody, CardText, Card, CardTitle } from 'reactstrap';
 import { useParams } from 'react-router-dom';
 import { NAVPAGES } from '../shared/NAVPAGES';
+import  OfficialsCarousel from '../../components/OfficialsCarousel';
+
 
 const LeadersPage = () => {
     
@@ -13,10 +15,10 @@ const LeadersPage = () => {
     return +leaderId === id; //The + sign does the same thing as the ParseInt function
 });
 
-console.log('leader is: ', leader);
+//console.log('leader is: ', leader);
 
     if(leader.id > 0 && leader.id < 5 ) {
-        console.log('leader.id is: ', leader.id);
+    //    console.log('leader.id is: ', leader.id);
         return (
         <>
             <Row className='mx-auto'>
@@ -102,7 +104,7 @@ console.log('leader is: ', leader);
                             </CardBody>
                         </Card>
                     </Row>
-                    <Row className='mt-4' style={{ flex: 1, justifyContent: 'center', fontSize: '25px', fontFamily: 'papyrus', color: 'darkblue', fontWeight: 'bold'}}>
+                    <Row className='mt-4 welcomeTitle' >
                         {leader.leaderName}
                     </Row>
                     <Row className='mt-5 mb-5'>
@@ -140,7 +142,7 @@ console.log('leader is: ', leader);
                         </Col>
                     </Row>
                 </Col>
-                <Col style={{ flex: 1, justifyContent: 'center', fontSize: '25px', fontFamily: 'papyrus', color: 'darkblue', fontWeight: 'bold',  textAlign:'center'}}>
+                <Col className='bodyFont' style={{ textAlign:'center'}}>
                     <p style={{ 
                                         flex: 1,
                                         textAlign:'center', 
@@ -162,8 +164,8 @@ console.log('leader is: ', leader);
         return (
             <Row className='mx-auto'>
                 <Col md='5'  style={{ flex: 1, justifyContent: 'center', textAlign:'center' }}>
-                    <Row className='' alt='group leader' height='500'>
-                        <Card style={{ width: 500, border: '10px darkblue double', backgroundColor: 'white' }} className='mx-auto'>
+                    <Row>
+                        <Card style={{ width: 600, border: '10px darkblue double', backgroundColor: 'white' }} className='mx-auto'>
                             <CardTitle className='mx-auto mt-4'>
                                 {/* {leader.leaderTitle} */}
                             </CardTitle>
@@ -173,25 +175,21 @@ console.log('leader is: ', leader);
                             </CardBody>
                         </Card>
                     </Row>
-                    <Row className='mt-3' style={{ flex: 1, justifyContent: 'center', fontSize: '20px', fontFamily: 'papyrus', color: 'darkblue', fontWeight: 'bold'}}>
+                    <Row className='mt-3 picTitles' >
                         {leader.leaderName}<br />{leader.leaderTitle}
                     </Row>
-                    <Row style={{ flex: 1, justifyContent: 'center', fontSize: '20px', fontFamily: 'papyrus', color: 'darkblue', fontWeight: 'bold'}}>
+                    <Row className='picTitles'>
                         <hr className='mt-5' style={{ justifyContent: 'center', border: 'solid 2px darkblue', width: '60%' }}/>
                     </Row>
-                    <Row>
+                    <Row className='picTitles'>
                         <p>Oficiales</p>
+                        <OfficialsCarousel />
                     </Row>
                 </Col>
-                <Col sm='12' style={{ flex: 1, justifyContent: 'center', fontSize: '25px', fontFamily: 'papyrus', color: 'darkblue', fontWeight: 'bold'}}>
-                <p style={{ 
-                                flex: 1,
-                                textAlign:'center', 
-                                fontSize: '40px', 
-                                fontFamily: 'papyrus', 
-                                color: 'darkblue', 
-                                fontWeight: 'bold'
-                            }}><em>Bienvenidos!</em></p>
+                <Col sm='12' style={{ flex: 1, justifyContent: 'center', fontSize: '25px', fontFamily: 'papyrus', color: 'darkblue', fontWeight: 'bold' }}>
+                    <p  className='bodyFont' style={{ textAlign:'center'}} >
+                        <em>Bienvenidos!</em>
+                    </p>
                     {leader.content.split('\n').map((t, key) => {
                         return <p key={key}>{t}</p>;
                     })}

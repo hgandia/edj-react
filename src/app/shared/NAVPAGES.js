@@ -1,12 +1,13 @@
-import pastorsPic from '../assets/img/pastores.jpg';
+import pastorsPic from '../assets/img/pastorsAltar1.jpg';
 import caballerosPresidentPic from '../assets/img/yunid.jpg';
 import damasPresidentPic from '../assets/img/isabel3.jpg';
 import jovenesPresidentPic from '../assets/img/javier2.jpg';
-import ninosPresidentPic from '../assets/img/monkey.jpg';
+import ninosPresidentPic from '../assets/img/bajoConstruccion1.jpg';
 import churchPic from '../assets/img/churchFront.jpg';
 import caballerosGroupPic from '../assets/img/caballeros3.jpg';
 import damasGroupPic from '../assets/img/damasGroup2.jpg';
 import jovenesGroupPic from '../assets/img/jovenes2022.jpg';
+import ninosGroupPic from '../assets/img/bajoConstruccion2.jpg'
 
 export const NAVPAGES = [
     {
@@ -84,11 +85,12 @@ export const NAVPAGES = [
         image: ninosPresidentPic,
         path:'./ninos',
         leaderTitle: 'Presidente de Niños',
-        leaderName: 'Jacob Lucho',
-        vpName: 'David Membreño',
+        leaderName: '',
+        vpName: '',
         vpTitle: 'Vice Presidente',
-        secName: 'Jose Rodriguez',
-        secTitle: 'Secretario'
+        secName: '',
+        secTitle: 'Secretario',
+        groupImage: ninosGroupPic
     },
     {
         id: 5,
