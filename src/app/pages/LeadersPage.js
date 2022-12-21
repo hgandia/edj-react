@@ -183,7 +183,7 @@ const LeadersPage = () => {
                     </Row>
                     <Row className='picTitles'>
                         <p className='mt-2'>OFICIALES</p>
-                        <Col>
+                        <Col className='mb-5'>
                             <OfficialsCarousel />
                         </Col>
                     </Row>
