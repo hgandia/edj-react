@@ -36,14 +36,14 @@ import { OFFICIALS } from '../app/shared/OFFICIALS';
                 onExited={() => setAnimating(false)}
                 key={item.picture}
             >
-                <img src={item.picture} alt={item.altText} />
+                <img src={item.picture} alt={item.altText} height='400px' border='5px double darkblue'/>
                 <CarouselCaption
                     captionText={item.title}
                     captionHeader={item.id}
                 />
             </CarouselItem>
         );
-    });
+    }); 
 
     return (
         <Carousel
@@ -53,7 +53,7 @@ import { OFFICIALS } from '../app/shared/OFFICIALS';
           {...args}
         >
           <CarouselIndicators
-            OFFICIALS={OFFICIALS}
+            items={OFFICIALS}
             activeIndex={activeIndex}
             onClickHandler={goToIndex}
           />

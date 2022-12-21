@@ -104,7 +104,7 @@ const LeadersPage = () => {
                             </CardBody>
                         </Card>
                     </Row>
-                    <Row className='mt-4 welcomeTitle' >
+                    <Row className='mt-4 bodyFont' >
                         {leader.leaderName}
                     </Row>
                     <Row className='mt-5 mb-5'>
@@ -182,8 +182,10 @@ const LeadersPage = () => {
                         <hr className='mt-5' style={{ justifyContent: 'center', border: 'solid 2px darkblue', width: '60%' }}/>
                     </Row>
                     <Row className='picTitles'>
-                        <p>Oficiales</p>
-                        <OfficialsCarousel />
+                        <p className='mt-2'>OFICIALES</p>
+                        <Col>
+                            <OfficialsCarousel />
+                        </Col>
                     </Row>
                 </Col>
                 <Col sm='12' style={{ flex: 1, justifyContent: 'center', fontSize: '25px', fontFamily: 'papyrus', color: 'darkblue', fontWeight: 'bold' }}>
