@@ -38,8 +38,8 @@ import { OFFICIALS } from '../app/shared/OFFICIALS';
             >
                 <img src={item.picture} alt={item.altText} height='400px' border='5px double darkblue'/>
                 <CarouselCaption
-                    captionText={item.title}
-                    captionHeader={item.id}
+                    //captionText={item.title}
+                    //captionHeader={item.id}
                 />
             </CarouselItem>
         );
@@ -50,6 +50,7 @@ import { OFFICIALS } from '../app/shared/OFFICIALS';
           activeIndex={activeIndex}
           next={next}
           previous={previous}
+          interval='3000'
           {...args}
         >
           <CarouselIndicators
@@ -62,11 +63,14 @@ import { OFFICIALS } from '../app/shared/OFFICIALS';
             direction="prev"
             directionText="Previous"
             onClickHandler={previous}
+            className='w-50'
+            
           />
           <CarouselControl
             direction="next"
             directionText="Next"
             onClickHandler={next}
+            className='w-50'
           />
         </Carousel>
       );
