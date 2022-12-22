@@ -4,7 +4,7 @@ import ContactForm from '../../components/ContactForm';
 const ContactUs = () => {
     return (
         <Container>
-            <h1>Contactenos</h1><hr />
+            <h1 style={{ color: 'darkblue'}} >Contactenos</h1><hr />
             <Row className='mx-auto'style={{ textAlign:'center'}}>
                 <Col sm='12' lg='6'>
                    <h5>Dirrección</h5>
@@ -22,10 +22,6 @@ const ContactUs = () => {
                 <hr />
             </Row>
             <Row className='row-content'>
-                <Col xs='12'>
-                    <h2>Respondanos</h2>
-                    <hr />
-                </Col>
                 <Col md='10'>
                     <ContactForm />
                 </Col>
