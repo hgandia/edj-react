@@ -7,7 +7,7 @@ const Credo = () => {
                 <Col>
                     <ul>
                         <li>Creemos en Dios Padre Todopoderoso, creador del cielo y de la tierra.</li>
-                        <li>Creemos en Jesucrito, su único Hijo, Señor nuestro; </li>
+                        <li>Creemos en Jesucristo, su único Hijo, Señor nuestro; </li>
                         <li>Que Jesucristo fue concebido del Espíritu Santo,</li>
                         <li>Que nació de la virgen María,</li>
                         <li>Que padecio bajo el poder de Poncio Pilatos,</li>

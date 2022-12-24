@@ -51,6 +51,7 @@ import { OFFICIALS } from '../app/shared/OFFICIALS';
           next={next}
           previous={previous}
           interval='3000'
+          ride='carousel'
           {...args}
         >
           <CarouselIndicators

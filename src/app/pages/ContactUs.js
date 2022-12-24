@@ -17,7 +17,7 @@ const ContactUs = () => {
                 <Col>
                     <a role='button' className='btn btn-link' href='tel:+17187339714'><i className='fa fa-phone' /> 1-718-733-9714</a>
                     <br />
-                    <a role='button' className='btn btn-link' href='mailto:la1raestrelladejabcob@gmail.com'><i className='fa fa-envelope-o' />la1raestrelladejabcob@gmail.com</a>
+                    <a role='button' className='btn btn-link' href='mailto:la1raestrelladejacob@gmail.com'><i className='fa fa-envelope-o' />la1raestrelladejacob@gmail.com</a>
                 </Col>
                 <hr />
             </Row>

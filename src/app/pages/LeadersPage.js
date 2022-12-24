@@ -15,10 +15,7 @@ const LeadersPage = () => {
     return +leaderId === id; //The + sign does the same thing as the ParseInt function
 });
 
-//console.log('leader is: ', leader);
-
     if(leader.id > 0 && leader.id < 5 ) {
-    //    console.log('leader.id is: ', leader.id);
         return (
         <>
             <Row className='mx-auto'>
@@ -26,7 +23,7 @@ const LeadersPage = () => {
                     <Row className='' alt='group leader' height='500'>
                         <Card style={{ width: 500, border: '10px darkblue double', backgroundColor: 'white' }} className='mx-auto'>
                             <CardTitle className='mx-auto mt-4'>
-                                {/* {leader.leaderTitle} */}
+                                {/* Nothing here */}
                             </CardTitle>
                             <CardImg src={leader.image} alt={leader.leaderTitle} />
                             <CardBody>
@@ -82,7 +79,9 @@ const LeadersPage = () => {
                     </CardTitle>
                     <CardImg src={leader.groupImage} alt={leader.title} />
                     <CardBody>
-                        <CardText></CardText>
+                        <CardText>
+                            {/* Nothing Here */}
+                        </CardText>
                     </CardBody>
                 </Card>
             </Row>
@@ -124,7 +123,7 @@ const LeadersPage = () => {
                                         <hr />
                                 <ul style={{ fontSize: '25px', textAlign: 'justify', fontWeight: 'normal'}}>
                                     <li>Creemos en Dios Padre Todopoderoso, creador del cielo y de la tierra.</li>
-                                    <li>Creemos en Jesucrito, su único Hijo, Señor nuestro; </li>
+                                    <li>Creemos en Jesucristo, su único Hijo, Señor nuestro; </li>
                                     <li>Que Jesucristo fue concebido del Espíritu Santo,</li>
                                     <li>Que nació de la virgen María,</li>
                                     <li>Que padecio bajo el poder de Poncio Pilatos,</li>
@@ -154,9 +153,7 @@ const LeadersPage = () => {
                     </p>
                     {leader.content.split('\n').map((t, key) => {
                         return <p key={key}>{t}</p>;
-                    })
-                    
-                    }
+                    })}
                 </Col> 
             </Row>
         );

@@ -5,7 +5,7 @@ const Footer = () => {
     return (
             <Row className='site-footer row-content mx-auto mt-5'>
                 <Col className='text-center' style={{ alignSelf:'center', fontSize: '20px' }}>
-                    <p className='papyrus'>Iglesia Pentecostal Estrlla de Jacob, Inc</p>
+                    <p className='papyrus'>Iglesia Pentecostal Estrella de Jacob, Inc</p>
                     <p className='papyrus'>53 East 184th Street</p>
                     <p className='papyrus'>Bronx, New York 10468</p>
                 </Col>              
