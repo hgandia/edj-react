@@ -7,8 +7,6 @@ import  OfficialsCarousel from '../../components/OfficialsCarousel';
 const LeadersPage = () => {
     
     const { leaderId } = useParams();
-    console.log('leader ID is: ', leaderId);
-
     const leader = NAVPAGES.find((leader) => {
     const { id } = leader;
     
