@@ -1,5 +1,5 @@
 body {
-  background: darkblue url("../src/app/assets/img/3Crosses.jpg") no-repeat fixed center;
+  background: url("../src/app/assets/img/3Crosses.jpg") no-repeat fixed center;
   background-size: 100% 100%;
   font-family: papyrus, sans-serif;
   color: darkblue;
@@ -63,7 +63,6 @@ h2 {
 
 .navbar-dark {
   background-color: lightgray;
-  /* background-image: linear-gradient(to right, #5637dd, #3046c5, #510e5a); */
   margin-bottom: 2rem;
   min-height: 8rem;
   margin-top:0;

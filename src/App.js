@@ -10,21 +10,21 @@ import Footer from "../src/components/Footer";
 import "./App.css";
 
 function App() {
-
-  let match = useMatch('/leader/:leaderId');
-  console.log ('match is: ', match);
+  let match = useMatch("/leader/:leaderId");
 
   return (
     <div className="App">
       <Header match={match} />
-      <Navigator/>
+      <Navigator />
       <Routes>
         <Route path="/leader/:leaderId" element={<LeadersPage />} />
         <Route path="/leader/6" element={<Events />} />
         <Route path="/leader/7" element={<Calendar />} />
         <Route path="/leader/8" element={<ContactUs />} />
         <Route path="/" element={<Navigate to="/leader/0" />} />
-      </Routes><br />
+        <Route path="/leader" element={<Navigate to="/leader/0" />} />
+      </Routes>
+      <br />
       <Footer />
     </div>
   );

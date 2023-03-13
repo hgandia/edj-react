@@ -17,7 +17,6 @@ const AnimatedFlyerCard = ({ item }) => {
         setToggle(true);
     }, []);
  
-
     return (
         <>
             <animated.div style={animatedStyle}>
