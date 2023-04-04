@@ -8,15 +8,16 @@ const Header = (props) => {
     if(props.match === null ){
         return null;
     }
-    const { leaderId } = props.match.params;
-    console.log("leaderId in header is:", leaderId);
 
+    const { pathname } = props.match.params;
+    
     const leader = NAVPAGES.find((leader) => {
             
-        const { id } = leader;
+        const { path } = leader;
 
-        return +leaderId === id //The + sign does the same thing as the ParseInt function
-    
+        const slashPathname = '/'.concat(pathname);
+       // return +leaderId === id; //The + sign does the same thing as the ParseInt function
+        return slashPathname === path;
         
     });
 

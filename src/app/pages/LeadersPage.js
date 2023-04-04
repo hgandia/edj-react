@@ -6,14 +6,23 @@ import  OfficialsCarousel from '../../components/OfficialsCarousel';
 
 const LeadersPage = () => {
     
-    const { leaderId } = useParams();
-    const leader = NAVPAGES.find((leader) => {
-    const { id } = leader;
+    const { pathname } = useParams();
+
+    // if (!pathname){
+    //     return '/';
+    // }
     
-    return +leaderId === id; //The + sign does the same thing as the ParseInt function
+    console.log('pathname in LeadersPage: ', pathname);
+    
+    const leader = NAVPAGES.find((leader) => {
+        const { path } = leader;
+        console.log('the path in LeaderPage inside the find function is: ', path);
+  
+        const slashPathname = '/'.concat(pathname); 
+        return slashPathname === path; //The + sign does the same thing as the ParseInt function
 });
 
-    if(leader.id > 0 && leader.id < 5 ) {
+    if((leader.path === '/caballeros') || (leader.path === '/damas') || (leader.path === '/jovenes') || (leader.path === '/ninos')) {
         return (
         <>
             <Row className='mx-auto'>
@@ -86,7 +95,7 @@ const LeadersPage = () => {
         </>
     );
     }
-    else if (leader.id === 5){
+    else if (leader.path === '/aboutus'){
         return(
             <Row className='mx-auto'>
                 <Col md='5' style={{ flex: 1, justifyContent: 'center', textAlign:'center' }}>
@@ -155,7 +164,7 @@ const LeadersPage = () => {
                 </Col> 
             </Row>
         );
-    } else if (leader.id === 0){
+    } else if (leader.path === '/home'){
         return (
             <Row className='mx-auto'>
                 <Col md='5'  style={{ flex: 1, justifyContent: 'center', textAlign:'center' }}>

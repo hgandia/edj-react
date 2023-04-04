@@ -8,13 +8,13 @@ const Navigator = () => {
 
     return(   
         <Navbar dark sticky='top' expand='lg'>
-            <NavbarToggler onClick={() => setMenuOpen(!menuOpen)} className='navbar'/>
+            <NavbarToggler onClick={() => setMenuOpen(!menuOpen)} className='navbar' />
             <Collapse isOpen={menuOpen} navbar>
                 <Nav className='mx-auto' style={{ fontSize: 20 }} >
                     {
                         NAVPAGES.map((leader) => ( 
                         <NavItem>
-                            <NavLink className='nav-link' to={`/leader/${leader.id}`} style={{ color: 'darkblue'}}>
+                            <NavLink className='nav-link' to={`${leader.path}`} style={{ color: 'darkblue'}}>
                                 <i className={`fa ${leader.icon ? leader.icon : 'fa-users'} fa-lg`} />{leader.navTitle}
                             </NavLink>
                         </NavItem>))
