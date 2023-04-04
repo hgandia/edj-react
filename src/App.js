@@ -1,5 +1,5 @@
 import { React } from "react";
-import { Routes, Route, /*Navigate,*/ useMatch } from "react-router-dom";
+import { Routes, Route, Navigate, useMatch } from "react-router-dom";
 import Header from "../src/components/Header";
 import Navigator from "../src/components/Navigator";
 import LeadersPage from "../src/app/pages/LeadersPage";
@@ -17,7 +17,7 @@ function App() {
       <Header match={match} />
       <Navigator />
       <Routes>
-        {/* <Route path="/" element={<LeadersPage />} /> */}
+        <Route path="/" element={<Navigate to='/home' />} />
         <Route path="/:pathname" element={<LeadersPage />} />
         <Route path="/events" element={<Events />} />
         <Route path="/calendar" element={<Calendar />} />
