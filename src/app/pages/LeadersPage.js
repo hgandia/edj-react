@@ -8,9 +8,9 @@ const LeadersPage = () => {
     
     const { pathname } = useParams();
 
-    if (!pathname){
-        return '/';
-    }
+    // if (!pathname){
+    //     return '/';
+    // }
     
     console.log('pathname in LeadersPage: ', pathname);
     
