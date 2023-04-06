@@ -73,7 +73,7 @@ export const NAVPAGES = [
         leaderName: 'Javier Rivera Jr.',
         vpName: 'Dileny Veloz',
         vpTitle: 'Vice Presidenta',
-        secName: 'Keileen B. Cabezas',
+        secName: 'Yanet Flores',
         secTitle: 'Secretaria',
         groupImage: jovenesGroupPic
     },

@@ -16,9 +16,12 @@ const Header = (props) => {
         const { path } = leader;
 
         const slashPathname = '/'.concat(pathname);
-       // return +leaderId === id; //The + sign does the same thing as the ParseInt function
+
         return slashPathname === path;
         
+        // return +leaderId === id;
+        //The + sign does the same thing as the ParseInt function.
+        //This was used when I destructred leaderId from props.match.params when using the id of the leader. 
     });
 
     return(

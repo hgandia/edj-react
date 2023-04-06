@@ -18,6 +18,7 @@ function App() {
       <Navigator />
       <Routes>
         <Route path="/" element={<Navigate to='/home' />} />
+        {/* <Route path='/' element={ <LeadersPage />} /> */}
         <Route path="/:pathname" element={<LeadersPage />} />
         <Route path="/events" element={<Events />} />
         <Route path="/calendar" element={<Calendar />} />

@@ -8,18 +8,16 @@ const LeadersPage = () => {
     
     const { pathname } = useParams();
 
-    // if (!pathname){
-    //     return '/';
+    // if(!pathname){
+    //     pathname = '/';
     // }
-    
-    console.log('pathname in LeadersPage: ', pathname);
-    
+
     const leader = NAVPAGES.find((leader) => {
         const { path } = leader;
-        console.log('the path in LeaderPage inside the find function is: ', path);
-  
+    
         const slashPathname = '/'.concat(pathname); 
-        return slashPathname === path; //The + sign does the same thing as the ParseInt function
+        
+        return slashPathname === path; 
 });
 
     if((leader.path === '/caballeros') || (leader.path === '/damas') || (leader.path === '/jovenes') || (leader.path === '/ninos')) {

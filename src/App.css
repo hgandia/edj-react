@@ -1,5 +1,5 @@
 body {
-  background: url("../src/app/assets/img/3Crosses.jpg") no-repeat fixed center;
+  background: url("../src/app/assets/img/3Crosses.jpg") no-repeat  fixed center;
   background-size: 100% 100%;
   font-family: papyrus, sans-serif;
   color: darkblue;
