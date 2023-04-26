@@ -4,7 +4,7 @@ import { validateContactForm } from "../utils/validateContactForm";
 
 const ContactForm = () => {
     const handleSubmit = (values, { resetForm }) => {
-        console.log('form vlues', values);
+        console.log('form values', values);
         console.log('in JSON format: ', JSON.stringify(values));
         resetForm();
     }
@@ -26,7 +26,7 @@ const ContactForm = () => {
       <Form>
         <FormGroup row>
           <Label htmlFor='firstName' md='2'>
-            Nombre
+            First Name
           </Label>
           <Col md='10'>
             <Field
@@ -41,7 +41,7 @@ const ContactForm = () => {
         </FormGroup>
         <FormGroup row>
           <Label htmlFor='lastName' md='2'>
-            Apellido
+            Last Name
           </Label>
           <Col md='10'>
             <Field
@@ -56,7 +56,7 @@ const ContactForm = () => {
         </FormGroup>
         <FormGroup row>
           <Label htmlFor='phoneNum' md='2' >
-            Telefono
+            Phone Number
           </Label>
           <Col md='10'>
             <Field
@@ -76,7 +76,7 @@ const ContactForm = () => {
           <Col md='10'>
             <Field
                     name='email'
-                    placeholder='E-mail'
+                    placeholder='Correo Electronico'
                     type='email' 
                     className='form-control'
             />
@@ -112,6 +112,7 @@ const ContactForm = () => {
             <Col md='10'>
             <Field
                 name='feedback'
+                placeholder='Su mensaje/pedido aqui'
                 as='textarea'
                 rows='15' 
                 className='form-control'
