@@ -107,7 +107,7 @@ const ContactForm = () => {
         </FormGroup>
         <FormGroup row>
             <Label htmlFor='feedback' md='2'>
-                Su Pedido
+                Request
             </Label>
             <Col md='10'>
             <Field
