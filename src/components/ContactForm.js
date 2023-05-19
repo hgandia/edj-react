@@ -20,7 +20,7 @@ const ContactForm = () => {
           agree: values.agree,
           contactType: values.contactType,
           feedback: values.feedback,
-          date: new Date(Date.now()).toISOString,
+          date: new Date(Date.now()).toISOString(),
         };
         dispatch(postVisitor(petition));
         resetForm();

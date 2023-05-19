@@ -63,7 +63,7 @@ const visitorSlice = createSlice({
         },
         [postVisitor.rejected]: (state, action) => {
             alert(
-                'Tu peticion no has sido sometida\nError: ' +
+                'Tu peticion no has sido grabada\nError: ' +
                 (action.error ? action.error.message : 'Sometimiento ha fallado')
             );
         }
