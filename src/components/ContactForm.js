@@ -1,11 +1,28 @@
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import { Button, Label, Col, FormGroup } from "reactstrap";
 import { validateContactForm } from "../utils/validateContactForm";
+import { useDispatch } from "react-redux";
+import { postVisitor } from "../features/visitors/visitorSlice";
 
 const ContactForm = () => {
+
+    const dispatch = useDispatch();
+
     const handleSubmit = (values, { resetForm }) => {
         console.log('form values', values);
         console.log('in JSON format: ', JSON.stringify(values));
+
+        const petition = {
+          firstName: values.firstName,
+          lastName: values.lastName,
+          phoneNum: values.phoneNum,
+          email: values.email,
+          agree: values.agree,
+          contactType: values.contactType,
+          feedback: values.feedback,
+          date: new Date(Date.now()).toISOString,
+        };
+        dispatch(postVisitor(petition));
         resetForm();
     }
 

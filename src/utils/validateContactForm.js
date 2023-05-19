@@ -18,7 +18,7 @@ export const validateContactForm = (values) => {
     }
 
     const reg = /^\d+$/;
-   // const reg = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/; <----- This regular expression receives multiple phone number formats.
+    //const reg = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/; //<----- This regular expression receives multiple phone number formats.
    
     if(!reg.test(values.phoneNum)){
         errors.phoneNum = 'El numero de telefono debe de contener solo numeros.';       
