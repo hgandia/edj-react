@@ -1,9 +1,13 @@
 import churchLogo from '../app/assets/img/churchlogo1.png';
-import { Row, Col } from 'reactstrap';
+import { Row, Col, Button } from 'reactstrap';
 import { NAVPAGES } from '../app/shared/NAVPAGES';
+import UserLoginForm from '../features/users/UserLoginForm';
+import { useState } from 'react';
 
 
 const Header = (props) => {
+
+    const [loginModalOpen, setLoginModalOpen] = useState(false);
 
     if(props.match === null ){
         return null;
@@ -24,10 +28,17 @@ const Header = (props) => {
         //This was used when I destructred leaderId from props.match.params when using the id of the leader. 
     });
 
+    const toggleUserLoginModal = () => {
+        setLoginModalOpen(!loginModalOpen);
+    };
+
     return(
+        <>
             <Row className='jumbotron mx-auto' style={{ flex: 1, alignItems:'center'}}>
                 <Col sm='12' lg='4' className='text-center'>
-                    <img src={churchLogo} alt='church logo' height='400' width='400' />
+                    <Button onClick={toggleUserLoginModal} color='link'>
+                        <img src={churchLogo} alt='church logo' height='400' width='400' />
+                    </Button>
                 </Col>
                 <Col sm='12' lg='8' style={{  flex: 1, fontFamily: 'papyrus', justifyContent: 'center' }}>
                     <Row lg='8' style={{ flex: 1, justifyContent: 'center', fontSize: '73px', textAlign: 'center' }}>
@@ -47,6 +58,8 @@ const Header = (props) => {
                     </Row>
                 </Col>   
             </Row>
+            <UserLoginForm isOpen={loginModalOpen} toggle={toggleUserLoginModal}/>
+        </>
     )
 }
 export default Header;
