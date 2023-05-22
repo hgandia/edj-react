@@ -29,7 +29,6 @@ export const validateUserLoginForm = (values) => {
         errors.password = 'La clave tiene que contener ambos letras y numeros.'
     } else if (values.password.length < 8){
         errors.password = 'Su clave tiene que tener por lo menos 8 caracteres.'
-    }    
-
+    }
     return errors;
 };
