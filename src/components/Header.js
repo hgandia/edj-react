@@ -4,7 +4,6 @@ import { NAVPAGES } from '../app/shared/NAVPAGES';
 import UserLoginForm from '../features/users/UserLoginForm';
 import { useState } from 'react';
 
-
 const Header = (props) => {
 
     const [loginModalOpen, setLoginModalOpen] = useState(false);
