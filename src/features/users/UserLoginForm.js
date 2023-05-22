@@ -19,6 +19,10 @@ const UserLoginForm = ({ isOpen, toggle }) => {
             username: values.username,
             password: values.password
         };
+        console.log('Info from Formik login: ', values);
+        dispatch(setCurrentUser(currentUser));
+        toggle();
+
     }
 
     return(            
