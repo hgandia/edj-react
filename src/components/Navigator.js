@@ -10,7 +10,7 @@ const Navigator = () => {
         <Navbar dark sticky='top' expand='lg'>
             <NavbarToggler onClick={() => setMenuOpen(!menuOpen)} className='navbar' />
             <Collapse isOpen={menuOpen} navbar>
-                <Nav className='mx-auto' style={{ fontSize: 20 }} >
+                <Nav className='mx-auto' style={{ fontSize: 20 }}>
                     {
                         NAVPAGES.map((leader) => ( 
                         <NavItem>

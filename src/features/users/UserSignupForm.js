@@ -4,47 +4,68 @@ import { setCurrentUser, selectCurrentUser } from './userSlice';
 import { Field, Form, Formik, ErrorMessage } from 'formik';
 import userIcon from '../../app/assets/img/userIcon.jpg';
 import { useSelector, useDispatch } from 'react-redux';
-import UserSignupForm from './UserSignupForm';
-import { useState } from 'react';
 
-const UserLoginForm = ({ isOpen, toggle }) => {
-    
-    const [signupModalOpen, setSignupModalOpen] = useState(false);
+const UserSignupForm = ({ isOpen, toggleSignupModal, toggle }) => {
+   
     const currentUser = useSelector(selectCurrentUser);
     const dispatch = useDispatch();
 
-    const handleLogin = (values) => {
+    const handleSignup = (values) => {
         const currentUser = {
-            // id: Date.now(),
-            // avatar: userIcon,
-            // firstName: values.firstName,
-            // lastName: values.lastName,
+            id: Date.now(),
+            avatar: userIcon,
+            firstName: values.firstName,
+            lastName: values.lastName,
             username: values.username,
             password: values.password
         };
         console.log('Info from Formik login: ', values);
         dispatch(setCurrentUser(currentUser));
+        toggleSignupModal();
         toggle();
 
     }
 
-    const toggleSignupModal = () => {
-        setSignupModalOpen(!signupModalOpen);
-    }
-
-    return(
-        <>            
-            <Modal isOpen={isOpen} toggle={toggle}>
-                <ModalHeader toggle={toggle}>
-                    Login
+    return(            
+            <Modal isOpen={isOpen} toggle={toggleSignupModal}>
+                <ModalHeader toggle={toggleSignupModal}>
+                    Signup
                 </ModalHeader>
                 <ModalBody>
                     <Formik
                         initialValues={{username: '', password: ''}}
-                        onSubmit={handleLogin}
+                        onSubmit={handleSignup}
                         validate={validateUserLoginForm}
                     >
                         <Form>
+                        <FormGroup>
+                                <Label htmlFor='firstName'>
+                                    First Name
+                                </Label>
+                                <Field 
+                                    id='firstName'
+                                    name='firstName'
+                                    placeholder='Nombre'
+                                    className='form-control'
+                                />
+                                <ErrorMessage name='firstName'>
+                                    {msg => <p className='text-danger'>{msg}</p>}
+                                </ErrorMessage>
+                            </FormGroup>
+                            <FormGroup>
+                                <Label htmlFor='lastName'>
+                                    Last Name
+                                </Label>
+                                <Field 
+                                    id='lastName'
+                                    name='lastName'
+                                    placeholder='Apellido'
+                                    className='form-control'
+                                />
+                                <ErrorMessage name='lastName'>
+                                    {msg => <p className='text-danger'>{msg}</p>}
+                                </ErrorMessage>
+                            </FormGroup>
                             <FormGroup>
                                 <Label htmlFor='username'>
                                     Username
@@ -74,18 +95,13 @@ const UserLoginForm = ({ isOpen, toggle }) => {
                                 </ErrorMessage>
                             </FormGroup>
                             <Button type='submit' color='primary'>
-                                Login
-                            </Button>{' '}
-                            <Button onClick={toggleSignupModal} color='warning'>
-                                Sign-Up
+                                Someter
                             </Button>
                         </Form>
                     </Formik>
                 </ModalBody>
             </Modal>
-            <UserSignupForm isOpen={signupModalOpen} toggleSignupModal={toggleSignupModal} toggle={toggle}/>
-        </>
     );
 };
 
-export default UserLoginForm;
+export default UserSignupForm;
