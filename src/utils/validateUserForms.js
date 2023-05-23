@@ -1,4 +1,4 @@
-export const validateUserLoginForm = (values) => {
+export const validateUserForms = (values) => {
     const errors = {};
 
     if(!values.firstName){
@@ -19,6 +19,8 @@ export const validateUserLoginForm = (values) => {
 
     if(!values.username){
         errors.username = 'Requerido';
+    } else if (values.username.length < 3){
+        errors.username = 'El username tiene que tener por los menos 3 caracteres.'
     }
 
     const regex = /^(?=.*[a-zA-Z])(?=.*\d).+$/;

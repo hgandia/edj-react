@@ -1,5 +1,5 @@
 import { Modal, ModalHeader, ModalBody, FormGroup, Label, Button } from 'reactstrap';
-import { validateUserLoginForm } from '../../utils/validateUserLoginForm';
+import { validateUserForms } from '../../utils/validateUserForms';
 import { setCurrentUser, selectCurrentUser } from './userSlice';
 import { Field, Form, Formik, ErrorMessage } from 'formik';
 import userIcon from '../../app/assets/img/userIcon.jpg';
@@ -35,7 +35,7 @@ const UserSignupForm = ({ isOpen, toggleSignupModal, toggle }) => {
                     <Formik
                         initialValues={{username: '', password: ''}}
                         onSubmit={handleSignup}
-                        validate={validateUserLoginForm}
+                        validate={validateUserForms}
                     >
                         <Form>
                         <FormGroup>
