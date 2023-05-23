@@ -1,26 +1,23 @@
 import { Modal, ModalHeader, ModalBody, FormGroup, Label, Button } from 'reactstrap';
 import { validateUserForms } from '../../utils/validateUserForms';
-import { setCurrentUser, selectCurrentUser } from './userSlice';
+import { userSignup } from './userSlice';
 import { Field, Form, Formik, ErrorMessage } from 'formik';
-import userIcon from '../../app/assets/img/userIcon.jpg';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 const UserSignupForm = ({ isOpen, toggleSignupModal, toggle }) => {
    
-    const currentUser = useSelector(selectCurrentUser);
     const dispatch = useDispatch();
 
     const handleSignup = (values) => {
-        const currentUser = {
-            id: Date.now(),
-            avatar: userIcon,
+        const newUser = {
             firstName: values.firstName,
             lastName: values.lastName,
             username: values.username,
-            password: values.password
+            password: values.password,
+            date: new Date(Date.now()).toISOString()
         };
         console.log('Info from Formik login: ', values);
-        dispatch(setCurrentUser(currentUser));
+        dispatch(userSignup(newUser));
         toggleSignupModal();
         toggle();
 

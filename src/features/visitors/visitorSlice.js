@@ -18,12 +18,12 @@ export const fetchVisitors = createAsyncThunk(
 export const postVisitor = createAsyncThunk(
     'visitors/postVisitor',
     async (petition) => {
-        const response = await fetch(baseUrl + 'visitors/', {
+        const response = await fetch(baseUrl + 'visitors', {
                                         method: 'POST',
                                         headers: {
                                                     'Content-Type': 'application/json'
                                                  },
-                                                credentials: 'same-origin',
+                                        credentials: 'same-origin',
                                         body: JSON.stringify(petition)
             });
             console.log('The reponse object is: ', response);
@@ -62,6 +62,7 @@ const visitorSlice = createSlice({
             state.isLoading = true;
         },
         [postVisitor.rejected]: (state, action) => {
+            state.isLoading = false;
             alert(
                 'Tu peticion no has sido grabada\nError: ' +
                 (action.error ? action.error.message : 'Sometimiento ha fallado')

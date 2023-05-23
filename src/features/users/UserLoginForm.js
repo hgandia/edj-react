@@ -2,7 +2,6 @@ import { Modal, ModalHeader, ModalBody, FormGroup, Label, Button } from 'reactst
 import { validateUserForms } from '../../utils/validateUserForms';
 import { setCurrentUser, selectCurrentUser } from './userSlice';
 import { Field, Form, Formik, ErrorMessage } from 'formik';
-import userIcon from '../../app/assets/img/userIcon.jpg';
 import { useSelector, useDispatch } from 'react-redux';
 import UserSignupForm from './UserSignupForm';
 import { useState } from 'react';
@@ -15,22 +14,17 @@ const UserLoginForm = ({ isOpen, toggle }) => {
 
     const handleLogin = (values) => {
         const currentUser = {
-            // id: Date.now(),
-            // avatar: userIcon,
-            // firstName: values.firstName,
-            // lastName: values.lastName,
             username: values.username,
             password: values.password
         };
-        console.log('Info from Formik login: ', values);
         dispatch(setCurrentUser(currentUser));
         toggle();
 
-    }
+    };
 
     const toggleSignupModal = () => {
         setSignupModalOpen(!signupModalOpen);
-    }
+    };
 
     return(
         <>            
