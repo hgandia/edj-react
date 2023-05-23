@@ -3,7 +3,7 @@ export const validateUserLoginForm = (values) => {
 
     if(!values.firstName){
         errors.firstName = 'Requerido';
-    } else if (values.firstName.length < 2){
+    } else if (values.firstName.length < 3){
         errors.firstName = 'Tiene que ser mayor de 2 caracteres.';
     } else if (values.firstName.length > 15){
         errors.firstName = 'Tiene que ser menos de 15 caracteres.'
