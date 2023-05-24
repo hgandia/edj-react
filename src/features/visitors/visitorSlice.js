@@ -23,7 +23,6 @@ export const postVisitor = createAsyncThunk(
                                         headers: {
                                                     'Content-Type': 'application/json'
                                                  },
-                                        credentials: 'same-origin',
                                         body: JSON.stringify(petition)
             });
             console.log('The reponse object is: ', response);

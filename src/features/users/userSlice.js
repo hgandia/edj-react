@@ -18,7 +18,7 @@ export const userSignup = createAsyncThunk(
         const data = await response.json();
         console.log('Return data from postUserSignup: ', data);
         if(data.success){
-            dispatch(newUser);
+            dispatch(userLogin(newUser));
         }
         return data;
     }
@@ -45,6 +45,7 @@ export const userLogin = createAsyncThunk(
 )
 
 const initialState = {
+    isLoading: false,
     currentUser: null
 };
 
@@ -53,10 +54,7 @@ const userSlice = createSlice({
     initialState,
     reducers: {
         setCurrentUser: (state, action) => {
-            return {
-                ...state, 
-                currentUser: action.payload
-            }
+            state.currentUser = action.payload.id;
         }
     },
     extraReducers: {
@@ -69,6 +67,24 @@ const userSlice = createSlice({
                 'Sign up was unsuccessful\nError: ' + 
                 (action.error ? action.error.message : 'Could not create account.')
             );
+        },
+        [userLogin.pending]: state =>{
+            state.isLoading = true;
+            state.currentUser = null;
+        },
+        [userLogin.fulfilled]: (state, action) => {
+            state.isLoading = false;
+            state.currentUser = action.payload;
+            alert(
+                `Login successful for userId: ${action.payload.id}` 
+            );
+        },
+        [userLogin.rejected]: (state, action) => {
+            state.isLoading = false;
+            state.currentUser = null;
+            alert(
+                'Login Failed\n', action.error.message
+            );            
         }
     }
 });
