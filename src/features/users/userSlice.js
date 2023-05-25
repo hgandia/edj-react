@@ -42,10 +42,37 @@ export const userLogin = createAsyncThunk(
         dispatch(setCurrentUser(data));
         return data;
     }
-)
+);
+
+export const userLogout = createAsyncThunk(
+    'user/logout',
+    async () => {
+        const bearer = 'Bearer ' + localStorage.getItem('token');
+
+        const response = await fetch(baseUrl + 'users/logout', {
+            headers: {
+                Authorization: bearer,
+                'Content-Type': 'application/json'
+            },
+            credentials: 'same-origin'
+        });
+
+        //Remove the token on client side no matter what happens with the fetch 
+        localStorage.removeItem('token');
+
+        if(!response.ok){
+            return Promise.reject('There was an issue logging out on the server side, status: ' + response.status);
+        }
+        const data = await response.json();
+        return data;
+
+    }
+);
 
 const initialState = {
     isLoading: false,
+    isAuthenticated: localStorage.getItem('token') ? true : false,
+    token: localStorage.getItem('token'),
     currentUser: null
 };
 
@@ -55,6 +82,11 @@ const userSlice = createSlice({
     reducers: {
         setCurrentUser: (state, action) => {
             state.currentUser = action.payload.id;
+        },
+        clearCurrentUser: state => {
+            state.isAuthenticated = false;
+            state.isLoading = false;
+            localStorage.removeItem('token');
         }
     },
     extraReducers: {
@@ -71,10 +103,12 @@ const userSlice = createSlice({
         [userLogin.pending]: state =>{
             state.isLoading = true;
             state.currentUser = null;
+            localStorage.removeItem('token');
         },
         [userLogin.fulfilled]: (state, action) => {
             state.isLoading = false;
             state.currentUser = action.payload;
+            localStorage.setItem('token', action.payload.token);
             alert(
                 `Login successful for userId: ${action.payload.id}` 
             );
@@ -82,9 +116,18 @@ const userSlice = createSlice({
         [userLogin.rejected]: (state, action) => {
             state.isLoading = false;
             state.currentUser = null;
+            localStorage.removeItem('token');
             alert(
                 'Login Failed\n', action.error.message
             );            
+        },
+        [userLogout.fulfilled]: state => {
+            state.isLoading = false;
+            state.currentUser = null;
+        },
+        [userLogout.rejected]: (state, action) => {
+            state.isLoading = false;
+            state.currentUser = action.payload.id;
         }
     }
 });
