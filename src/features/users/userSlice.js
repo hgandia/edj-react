@@ -134,8 +134,12 @@ const userSlice = createSlice({
 
 export const userReducer = userSlice.reducer;
 
-export const { setCurrentUser } = userSlice.actions;
+export const { setCurrentUser, clearCurrentUser } = userSlice.actions;
+
+export const isAuthenticated = () => {
+    return localStorage.getItem('token') ? true : false;
+};
 
 export const selectCurrentUser = state => {
     return state.user.currentUser;
-}
+};
