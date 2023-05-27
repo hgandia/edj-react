@@ -10,8 +10,8 @@ const UserSignupForm = ({ isOpen, toggleSignupModal, toggle }) => {
 
     const handleSignup = (values) => {
         const newUser = {
-            firstName: values.firstName,
-            lastName: values.lastName,
+            firstname: values.firstName,
+            lastname: values.lastName,
             username: values.username,
             password: values.password,
             date: new Date(Date.now()).toISOString()
