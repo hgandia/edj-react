@@ -13,8 +13,8 @@ const ContactForm = () => {
         console.log('in JSON format: ', JSON.stringify(values));
 
         const petition = {
-          firstName: values.firstName,
-          lastName: values.lastName,
+          firstname: values.firstname,
+          lastname: values.lastname,
           phoneNum: values.phoneNum,
           email: values.email,
           agree: values.agree,
@@ -22,6 +22,7 @@ const ContactForm = () => {
           feedback: values.feedback,
           date: new Date(Date.now()).toISOString(),
         };
+        console.log('The petition object is: ', petition);
         dispatch(postVisitor(petition));
         resetForm();
     }
@@ -29,8 +30,8 @@ const ContactForm = () => {
   return (
     <Formik
       initialValues={{
-        firstName: '',
-        lastName: '',
+        firstname: '',
+        lastname: '',
         phoneNum: '',
         email: '',
         agree: false,
@@ -42,31 +43,31 @@ const ContactForm = () => {
     >
       <Form>
         <FormGroup row>
-          <Label htmlFor='firstName' md='2'>
+          <Label htmlFor='firstname' md='2'>
             First Name
           </Label>
           <Col md='10'>
             <Field
-                name='firstName' 
+                name='firstname' 
                 placeholder='Nombre'
                 className='form-control'
             />
-            <ErrorMessage name='firstName'>
+            <ErrorMessage name='firstname'>
                 {(msg) => <p className='text-danger'>{msg}</p>}
             </ErrorMessage>
           </Col>
         </FormGroup>
         <FormGroup row>
-          <Label htmlFor='lastName' md='2'>
+          <Label htmlFor='lastname' md='2'>
             Last Name
           </Label>
           <Col md='10'>
             <Field
-                    name='lastName'
+                    name='lastname'
                     placeholder='Apellido' 
                     className='form-control'
             />
-            <ErrorMessage name='lastName'>
+            <ErrorMessage name='lastname'>
                 {(msg) => <p className='text-danger'>{msg}</p>}
             </ErrorMessage>
           </Col>

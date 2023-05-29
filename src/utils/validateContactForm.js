@@ -1,20 +1,20 @@
 export const validateContactForm = (values) => {
     const errors = {};
 
-    if(!values.firstName){
-        errors.firstName = 'Requerido';
-    } else if (values.firstName.length < 2){
-        errors.firstName = 'Tiene que ser mayor de 2 caracteres.';
-    } else if (values.firstName.length > 15){
+    if(!values.firstname){
+        errors.firstname = 'Requerido';
+    } else if (values.firstname.length < 2){
+        errors.firstname = 'Tiene que ser mayor de 2 caracteres.';
+    } else if (values.firstname.length > 15){
         errors.firstName = 'Tiene que ser menos de 15 caracteres.'
     }
 
-    if(!values.lastName){
-        errors.lastName = 'Requerido';
-    } else if (values.lastName.length < 2){
-        errors.lastName = 'Tiene que ser mayor de 2 caracteres.';
-    } else if (values.lastName.length > 15){
-        errors.lastName = 'Tiene que ser menos de 15 caracteres.'
+    if(!values.lastname){
+        errors.lastname = 'Requerido';
+    } else if (values.lastname.length < 2){
+        errors.lastname = 'Tiene que ser mayor de 2 caracteres.';
+    } else if (values.lastname.length > 15){
+        errors.lastname = 'Tiene que ser menos de 15 caracteres.'
     }
 
     const reg = /^\d+$/;

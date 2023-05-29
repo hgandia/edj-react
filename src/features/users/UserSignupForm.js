@@ -4,14 +4,14 @@ import { userSignup } from './userSlice';
 import { Field, Form, Formik, ErrorMessage } from 'formik';
 import { useDispatch } from 'react-redux';
 
-const UserSignupForm = ({ isOpen, toggleSignupModal, toggle }) => {
+const UserSignupForm = ({ isSignupOpen, toggleSignupModal, toggle }) => {
    
     const dispatch = useDispatch();
 
     const handleSignup = (values) => {
         const newUser = {
-            firstname: values.firstName,
-            lastname: values.lastName,
+            firstname: values.firstname,
+            lastname: values.lastname,
             username: values.username,
             password: values.password,
             date: new Date(Date.now()).toISOString()
@@ -24,7 +24,7 @@ const UserSignupForm = ({ isOpen, toggleSignupModal, toggle }) => {
     }
 
     return(            
-            <Modal isOpen={isOpen} toggle={toggleSignupModal}>
+            <Modal isOpen={isSignupOpen} toggle={toggleSignupModal}>
                 <ModalHeader toggle={toggleSignupModal}>
                     Signup
                 </ModalHeader>
@@ -36,30 +36,30 @@ const UserSignupForm = ({ isOpen, toggleSignupModal, toggle }) => {
                     >
                         <Form>
                         <FormGroup>
-                                <Label htmlFor='firstName'>
+                                <Label htmlFor='firstname'>
                                     First Name
                                 </Label>
                                 <Field 
-                                    id='firstName'
-                                    name='firstName'
+                                    id='firstname'
+                                    name='firstname'
                                     placeholder='Nombre'
                                     className='form-control'
                                 />
-                                <ErrorMessage name='firstName'>
+                                <ErrorMessage name='firstname'>
                                     {msg => <p className='text-danger'>{msg}</p>}
                                 </ErrorMessage>
                             </FormGroup>
                             <FormGroup>
-                                <Label htmlFor='lastName'>
+                                <Label htmlFor='lastname'>
                                     Last Name
                                 </Label>
                                 <Field 
-                                    id='lastName'
-                                    name='lastName'
+                                    id='lastname'
+                                    name='lastname'
                                     placeholder='Apellido'
                                     className='form-control'
                                 />
-                                <ErrorMessage name='lastName'>
+                                <ErrorMessage name='lastname'>
                                     {msg => <p className='text-danger'>{msg}</p>}
                                 </ErrorMessage>
                             </FormGroup>

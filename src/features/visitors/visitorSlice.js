@@ -4,7 +4,7 @@ import { baseUrl } from '../../app/shared/baseUrl';
 export const fetchVisitors = createAsyncThunk(
     'visitors/fetchVisitors',
     async () => {
-        const response = await fetch(baseUrl + 'visitors');
+        const response = await fetch(baseUrl + 'contactus/visitors');
 
         if(!response.ok){
             return Promise.reject('Unable to retrieve the list of visitors, status: ' + response.status);
@@ -18,14 +18,15 @@ export const fetchVisitors = createAsyncThunk(
 export const postVisitor = createAsyncThunk(
     'visitors/postVisitor',
     async (petition) => {
-        const response = await fetch(baseUrl + 'visitors', {
+        const response = await fetch(baseUrl + 'contactus', {
                                         method: 'POST',
                                         headers: {
                                                     'Content-Type': 'application/json'
                                                  },
                                         body: JSON.stringify(petition)
             });
-            console.log('The reponse object is: ', response);
+            console.log('The response object in postVisitor is: ', response);
+            console.log('The petition object in postVisitor is: ', petition);
             if (!response.ok) {
                 return Promise.reject('Su pedido no ha sido sometido: ' + response.status);
             }
@@ -59,6 +60,12 @@ const visitorSlice = createSlice({
         },
         [postVisitor.pending]: state => {
             state.isLoading = true;
+        },
+        [postVisitor.fulfilled]: (state, action) => {
+            state.isLoading = false;
+            state.visitorsArray.push(action.payload);
+            state.errMsg = ''; 
+            console.log('The action.payload in postVisitor.fulfilled state is: ', action.payload);
         },
         [postVisitor.rejected]: (state, action) => {
             state.isLoading = false;

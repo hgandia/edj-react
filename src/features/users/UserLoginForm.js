@@ -1,15 +1,16 @@
 import { Modal, ModalHeader, ModalBody, FormGroup, Label, Button } from 'reactstrap';
 import { validateUserForms } from '../../utils/validateUserForms';
-import { setCurrentUser, selectCurrentUser } from './userSlice';
+import { userLogin } from './userSlice';
 import { Field, Form, Formik, ErrorMessage } from 'formik';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import UserSignupForm from './UserSignupForm';
 import { useState } from 'react';
 
 const UserLoginForm = ({ isOpen, toggle }) => {
+    const { loginModalOpen } = isOpen;
+    const { toggleUserLoginModal } = toggle;
     
     const [signupModalOpen, setSignupModalOpen] = useState(false);
-    const currentUser = useSelector(selectCurrentUser);
     const dispatch = useDispatch();
 
     const handleLogin = (values) => {
@@ -17,8 +18,8 @@ const UserLoginForm = ({ isOpen, toggle }) => {
             username: values.username,
             password: values.password
         };
-        dispatch(setCurrentUser(currentUser));
-        toggle();
+        dispatch(userLogin(currentUser));
+        toggle(toggleUserLoginModal);
 
     };
 
@@ -77,7 +78,7 @@ const UserLoginForm = ({ isOpen, toggle }) => {
                     </Formik>
                 </ModalBody>
             </Modal>
-            <UserSignupForm isOpen={signupModalOpen} toggleSignupModal={toggleSignupModal} toggle={toggle}/>
+            <UserSignupForm isSignupOpen={signupModalOpen} toggleSignupModal={toggleSignupModal} toggle={toggle}/>
         </>
     );
 };
