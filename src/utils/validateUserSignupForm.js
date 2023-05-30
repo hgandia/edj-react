@@ -1,4 +1,4 @@
-export const validateUserForms = (values) => {
+export const validateUserSignupForm = (values) => {
     const errors = {};
 
     if(!values.firstname){

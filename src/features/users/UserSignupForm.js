@@ -1,5 +1,5 @@
 import { Modal, ModalHeader, ModalBody, FormGroup, Label, Button } from 'reactstrap';
-import { validateUserForms } from '../../utils/validateUserForms';
+import { validateUserSignupForm } from '../../utils/validateUserSignupForm';
 import { userSignup } from './userSlice';
 import { Field, Form, Formik, ErrorMessage } from 'formik';
 import { useDispatch } from 'react-redux';
@@ -32,7 +32,7 @@ const UserSignupForm = ({ isSignupOpen, toggleSignupModal, toggle }) => {
                     <Formik
                         initialValues={{username: '', password: ''}}
                         onSubmit={handleSignup}
-                        validate={validateUserForms}
+                        validate={validateUserSignupForm}
                     >
                         <Form>
                         <FormGroup>

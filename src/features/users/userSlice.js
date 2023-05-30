@@ -26,11 +26,11 @@ export const userSignup = createAsyncThunk(
 
 export const userLogin = createAsyncThunk(
     'user/login',
-    async (currentUser, { dispatch }) => {
-        console.log('The currentUser in userLogin is: ', currentUser);
+    async (userLoggingIn, { dispatch }) => {
+        console.log('The userLoggingIn in userLogin is: ', userLoggingIn);
         const response = await fetch(baseUrl + 'users/login', {
             method:'POST',
-            body: JSON.stringify(currentUser),
+            body: JSON.stringify(userLoggingIn),
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -39,6 +39,7 @@ export const userLogin = createAsyncThunk(
         if(!response.ok){
             return Promise.reject('Could not log in.\nStatus: ' + response.status);
         }
+
         const data = await response.json();
         dispatch(setCurrentUser(data));
         return data;

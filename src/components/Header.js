@@ -1,17 +1,18 @@
-import churchLogo from '../app/assets/img/churchlogo1.png';
-import { Row, Col, Button } from 'reactstrap';
-import { NAVPAGES } from '../app/shared/NAVPAGES';
-import UserLoginForm from '../features/users/UserLoginForm';
-import { useState, useEffect } from 'react';
 import { isAuthenticated, userLogout, validateLogin } from '../features/users/userSlice';
+import UserLoginForm from '../features/users/UserLoginForm';
+import churchLogo from '../app/assets/img/churchlogo1.png';
 import { useDispatch, useSelector } from 'react-redux';
+import UserAvatar from '../features/users/UserAvatar';
+import { NAVPAGES } from '../app/shared/NAVPAGES';
+import { Row, Col, Button } from 'reactstrap';
+import { useState, useEffect } from 'react';
 
 const Header = (props) => {
 
     const [loginModalOpen, setLoginModalOpen] = useState(false);
-    const dispatch = useDispatch();
     const auth = useSelector(isAuthenticated);
-
+    const dispatch = useDispatch();
+    
     useEffect(() => {
         dispatch(validateLogin());
     }, [dispatch]);
@@ -35,9 +36,9 @@ const Header = (props) => {
         </>
 
     ) : (
-        //This is where I need to render a new component to will fetch the visitors data from the MongoDB database using the edjServer backend server.
-        <LinkToRetrieveData />
-    );
+        <>
+        </>
+    ); 
 
     if(props.match === null ){
         return null;
@@ -89,6 +90,7 @@ const Header = (props) => {
                 </Col>   
             </Row>
             <UserLoginForm isOpen={loginModalOpen} toggle={toggleUserLoginModal}/>
+            {userOptions}
         </>
     )
 }

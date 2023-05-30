@@ -1,25 +1,25 @@
 import { Modal, ModalHeader, ModalBody, FormGroup, Label, Button } from 'reactstrap';
-import { validateUserForms } from '../../utils/validateUserForms';
-import { userLogin } from './userSlice';
+import { validateUserLoginForm } from '../../utils/validateUserLoginForm';
 import { Field, Form, Formik, ErrorMessage } from 'formik';
-import { useDispatch } from 'react-redux';
 import UserSignupForm from './UserSignupForm';
+import { useDispatch } from 'react-redux';
+import { userLogin } from './userSlice';
 import { useState } from 'react';
 
 const UserLoginForm = ({ isOpen, toggle }) => {
-    const { loginModalOpen } = isOpen;
-    const { toggleUserLoginModal } = toggle;
+  //  const { loginModalOpen } = isOpen;
+  //  const { toggleUserLoginModal } = toggle;
     
     const [signupModalOpen, setSignupModalOpen] = useState(false);
     const dispatch = useDispatch();
 
     const handleLogin = (values) => {
-        const currentUser = {
+        const userLoggingIn = {
             username: values.username,
             password: values.password
         };
-        dispatch(userLogin(currentUser));
-        toggle(toggleUserLoginModal);
+        dispatch(userLogin(userLoggingIn));
+        toggle();
 
     };
 
@@ -37,7 +37,7 @@ const UserLoginForm = ({ isOpen, toggle }) => {
                     <Formik
                         initialValues={{username: '', password: ''}}
                         onSubmit={handleLogin}
-                        validate={validateUserForms}
+                        validate={validateUserLoginForm}
                     >
                         <Form>
                             <FormGroup>

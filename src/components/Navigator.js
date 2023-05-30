@@ -1,5 +1,5 @@
-import { NAVPAGES } from '../app/shared/NAVPAGES';
 import { Navbar, Collapse, NavbarToggler, Nav, NavItem } from 'reactstrap';
+import { NAVPAGES } from '../app/shared/NAVPAGES';
 import { NavLink } from 'react-router-dom';
 import { useState } from 'react'
 
@@ -12,10 +12,10 @@ const Navigator = () => {
             <Collapse isOpen={menuOpen} navbar>
                 <Nav className='mx-auto' style={{ fontSize: 20 }}>
                     {
-                        NAVPAGES.map((leader) => ( 
+                        NAVPAGES.map((page) => ( 
                         <NavItem>
-                            <NavLink className='nav-link' to={`${leader.path}`} style={{ color: 'darkblue'}}>
-                                <i className={`fa ${leader.icon ? leader.icon : 'fa-users'} fa-lg`} />{leader.navTitle}
+                            <NavLink className='nav-link' to={`${page.path}`} style={{ color: 'darkblue'}}>
+                                <i className={`fa ${page.icon ? page.icon : 'fa-users'} fa-lg`} />{page.navTitle}
                             </NavLink>
                         </NavItem>))
                     }
