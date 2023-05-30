@@ -2,11 +2,42 @@ import churchLogo from '../app/assets/img/churchlogo1.png';
 import { Row, Col, Button } from 'reactstrap';
 import { NAVPAGES } from '../app/shared/NAVPAGES';
 import UserLoginForm from '../features/users/UserLoginForm';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { isAuthenticated, userLogout, validateLogin } from '../features/users/userSlice';
+import { useDispatch, useSelector } from 'react-redux';
 
 const Header = (props) => {
 
     const [loginModalOpen, setLoginModalOpen] = useState(false);
+    const dispatch = useDispatch();
+    const auth = useSelector(isAuthenticated);
+
+    useEffect(() => {
+        dispatch(validateLogin());
+    }, [dispatch]);
+
+    const userOptions = auth ? (
+        <>
+            <span className='navbar-text ml-auto'>
+                <Button 
+                    outline
+                    onClick={() => dispatch(userLogout())}
+                    style={{
+                        color: 'white',
+                        border: '1px solid white',
+                        margin: '5px'
+                    }}    
+                >
+                    <i className='fa fa-sign-out fa-lg' />Logout
+                </Button>
+            </span>
+            <UserAvatar />
+        </>
+
+    ) : (
+        //This is where I need to render a new component to will fetch the visitors data from the MongoDB database using the edjServer backend server.
+        <LinkToRetrieveData />
+    );
 
     if(props.match === null ){
         return null;
