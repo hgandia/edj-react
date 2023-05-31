@@ -4,7 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import UserAvatar from '../features/users/UserAvatar';
 import { NAVPAGES } from '../app/shared/NAVPAGES';
 import { NavLink } from 'react-router-dom';
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
+import churchLogo from '../app/assets/img/churchlogo2.jpg'
 
 const Navigator = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -13,6 +14,7 @@ const Navigator = () => {
     
     useEffect(() => {
         dispatch(validateLogin());
+        dispatch(userLogout());
     }, [dispatch]);
 
     const userOptions = auth ? (
@@ -35,8 +37,9 @@ const Navigator = () => {
 
     ) : (
         //Here I can display a login button, instead of using the church logo.
-        <>
-        </>
+        <span>
+            <img src={churchLogo} alt='church logo' height='2px' width='2px'/>
+        </span>
     ); 
 
     return(   

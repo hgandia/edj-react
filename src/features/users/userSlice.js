@@ -58,7 +58,6 @@ export const userLogout = createAsyncThunk(
             },
             credentials: 'same-origin'
         });
-
         //Remove the token on client side no matter what happens with the fetch 
         localStorage.removeItem('token');
 
@@ -67,7 +66,6 @@ export const userLogout = createAsyncThunk(
         }
         const data = await response.json();
         return data;
-
     }
 );
 
@@ -92,7 +90,6 @@ export const validateLogin = createAsyncThunk(
         if (!data.success) {
             dispatch(clearCurrentUser());
         }
-
         return data;
     }
 );
