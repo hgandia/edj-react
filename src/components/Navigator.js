@@ -1,10 +1,43 @@
-import { Navbar, Collapse, NavbarToggler, Nav, NavItem } from 'reactstrap';
+import { isAuthenticated, userLogout, validateLogin } from '../features/users/userSlice';
+import { Navbar, Collapse, NavbarToggler, Nav, NavItem, Button } from 'reactstrap';
+import { useDispatch, useSelector } from 'react-redux';
+import UserAvatar from '../features/users/UserAvatar';
 import { NAVPAGES } from '../app/shared/NAVPAGES';
 import { NavLink } from 'react-router-dom';
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const Navigator = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const auth = useSelector(isAuthenticated);
+    const dispatch = useDispatch();
+    
+    useEffect(() => {
+        dispatch(validateLogin());
+    }, [dispatch]);
+
+    const userOptions = auth ? (
+        <>
+            <UserAvatar />
+            <span className='navbar-text ml-auto'>
+                <Button 
+                    outline
+                    onClick={() => dispatch(userLogout())}
+                    style={{
+                        color: '#00008B',
+                        border: '1px solid darkblue',
+                         marginLeft: '10px'
+                    }}    
+                >
+                    <i className='fa fa-sign-out fa-lg' />Logout
+                </Button>
+            </span>
+        </>
+
+    ) : (
+        //Here I can display a login button, instead of using the church logo.
+        <>
+        </>
+    ); 
 
     return(   
         <Navbar dark sticky='top' expand='lg'>
@@ -20,6 +53,7 @@ const Navigator = () => {
                         </NavItem>))
                     }
                 </Nav>
+                {userOptions}
             </Collapse>
         </Navbar>
     );

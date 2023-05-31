@@ -1,44 +1,12 @@
-import { isAuthenticated, userLogout, validateLogin } from '../features/users/userSlice';
 import UserLoginForm from '../features/users/UserLoginForm';
 import churchLogo from '../app/assets/img/churchlogo1.png';
-import { useDispatch, useSelector } from 'react-redux';
-import UserAvatar from '../features/users/UserAvatar';
 import { NAVPAGES } from '../app/shared/NAVPAGES';
 import { Row, Col, Button } from 'reactstrap';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 const Header = (props) => {
 
     const [loginModalOpen, setLoginModalOpen] = useState(false);
-    const auth = useSelector(isAuthenticated);
-    const dispatch = useDispatch();
-    
-    useEffect(() => {
-        dispatch(validateLogin());
-    }, [dispatch]);
-
-    const userOptions = auth ? (
-        <>
-            <span className='navbar-text ml-auto'>
-                <Button 
-                    outline
-                    onClick={() => dispatch(userLogout())}
-                    style={{
-                        color: 'white',
-                        border: '1px solid white',
-                        margin: '5px'
-                    }}    
-                >
-                    <i className='fa fa-sign-out fa-lg' />Logout
-                </Button>
-            </span>
-            <UserAvatar />
-        </>
-
-    ) : (
-        <>
-        </>
-    ); 
 
     if(props.match === null ){
         return null;
@@ -90,7 +58,6 @@ const Header = (props) => {
                 </Col>   
             </Row>
             <UserLoginForm isOpen={loginModalOpen} toggle={toggleUserLoginModal}/>
-            {userOptions}
         </>
     )
 }
