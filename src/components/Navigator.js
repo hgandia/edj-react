@@ -14,9 +14,8 @@ const Navigator = () => {
     
     useEffect(() => {
         dispatch(validateLogin());
-        dispatch(userLogout());
     }, [dispatch]);
-
+console.log('auth is: ', auth);
     const userOptions = auth ? (
         <>
             <UserAvatar />
@@ -36,9 +35,9 @@ const Navigator = () => {
         </>
 
     ) : (
-        //Here I can display a login button, instead of using the church logo.
+        //Here I can display a login button, instead of using the church logo as a secret login.
         <span>
-            <img src={churchLogo} alt='church logo' height='2px' width='2px'/>
+            <img src={churchLogo} alt='church logo' height='32px' width='32px'/>
         </span>
     ); 
 
@@ -48,8 +47,8 @@ const Navigator = () => {
             <Collapse isOpen={menuOpen} navbar>
                 <Nav className='mx-auto' style={{ fontSize: 20 }}>
                     {
-                        NAVPAGES.map((page) => ( 
-                        <NavItem>
+                        NAVPAGES.map((page, idx) => ( 
+                        <NavItem key={idx}>
                             <NavLink className='nav-link' to={`${page.path}`} style={{ color: 'darkblue'}}>
                                 <i className={`fa ${page.icon ? page.icon : 'fa-users'} fa-lg`} />{page.navTitle}
                             </NavLink>

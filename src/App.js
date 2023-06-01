@@ -17,7 +17,6 @@ function App() {
 
   useEffect(() => {
     dispatch(validateLogin());
-    dispatch(userLogout());
   }, [dispatch]);
 
   return (

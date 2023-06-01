@@ -36,10 +36,10 @@ function OfficialsCarousel(args) {
               key={item.picture}
           >
               <img src={item.picture} alt={item.altText} height='400px' border='5px double darkblue' />
-              <CarouselCaption
-                  //captionText={item.title}
-                  //captionHeader={item.id}
-              />
+              {/* <CarouselCaption
+                  captionText={item.title}
+                  captionHeader={item.id}
+              /> */}
           </CarouselItem>
       );
   }); 

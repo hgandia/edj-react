@@ -18,8 +18,8 @@ const Footer = () => {
                 </Col>
                 <Col className='text-center'>
                     <h4 className='papyrus'>Siganos por:</h4><br />
-                    <a className='btn btn-social-icon btn-facebook btn-lg mx-4' target='blank' href='https://www.facebook.com/estrelladjacob'><i class='fa fa-facebook-official' /></a>   
-                    <a className='btn btn-social-icon btn-google btn-lg' target='blank' href='https://www.youtube.com/c/PrimeraEstrellaDeJacob/featured'><i class='fa fa-youtube-play' /></a>
+                    <a className='btn btn-social-icon btn-facebook btn-lg mx-4' target='blank' href='https://www.facebook.com/estrelladjacob'><i className='fa fa-facebook-official' /></a>   
+                    <a className='btn btn-social-icon btn-google btn-lg' target='blank' href='https://www.youtube.com/c/PrimeraEstrellaDeJacob/featured'><i className='fa fa-youtube-play' /></a>
                 </Col>
             </Row>
     );
