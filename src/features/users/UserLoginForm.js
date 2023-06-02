@@ -7,8 +7,6 @@ import { userLogin } from './userSlice';
 import { useState } from 'react';
 
 const UserLoginForm = ({ isOpen, toggle }) => {
-  //  const { loginModalOpen } = isOpen;
-  //  const { toggleUserLoginModal } = toggle;
     
     const [signupModalOpen, setSignupModalOpen] = useState(false);
     const dispatch = useDispatch();

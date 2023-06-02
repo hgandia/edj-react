@@ -27,7 +27,7 @@ export const userSignup = createAsyncThunk(
 export const userLogin = createAsyncThunk(
     'user/login',
     async (userLoggingIn, { dispatch }) => {
-        console.log('The userLoggingIn in userLogin is: ', userLoggingIn);
+        
         const response = await fetch(baseUrl + 'users/login', {
             method:'POST',
             body: JSON.stringify(userLoggingIn),
@@ -158,6 +158,10 @@ export const { setCurrentUser, clearCurrentUser } = userSlice.actions;
 export const isAuthenticated = () => {
     return localStorage.getItem('token') ? true : false;
 };
+
+// export const isAuthenticated = (state) => {
+//     return state.user.isAuthenticated;
+//   };
 
 export const selectCurrentUser = state => {
     return state.user.currentUser;

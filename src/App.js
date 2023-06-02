@@ -1,5 +1,5 @@
-import { Routes, Route, Navigate, useMatch } from "react-router-dom";import { React, useEffect } from "react";
-import { validateLogin, userLogout } from "./features/users/userSlice";
+import { Routes, Route, Navigate, useMatch } from "react-router-dom";
+//import { validateLogin, userLogout } from "./features/users/userSlice";
 import LeadersPage from "../src/app/pages/LeadersPage";
 import Navigator from "../src/components/Navigator";
 import ContactUs from "../src/app/pages/ContactUs";
@@ -7,17 +7,18 @@ import Calendar from "../src/app/pages/Calendar";
 import Header from "../src/components/Header";
 import Footer from "../src/components/Footer";
 import Events from "../src/app/pages/Events";
-import { useDispatch } from "react-redux";
+//import { useDispatch } from "react-redux";
+//import { React, useEffect } from "react";
 import "./App.css";
 
 function App() {
   let match = useMatch("/:pathname");
 
-  const dispatch = useDispatch();
+  //const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(validateLogin());
-  }, [dispatch]);
+  // useEffect(() => {
+  //    dispatch(validateLogin());
+  // }, [dispatch]);
 
   return (
     <div className="App">
