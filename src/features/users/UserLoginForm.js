@@ -76,7 +76,11 @@ const UserLoginForm = ({ isOpen, toggle }) => {
                     </Formik>
                 </ModalBody>
             </Modal>
-            <UserSignupForm isSignupOpen={signupModalOpen} toggleSignupModal={toggleSignupModal} toggle={toggle}/>
+            <UserSignupForm 
+                isSignupOpen={signupModalOpen} 
+                toggleSignupModal={toggleSignupModal} 
+                toggle={toggle}
+            />
         </>
     );
 };

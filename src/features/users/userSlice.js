@@ -41,6 +41,7 @@ export const userLogin = createAsyncThunk(
         }
 
         const data = await response.json();
+        console.log('data in userLogin: ', data);
         dispatch(setCurrentUser(data));
         return data;
     }
@@ -90,6 +91,7 @@ export const validateLogin = createAsyncThunk(
         if (!data.success) {
             dispatch(clearCurrentUser());
         }
+
         return data;
     }
 );
@@ -97,7 +99,8 @@ export const validateLogin = createAsyncThunk(
 const initialState = {
     isLoading: false,
     isAuthenticated: localStorage.getItem('token') ? true : false,
-    token: localStorage.getItem('token')
+    token: localStorage.getItem('token'),
+    currentUser: ''
 };
 
 const userSlice = createSlice({
@@ -107,9 +110,10 @@ const userSlice = createSlice({
         setCurrentUser: (state, action) => {
             state.currentUser = action.payload.id;
         },
-        clearCurrentUser: state => {
+        clearCurrentUser: (state) => {
             state.isAuthenticated = false;
             state.isLoading = false;
+            state.currentUser = '';
             localStorage.removeItem('token');
         }
     },
@@ -126,13 +130,14 @@ const userSlice = createSlice({
         },
         [userLogin.pending]: state =>{
             state.isLoading = true;
+            state.currentUser = '';
             localStorage.removeItem('token');
         },
         [userLogin.fulfilled]: (state, action) => {
             state.isLoading = false;
             localStorage.setItem('token', action.payload.token);
-            alert(
-                `Login successful for userId: ${action.payload.id}` 
+            console.log(
+                `Login successful for user _id: ${action.payload.id}` 
             );
         },
         [userLogin.rejected]: (state, action) => {
@@ -142,11 +147,13 @@ const userSlice = createSlice({
                 'Login Failed\n', action.error.message
             );            
         },
-        [userLogout.fulfilled]: state => {
+        [userLogout.fulfilled]: (state) => {
             state.isLoading = false;
+            state.currentUser = '';
         },
-        [userLogout.rejected]: state => {
+        [userLogout.rejected]: (state) => {
             state.isLoading = false;
+            state.currentUser = '';
         }
     }
 });

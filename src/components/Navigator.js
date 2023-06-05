@@ -33,7 +33,6 @@ console.log('auth is: ', auth);
                 </Button>
             </span>
         </>
-
     ) : (
         //Here I can display a login button, instead of using the church logo as a secret login.
         <span>

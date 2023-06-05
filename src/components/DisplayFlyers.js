@@ -8,8 +8,8 @@ const DisplayFlyers = () => {
         <Row width='200' height='200'>
            {FLYERS.map((item, idx) => {
                 return(
-                        <Col md='4' sm='6' className='my-4'>
-                            <AnimatedFlyerCard item={item} idx={idx}/>
+                        <Col md='4' sm='6' className='my-4' >
+                            <AnimatedFlyerCard item={item} idx={idx} />
                         </Col>
                 );
             })}
