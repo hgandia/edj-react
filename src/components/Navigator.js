@@ -3,9 +3,8 @@ import { Navbar, Collapse, NavbarToggler, Nav, NavItem, Button } from 'reactstra
 import { useDispatch, useSelector } from 'react-redux';
 import UserAvatar from '../features/users/UserAvatar';
 import { NAVPAGES } from '../app/shared/NAVPAGES';
-import { NavLink } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import churchLogo from '../app/assets/img/churchlogo2.jpg'
+import { NavLink } from 'react-router-dom';
 
 const Navigator = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -34,10 +33,10 @@ console.log('auth is: ', auth);
             </span>
         </>
     ) : (
-        //Here I can display a login button, instead of using the church logo as a secret login.
-        <span>
-            <img src={churchLogo} alt='church logo' height='32px' width='32px'/>
-        </span>
+        
+        <>
+           {/* Here I can display a login button, instead of using the church logo as a secret login.  */}
+        </>
     ); 
 
     return(   
