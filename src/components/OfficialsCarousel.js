@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import {    Carousel, 
             CarouselItem, 
             CarouselControl, 
-            CarouselIndicators, 
-            CarouselCaption 
+            CarouselIndicators
         } from 'reactstrap';
 import { OFFICIALS } from '../app/shared/OFFICIALS';
 
