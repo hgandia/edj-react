@@ -25,13 +25,13 @@ export const postVisitor = createAsyncThunk(
                                                  },
                                         body: JSON.stringify(petition)
             });
-            console.log('The response object in postVisitor is: ', response);
-            console.log('The petition object in postVisitor is: ', petition);
+            
             if (!response.ok) {
                 return Promise.reject('Su pedido no ha sido sometido: ' + response.status);
             }
             const data = await response.json();
-            console.log('The return data in postVisitor is: ', data);
+            console.log('Return data: ', data);
+            return data;
     }
 );
 
@@ -65,12 +65,14 @@ const visitorSlice = createSlice({
             state.isLoading = false;
             state.visitorsArray.push(action.payload);
             state.errMsg = ''; 
-            console.log('The action.payload in postVisitor.fulfilled state is: ', action.payload);
+            alert(
+                    `Muchas gracias por contactarnos.\nSu peticion ha sido sometida.\nDios les bendiga ${action.payload.firstname} ${action.payload.lastname}.`
+            );
         },
         [postVisitor.rejected]: (state, action) => {
             state.isLoading = false;
             alert(
-                'Tu peticion no has sido grabada\nError: ' +
+                'Tu peticion no has sido sometida!\nError: ' +
                 (action.error ? action.error.message : 'Sometimiento ha fallado')
             );
         }
