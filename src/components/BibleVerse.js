@@ -1,7 +1,11 @@
-const YouVersion = require("@glowstudent/youversion");
+import { getVerseOfTheDay } from "@glowstudent/youversion";
 
-(async () => {
-    const verse = await fetch(YouVersion.getVerseOfTheDay());
-    console.log('The verse of the day is: ', verse);
-})();
+const BibleVerse = () => {
+    (async () => {
+        const verse = await fetch(getVerseOfTheDay());
+        console.log('The verse of the day is: ', verse);
+    })();
+};
+
+export default BibleVerse;
   

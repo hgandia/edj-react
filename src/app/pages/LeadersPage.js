@@ -2,7 +2,7 @@ import { Col, Row, CardImg, CardBody, CardText, Card, CardTitle } from 'reactstr
 import  OfficialsCarousel from '../../components/OfficialsCarousel';
 import { NAVPAGES } from '../shared/NAVPAGES';
 import { useParams } from 'react-router-dom';
-//import BibleVerse from '../../components/BibleVerse';
+import BibleVerse from '../../components/BibleVerse';
 
 
 
@@ -195,6 +195,7 @@ const LeadersPage = () => {
                     {leader.content.split('\n').map((t, key) => {
                         return <p key={key}>{t}</p>;
                     })}
+                    <BibleVerse />
                 </Col> 
             </Row> 
         );
