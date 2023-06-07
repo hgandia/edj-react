@@ -10,7 +10,6 @@ export const fetchVisitors = createAsyncThunk(
             return Promise.reject('Unable to retrieve the list of visitors, status: ' + response.status);
         }
         const data = await response.json();
-        console.log('The return data in fetchVisitor is: ', data);
         return data;
     }
 );

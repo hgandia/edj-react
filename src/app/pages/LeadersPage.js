@@ -10,10 +10,6 @@ const LeadersPage = () => {
     
     const { pathname } = useParams();
 
-    // if(!pathname){
-    //     pathname = '/';
-    // }
-
     const leader = NAVPAGES.find((leader) => {
         const { path } = leader;
     

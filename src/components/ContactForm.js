@@ -9,9 +9,6 @@ const ContactForm = () => {
     const dispatch = useDispatch();
 
     const handleSubmit = (values, { resetForm }) => {
-        console.log('form values', values);
-        console.log('in JSON format: ', JSON.stringify(values));
-
         const petition = {
           firstname: values.firstname,
           lastname: values.lastname,
