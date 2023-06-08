@@ -1,15 +1,25 @@
 import { Container, Row, Col } from 'reactstrap';
 import { BIBLE } from "../app/shared/BIBLE";
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const BibleVerse = () => {
+    const randomBibleVerseIndex = () => {
+        return (Math.floor(Math.random() * BIBLE.length) + 1);
+    };
+
+    const [bibleVerseIndex, setBibleVerseIndex] = useState(randomBibleVerseIndex());
+
     useEffect(() => {
-        
-    });
+        const oncePerDay = setInterval(() => {
+        setBibleVerseIndex(randomBibleVerseIndex());
+        }, 10000);
 
-    const randomBibleVerseIndex = Math.floor(Math.random() * BIBLE.length) + 1;
+        return () => {
+        clearInterval(oncePerDay);
+        };
+  }, []);  
 
-    const bibleVerseOfTheDay = BIBLE[randomBibleVerseIndex]
+    const bibleVerseOfTheDay = BIBLE[bibleVerseIndex];
 
     return(
         <Container>
