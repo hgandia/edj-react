@@ -12,7 +12,7 @@ const BibleVerse = () => {
     useEffect(() => {
         const oncePerDay = setInterval(() => {
         setBibleVerseIndex(randomBibleVerseIndex());
-        }, 10000);
+        }, 86400000);
 
         return () => {
         clearInterval(oncePerDay);
