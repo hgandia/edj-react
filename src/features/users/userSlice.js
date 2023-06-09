@@ -16,7 +16,7 @@ export const userSignup = createAsyncThunk(
             return Promise.reject('Unable to POST to server. \nStatus: ' + response.status);
         }
         const data = await response.json();
-        console.log('Return data from postUserSignup: ', data);
+        
         if(data.success){
             dispatch(userLogin(newUser));
         }
@@ -41,7 +41,7 @@ export const userLogin = createAsyncThunk(
         }
 
         const data = await response.json();
-        console.log('data in userLogin: ', data);
+
         dispatch(setCurrentUser(data));
         return data;
     }

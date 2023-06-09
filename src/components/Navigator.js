@@ -14,7 +14,7 @@ const Navigator = () => {
     useEffect(() => {
         dispatch(validateLogin());
     }, [dispatch]);
-console.log('auth is: ', auth);
+
     const userOptions = auth ? (
         <>
             <UserAvatar />

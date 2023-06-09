@@ -16,7 +16,7 @@ const UserSignupForm = ({ isSignupOpen, toggleSignupModal, toggle }) => {
             password: values.password,
             date: new Date(Date.now()).toISOString()
         };
-        console.log('Info from Formik login: ', values);
+    
         dispatch(userSignup(newUser));
         toggleSignupModal();
         toggle();
