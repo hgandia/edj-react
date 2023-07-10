@@ -180,7 +180,7 @@ const LeadersPage = () => {
                         {leader.leaderName}<br />{leader.leaderTitle}
                     </Row>
                     <Row className='picTitles'>
-                        <hr className='mt-5' style={{ justifyContent: 'center', border: 'solid 2px darkblue', width: '60%' }}/>
+                        <hr className='mt-5' style={{ justifyContent: 'center', border: 'solid 2px darkblue', width: '60%' }} />
                     </Row>
                     <Row className='picTitles'>
                         <p className='mt-2'>OFICIALES</p>
