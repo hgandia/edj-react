@@ -63,7 +63,6 @@ function OfficialsCarousel(args) {
           directionText="Previous"
           onClickHandler={previous}
           className='w-25'
-          
         />
         <CarouselControl
           direction="next"
