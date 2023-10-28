@@ -11,8 +11,6 @@ import Events from "../src/app/pages/Events";
 //import { useEffect } from "react";
 import "./App.css";
 
-
-
 function App() {
   let match = useMatch("/:pathname");
 
