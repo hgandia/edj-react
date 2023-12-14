@@ -19,7 +19,7 @@ const ContactForm = () => {
           feedback: values.feedback,
           date: new Date(Date.now()).toISOString(),
         };
-        console.log('The petition object is: ', petition);
+        
         dispatch(postVisitor(petition));
         resetForm();
     }

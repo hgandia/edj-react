@@ -4,9 +4,6 @@ import BibleVerse from '../../components/BibleVerse';
 import { NAVPAGES } from '../shared/NAVPAGES';
 import { useParams } from 'react-router-dom';
 
-
-
-
 const LeadersPage = () => {
     
     const { pathname } = useParams();

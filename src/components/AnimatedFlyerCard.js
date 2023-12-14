@@ -28,7 +28,7 @@ const AnimatedFlyerCard = ({ item }) => {
                     </CardBody>
                 </Card>
             </animated.div>
-            <Modal isOpen={modalOpen} size='xl' className='mx-auto'>
+            <Modal isOpen={modalOpen} size='xl'>
                 <ModalHeader className='mx-auto' toggle={ () => setModalOpen(false) } >
                     {title}
                 </ModalHeader >
