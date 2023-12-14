@@ -1,6 +1,6 @@
 import joyce from '../assets/img/joyce.jpg'
-import ana from '../assets/img/anaGuevara.jpg'
-import anaLuz from '../assets/img/anaLuz.jpg'
+import ana from '../assets/img/anaGuevara.JPG'
+import anaLuz from '../assets/img/anaLuz.JPG'
 import yunid from '../assets/img/yunid2.jpg'
 import herbie from '../assets/img/herbie.jpg'
 
