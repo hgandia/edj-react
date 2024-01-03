@@ -1,8 +1,8 @@
-import joyce from '../assets/img/joyce.jpg'
-import ana from '../assets/img/anaGuevara.JPG'
-import anaLuz from '../assets/img/anaLuz.JPG'
-import yunid from '../assets/img/yunid2.jpg'
-import herbie from '../assets/img/herbie.jpg'
+import joyce from '../assets/img/joyce.jpg';
+import ana from '../assets/img/anaGuevara.JPG';
+import anaLuz from '../assets/img/anaLuz.JPG';
+import yunid from '../assets/img/yunid2.jpg';
+import herbie from '../assets/img/herbie.jpg';
 
 export const OFFICIALS = [
     {

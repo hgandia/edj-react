@@ -16,7 +16,7 @@ const LeadersPage = () => {
         return slashPathname === path; 
 });
 
-    if((leader.path === '/caballeros') || (leader.path === '/damas') || (leader.path === '/jovenes') || (leader.path === '/ninos')) {
+    if((leader.path === '/caballeros') || (leader.path === '/damas') || (leader.path === '/jovenes') || (leader.path === '/ninos') || (leader.path === '/escueladominical')) {
         return (
         <>
             <Row className='mx-auto'>
