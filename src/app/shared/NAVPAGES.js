@@ -95,7 +95,7 @@ export const NAVPAGES = [
     },
     {
         id: 5,
-        navTitle: 'Escuela Domonical',
+        navTitle: 'Escuela Dominical',
         title: 'Departamento de Escuela Dominical',
         subTitle: 'Un versiculo',
         verse: 'Texto',
