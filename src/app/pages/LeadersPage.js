@@ -3,6 +3,7 @@ import  OfficialsCarousel from '../../components/OfficialsCarousel';
 import BibleVerse from '../../components/BibleVerse';
 import { NAVPAGES } from '../shared/NAVPAGES';
 import { useParams } from 'react-router-dom';
+import BiblePortal from '../../components/BiblePortal';
 
 const LeadersPage = () => {
     
@@ -64,6 +65,11 @@ const LeadersPage = () => {
                     })}
                     <hr />
                     {/* {leader.content2} */}
+                    { 
+                        leader.path === '/escueladominical' ? 
+                        <BiblePortal /> : 
+                        ""
+                    }
                 </Col> 
             </Row>
             <Row className=' mx-auto my-5'>
