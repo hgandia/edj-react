@@ -1,9 +1,9 @@
 import { Col, Row, CardImg, CardBody, CardText, Card, CardTitle } from 'reactstrap';
 import  OfficialsCarousel from '../../components/OfficialsCarousel';
+import BiblePortal from '../../components/BiblePortal';
 import BibleVerse from '../../components/BibleVerse';
 import { NAVPAGES } from '../shared/NAVPAGES';
 import { useParams } from 'react-router-dom';
-import BiblePortal from '../../components/BiblePortal';
 
 const LeadersPage = () => {
     

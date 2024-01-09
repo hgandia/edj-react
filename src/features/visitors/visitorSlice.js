@@ -29,7 +29,6 @@ export const postVisitor = createAsyncThunk(
                 return Promise.reject('Su pedido no ha sido sometido: ' + response.status);
             }
             const data = await response.json();
-            console.log('Return data: ', data);
             return data;
     }
 );
