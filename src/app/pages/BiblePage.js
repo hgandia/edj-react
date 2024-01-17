@@ -28,7 +28,7 @@ const BiblePage = () => {
         <Container>
             <Row>
                 <Col style={{textAlign: 'center'}}>
-                    <h1>Biblia Interactiva</h1>
+                    <h1 style={{ color: 'darkblue'}}>Biblia Interactiva</h1>
                     <Button color='warning' size='lg' onClick={() => setClickedOT(true)}>
                         Antiguo Testamento
                     </Button>{' '}
