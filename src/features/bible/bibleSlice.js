@@ -7,7 +7,7 @@ export const fetchBible = createAsyncThunk(
         const response = await fetch(bibleUrl + 'books');
 
         if(!response.ok){
-            return Promise.reject('Unable to retrieve the list of visitors, status: ' + response.status);
+            return Promise.reject('Unable to retrieve the list of bible books, status: ' + response.status);
         }
         const data = await response.json();
         console.log('return data from bible API is: ', data);
