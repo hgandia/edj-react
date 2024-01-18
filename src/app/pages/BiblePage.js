@@ -11,18 +11,27 @@ const BiblePage = () => {
     const [clickedNT, setClickedNT] = useState(false);
     const [otBooks, setOTBooks] = useState([]);
     const [ntBooks, setNTBooks] = useState([]);
+    const [selectedBook, setSelectedBook] = useState('');
+    const [bookChapters, setBookChapters] = useState([]);
 
     useEffect(() => {
         dispatch(fetchBible());
     }, [dispatch]);
 
     useEffect(() => {
-        setOTBooks(bibleArray.filter(book => book.testament === 'OT'))
+        setOTBooks(bibleArray.filter(book => book.testament === 'OT'));
     }, [ bibleArray, clickedOT]);
 
     useEffect(() => {
-        setNTBooks(bibleArray.filter(book => book.testament === 'NT'))
+        setNTBooks(bibleArray.filter(book => book.testament === 'NT'));
     }, [ bibleArray, clickedNT]);  
+
+    useEffect(() => {
+        setBookChapters(bibleArray.find(book => book.name === selectedBook)?.chapters || []);
+    }, [bibleArray, selectedBook]);
+
+    console.log('Selected Book: ', selectedBook);
+    console.log('bookChapters is: ', bookChapters);
 
     return(
         <Container>
@@ -37,11 +46,11 @@ const BiblePage = () => {
                     </Button>
                 </Col>
             </Row>
-            <Row style={{marginTop:'3rem'}}>
-                <Col style={{textAlign:'left', marginLeft:''}}>
+            <Row style={{marginTop:'4rem'}}>
+                <Col style={{textAlign:'left', marginLeft:'-18rem'}}>
                     {
                          clickedOT && otBooks.map(book => (
-                                <Button color='primary' key={book.id} style={{ margin: '4px' }}>
+                                <Button color='primary' key={book.id} style={{ margin: '4px' }} onClick={() => setSelectedBook(book.name)}>
                                     {book.name}
                                 </Button> 
                         ))
@@ -50,10 +59,22 @@ const BiblePage = () => {
                 <Col>
                     {
                         clickedNT && ntBooks.map(book => (
-                            <Button color='primary' key={book.id} style={{ margin: '4px' }}>
+                            <Button color='primary' key={book.id} style={{ margin: '4px' }} onClick={() => setSelectedBook(book.name)}>
                                 {book.name}
                             </Button>
                     ))}
+                </Col>
+            </Row>
+            <Row>
+            <Col style={{textAlign:'center', marginLeft:'', marginTop: '6rem'}}>
+                    {
+                         selectedBook && bookChapters.map(chapter => (
+                            
+                                <Button color='success' key={chapter.id} style={{ margin: '4px' }}>
+                                    {chapter.chapter}
+                                </Button>
+                            ))
+                    }
                 </Col>
             </Row>
         </Container>
