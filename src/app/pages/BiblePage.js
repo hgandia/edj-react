@@ -1,6 +1,6 @@
 import { Container, Row, Col, Button } from 'reactstrap';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchBible } from '../../features/bible/bibleSlice';
+import { fetchBibleBooks, fetchBibleBookChapter } from '../../features/bible/bibleSlice';
 import { useEffect, useState } from 'react';
 
 const BiblePage = () => {
@@ -13,10 +13,20 @@ const BiblePage = () => {
     const [ntBooks, setNTBooks] = useState([]);
     const [selectedBook, setSelectedBook] = useState('');
     const [bookChapters, setBookChapters] = useState([]);
+    const [chapter, setChapter] = useState(null);
+    const [chapterText, setChapterText] = useState([]);
 
     useEffect(() => {
-        dispatch(fetchBible());
+        dispatch(fetchBibleBooks());
     }, [dispatch]);
+
+    useEffect(() => {
+        if(selectedBook && chapter){
+            dispatch(fetchBibleBookChapter( {selectedBook, chapter} ));
+        }
+        
+    }, [dispatch, selectedBook, chapter]);
+
 
     useEffect(() => {
         setOTBooks(bibleArray.filter(book => book.testament === 'OT'));
@@ -27,11 +37,13 @@ const BiblePage = () => {
     }, [ bibleArray, clickedNT]);  
 
     useEffect(() => {
-        setBookChapters(bibleArray.find(book => book.name === selectedBook)?.chapters || []);
+        setBookChapters(bibleArray.find(book => book.id === selectedBook)?.chapters || []);
     }, [bibleArray, selectedBook]);
 
-    console.log('Selected Book: ', selectedBook);
-    console.log('bookChapters is: ', bookChapters);
+    useEffect(() => {
+       setChapterText(bibleArray.filter(chapter => chapter.cleanText));
+       //console.log('chapterText Array is: ', chapterText);
+    }, [bibleArray, chapter]);
 
     return(
         <Container>
@@ -50,7 +62,7 @@ const BiblePage = () => {
                 <Col style={{textAlign:'left', marginLeft:'-18rem'}}>
                     {
                          clickedOT && otBooks.map(book => (
-                                <Button color='primary' key={book.id} style={{ margin: '4px' }} onClick={() => setSelectedBook(book.name)}>
+                                <Button color='primary' key={book.id} style={{ margin: '4px' }} onClick={() => setSelectedBook(book.id)}>
                                     {book.name}
                                 </Button> 
                         ))
@@ -59,22 +71,34 @@ const BiblePage = () => {
                 <Col>
                     {
                         clickedNT && ntBooks.map(book => (
-                            <Button color='primary' key={book.id} style={{ margin: '4px' }} onClick={() => setSelectedBook(book.name)}>
+                            <Button color='primary' key={book.id} style={{ margin: '4px' }} onClick={() => setSelectedBook(book.id)}>
                                 {book.name}
                             </Button>
                     ))}
                 </Col>
             </Row>
             <Row>
-            <Col style={{textAlign:'center', marginLeft:'', marginTop: '6rem'}}>
-                    {
-                         selectedBook && bookChapters.map(chapter => (
-                            
-                                <Button color='success' key={chapter.id} style={{ margin: '4px' }}>
-                                    {chapter.chapter}
-                                </Button>
-                            ))
-                    }
+                <Col style={{textAlign:'center', marginLeft:'', marginTop: '6rem'}}>
+                        {
+                            selectedBook && bookChapters.map(chapter => (
+                                    <Button color='success' key={chapter.id} style={{ margin: '4px' }} onClick={() => setChapter(chapter.chapter)}>
+                                        {chapter.chapter}
+                                    </Button>
+                                )
+                            )
+                        }
+                </Col>
+            </Row>
+            <Row>
+                <Col style={{textAlign:'left', marginLeft:'', marginTop: '6rem'}}>
+                        {
+                             chapter && chapterText.map((text, idx) => (
+                                    <p color='success' key={idx}>
+                                        {text.cleanText}
+                                    </p>
+                                )
+                            )
+                        }
                 </Col>
             </Row>
         </Container>
