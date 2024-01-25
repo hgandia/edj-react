@@ -128,7 +128,7 @@ const userSlice = createSlice({
                 (action.error ? action.error.message : 'Could not create account.')
             );
         },
-        [userLogin.pending]: state =>{
+        [userLogin.pending]: state => {
             state.isLoading = true;
             state.currentUser = '';
             localStorage.removeItem('token');

@@ -28,35 +28,22 @@ const BiblePage = () => {
 
     useEffect(() => {
         setOTBooks(bibleArray.filter(book => book.testament === 'OT'));
-        console.log('otBooks: ', otBooks);
-        
-    }, [ bibleArray, clickedOT]);
+    }, [ clickedOT ]);
 
     useEffect(() => {
-        setNTBooks(bibleArray.filter(book => book.testament === 'NT'));
-        console.log('ntBooks: ', ntBooks);
-        
-    }, [ bibleArray, clickedNT]);  
+        setNTBooks(bibleArray.filter(book => book.testament === 'NT'));        
+    }, [ clickedNT ]);  
 
     useEffect(() => {
         setBookChapters(bibleArray.find(book => book.id === selectedBook)?.chapters || []);
-    }, [bibleArray, selectedBook]);
+    }, [ selectedBook ]);
 
     useEffect(() => { 
        bibleArray.filter(chapter => chapter);
-       const subsetBibleArray = bibleArray.map( text => text.cleanText );
-        
-        console.log('bibleArray is: ', bibleArray);
-        console.log('subseBibleArray is: ', subsetBibleArray);
+       const subsetBibleArray = bibleArray.map( text => text.cleanText ); 
        setChapterText(subsetBibleArray);
-       console.log('chapterText is: ', chapterText);
-       return(
-        () => {
-            setChapterText([]);
-        }
-    );
        
-    }, [bibleArray, chapter]);
+    });
 
     return(
         <Container>
@@ -113,7 +100,7 @@ const BiblePage = () => {
             <Row>
                 <Col style={{textAlign:'left', marginLeft:'', marginTop: '6rem'}}>
                         {
-                              chapterText.map((text, idx) => (
+                            chapterText.map((text, idx) => (
                                     <p key={idx}>
                                         {text}
                                     </p>

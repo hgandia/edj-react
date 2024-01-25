@@ -33,7 +33,7 @@ export const fetchBibleBookChapter = createAsyncThunk(
 const initialState = {
     isLoading: true,
     errMsg: '',
-    bibleArray: []
+    bibleArray: [],
 };
 
 const bibleSlice = createSlice({
