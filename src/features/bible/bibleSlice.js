@@ -34,6 +34,7 @@ const initialState = {
     isLoading: true,
     errMsg: '',
     bibleArray: [],
+    newBibleArray: []
 };
 
 const bibleSlice = createSlice({
@@ -59,7 +60,7 @@ const bibleSlice = createSlice({
         [fetchBibleBookChapter.fulfilled]: (state, action) => {
             state.isLoading = false;
             state.errMsg = '';
-            state.bibleArray = action.payload;
+            state.newBibleArray = action.payload;
         },
         [fetchBibleBookChapter.rejected]: (state, action) => {
             state.isLoading = false;
@@ -67,5 +68,7 @@ const bibleSlice = createSlice({
         }
     }
 });
+
+export const { resetBibleArray } = bibleSlice.actions;
 
 export const bibleReducer = bibleSlice.reducer;
