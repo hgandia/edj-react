@@ -1,13 +1,12 @@
+import { fetchBibleBooks, fetchBibleBookChapter } from '../../features/bible/bibleSlice';
 import { Container, Row, Col, Button } from 'reactstrap';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchBibleBooks, fetchBibleBookChapter } from '../../features/bible/bibleSlice';
 import { useEffect, useState } from 'react';
 
 const BiblePage = () => {
     const dispatch = useDispatch();
     const bibleArray = useSelector(state => state.bible.bibleArray);
     const newBibleArray = useSelector(state => state.bible.newBibleArray);
-    //const isLoading = useSelector(state => state.bible.loading);
     const [clickedOT, setClickedOT] = useState(false);
     const [clickedNT, setClickedNT] = useState(false);
     const [otBooks, setOTBooks] = useState([]);

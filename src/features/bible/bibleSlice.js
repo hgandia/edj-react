@@ -69,6 +69,4 @@ const bibleSlice = createSlice({
     }
 });
 
-export const { resetBibleArray } = bibleSlice.actions;
-
 export const bibleReducer = bibleSlice.reducer;
