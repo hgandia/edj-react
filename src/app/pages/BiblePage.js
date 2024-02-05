@@ -45,8 +45,11 @@ const BiblePage = () => {
 
     useEffect(() => { 
        newBibleArray.filter(chapter => chapter);
-       setChapterText(newBibleArray.map( text => text.cleanText ));  
+       setChapterText(newBibleArray.map( text => text.text ));  
     }, [ newBibleArray, chapter ]);
+
+    console.log('newBibleArray: ', newBibleArray);
+    console.log('chapterText: ', chapterText);
 
     return(
         <Container>
@@ -103,10 +106,8 @@ const BiblePage = () => {
             <Row>
                 <Col style={{textAlign:'left', marginLeft:'', marginTop: '6rem'}}>
                         {
-                            chapter && chapterText.map((text, idx) => (
-                                    <p key={idx}>
-                                        {text}
-                                    </p>
+                            chapter && chapterText.map((text, idx) => (  
+                                    <div key={idx} dangerouslySetInnerHTML={{__html: text}}/>
                                 )
                             )
                         }
