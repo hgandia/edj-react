@@ -5,11 +5,18 @@ const BiblePortal = () => {
     return(
         <>
             <br />
-            <br />
-            <h1 style={{ fontSize: '5rem'}}>Biblia Interactiva</h1>
-            <Link to='/escueladominical/bible'>
-                <img src={bible} alt='bible' height='50%' width='100%' />
-            </Link>
+            <div style={{
+                    background:'white',
+                    border:'solid 1rem darkblue',
+                    borderRadius: '120rem',
+                    marginBottom:'5rem'
+
+        }}>
+                <h1 style={{ margin: '1rem', fontSize: '5rem', textAlign: 'center'}}>Biblia Interactiva</h1>
+                <Link to='/escueladominical/bible' style={{ display:'flex', justifyContent:'center'}}>
+                    <img src={bible} alt='bible' width='35%' />
+                </Link>
+            </div>
             
         </>
             

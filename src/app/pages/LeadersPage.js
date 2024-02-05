@@ -50,7 +50,7 @@ const LeadersPage = () => {
                         <hr className='mt-4' style={{ justifyContent: 'center', border: 'solid 2px darkblue', width: '60%' }}/>
                     </Row>
                 </Col>
-                <Col sm='12' style={{ flex: 1, fontSize: '25px', fontFamily: 'papyrus', color: 'darkblue', fontWeight: 'bold', textAlign:'center'}}>
+                <Col sm='12' style={{ flex: 1, fontSize: '25px', fontFamily: 'papyrus', color: 'darkblue', fontWeight: 'bold', textAlign:'left'}}>
                     <p style={{ 
                                 flex: 1,
                                 textAlign:'center', 
@@ -60,11 +60,11 @@ const LeadersPage = () => {
                                 fontWeight: 'bold',
                             }} className='mt-4'><em>Bienvenidos!</em>
                     </p>
-                    {leader.content.split('\n').map((t, key) => {
-                        return <p key={key}>{t}</p>;
+                    {leader.content.split('\n').map((text, key) => {
+                        return <p key={key}>{text}</p>;
                     })}
                     <hr />
-                    {/* {leader.content2} */}
+                    {/* {leader.content2} This is really for the youth section*/}
                     { 
                         leader.path === '/escueladominical' ? 
                         <BiblePortal /> : 
@@ -148,7 +148,7 @@ const LeadersPage = () => {
                         </Col>
                     </Row>
                 </Col>
-                <Col className='bodyFont' style={{ textAlign:'center'}}>
+                <Col className='bodyFont' style={{ textAlign:'left'}}>
                     <p style={{ 
                                         flex: 1,
                                         textAlign:'center', 
@@ -158,8 +158,8 @@ const LeadersPage = () => {
                                         fontWeight: 'bold'
                                     }}><em><u>Nuestra Historia!</u></em>
                     </p>
-                    {leader.content.split('\n').map((t, key) => {
-                        return <p key={key}>{t}</p>;
+                    {leader.content.split('\n').map((text, key) => {
+                        return <p key={key}>{text}</p>;
                     })}
                 </Col> 
             </Row>
@@ -196,8 +196,8 @@ const LeadersPage = () => {
                     <p  className='bodyFont' style={{ textAlign:'center'}} >
                         <em>Bienvenidos!</em>
                     </p>
-                    {leader.content.split('\n').map((t, key) => {
-                        return <p key={key}>{t}</p>;
+                    {leader.content.split('\n').map((text, key) => {
+                        return <p key={key}>{text}</p>;
                     })}
                     <BibleVerse />
                 </Col> 
