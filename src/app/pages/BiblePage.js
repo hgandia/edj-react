@@ -54,6 +54,14 @@ const BiblePage = () => {
             <Row>
                 <Col style={{textAlign: 'center', marginTop: '3.5rem'}}>
                     <h1 style={{ color: 'darkblue', fontWeight: "bold", fontSize: '8rem'}}>Biblia Interactiva</h1>
+                    <h6 style={{ 
+                                color: 'darkblue', 
+                                fontWeight: "bold", 
+                                fontSize: '1rem', 
+                                fontFamily: 'papyrus, sans-serif',
+                                textAlign: 'center',
+                                marginTop: '-1rem'
+                    }}>RVA 1960</h6>
                     <Button 
                             size='lg' 
                             onClick={() => setClickedOT(true)}
@@ -167,13 +175,21 @@ const BiblePage = () => {
                 </Col>
             </Row>
             <Row>
-                <Col style={{textAlign:'left', marginLeft:'', marginTop: '2rem'}}>
+                <Col style={{
+                            textAlign:'left', 
+                            marginLeft:'', 
+                            marginTop: '1rem',
+                            backgroundColor: '#FFFFFF',
+                            fontSize: '20px',
+                            border: chapter ? '10px double #00008B' : ''
+                           
+                }}><br />
                         {
                             chapter && chapterText.map((text, idx) => (  
-                                    <div key={idx} dangerouslySetInnerHTML={{__html: text}}/>
+                                    <div key={idx} dangerouslySetInnerHTML={{__html: text}} />
                                 )
                             )
-                        }
+                        } 
                 </Col>
             </Row>
         </Container>
