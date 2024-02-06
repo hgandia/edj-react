@@ -10,7 +10,7 @@ export const fetchBibleBooks = createAsyncThunk(
             return Promise.reject('Unable to retrieve the list of bible books, status: ' + response.status);
         }
         const data = await response.json();
-        console.log('return data from bible API is: ', data);
+
         return data;
     }
 );
@@ -25,7 +25,7 @@ export const fetchBibleBookChapter = createAsyncThunk(
             return Promise.reject('Unable to retrieve the list of bible books, status: ' + response.status);
         }
         const data = await response.json();
-        console.log('return data from bible API verses is: ', data);
+        
         return data;
     }
 );
