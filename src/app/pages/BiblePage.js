@@ -30,11 +30,11 @@ const BiblePage = () => {
 
     useEffect(() => {
         setOTBooks(bibleArray.filter(book => book.testament === 'OT'));
-    }, [ clickedOT ]);
+    }, [ bibleArray, clickedOT ]);
 
     useEffect(() => {
         setNTBooks(bibleArray.filter(book => book.testament === 'NT')); 
-    }, [ clickedNT ]);  
+    }, [ bibleArray, clickedNT ]);  
 
     useEffect(() => {
         setBookChapters(bibleArray.find(book => book.id === selectedBook)?.chapters || []);   
@@ -42,7 +42,7 @@ const BiblePage = () => {
             setChapter(null);
         });
 
-    }, [ selectedBook ]);
+    }, [ bibleArray, selectedBook ]);
 
     useEffect(() => { 
        newBibleArray.filter(chapter => chapter);
@@ -52,46 +52,19 @@ const BiblePage = () => {
     return(
         <Container>
             <Row>
-                <Col md='12' style={{textAlign: 'center', marginTop: '3.5rem'}}>
-                    <h1 style={{ color: 'darkblue', fontWeight: "bold", fontSize: '8rem'}}>Biblia Interactiva</h1>
-                    <h6 style={{ 
-                                color: 'darkblue', 
-                                fontWeight: "bold", 
-                                fontSize: '1rem', 
-                                fontFamily: 'papyrus, sans-serif',
-                                textAlign: 'center',
-                                marginTop: '-1rem'
-                    }}>RVA 1960</h6>
-                    <Button 
+                <Col style={{textAlign: 'center', marginTop: '3.5rem'}}>
+                    <h1 className='bibleTitle'>Biblia Interactiva</h1>
+                    <h6>RVA 1960</h6>
+                    <Button
+                            className='testamentButton' 
                             size='lg' 
-                            onClick={() => setClickedOT(true)}
-                            style={{ 
-                                    margin: '4rem', 
-                                    color: '#FFCA2C',
-                                    backgroundColor: '#00008B', 
-                                    fontFamily: 'papyrus, sans-serif',
-                                    fontSize: '2rem',
-                                    fontWeight: 'bold',
-                                    padding: '2rem',
-                                    border: '3px solid #FFCA2C',
-                                    //borderRadius: '5rem'
-                    }}>
+                            onClick={() => setClickedOT(true)}>
                         Antiguo Testamento
                     </Button>{' '}
                     <Button 
+                            className='testamentButton'
                             size='lg' 
-                            onClick={() => setClickedNT(true)}
-                            style={{ 
-                                margin: '4rem',
-                                color: '#FFCA2C', 
-                                backgroundColor: '#00008B', 
-                                fontFamily: 'papyrus, sans-serif',
-                                fontSize: '2rem',
-                                fontWeight: 'bold',
-                                padding: '2rem',
-                                border: '3px solid #FFCA2C',
-                               // borderRadius: '5rem'
-                    }}>
+                            onClick={() => setClickedNT(true)}>
                         Nuevo Testamento
                     </Button>
                 </Col>

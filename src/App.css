@@ -23,6 +23,66 @@ h3,
   font-family: papyrus, sans-serif;
 }
 
+h6 {
+  color:#00008B;
+  font-size: 1rem;
+  font-family: papyrus, sans-serif;
+  text-align: center;
+  margin-top: -1rem;
+}
+
+.bibleTitle {
+  color:#00008B;
+  font-weight: bold;
+  font-size: 8rem;
+
+  @media screen and (max-width: 576px){
+    font-size: 3rem;
+    margin-top: -3rem;
+    margin-bottom: -0.5rem;
+  }
+
+  @media screen and (min-width: 576.02px) and (max-width: 992px){
+    font-size: 5rem;
+    margin-top: -3rem;
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1200px){
+    font-size: 7rem;
+    margin: -2rem 0rem;
+  }
+}
+
+.btn.testamentButton,
+.btn.testamentButton:hover 
+ {
+  color: #FFCA2C;
+  background-color: #00008B;
+  font-family: papyrus, sans-serif;
+  font-weight: bold;
+  border: 3px solid #FFCA2C;
+  padding: 1rem;
+
+  @media screen and (max-width: 576px){
+    margin: 4px;
+    font-size: 1rem;
+  }
+
+  @media screen and (min-width: 576.02px) and (max-width: 992px){
+    
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1200px){
+    margin: 2rem;
+    font-size: 1.5rem;
+  }
+
+  @media screen and (min-width: 1200px){
+    margin: 4rem;
+    font-size: 2rem;
+  }
+}
+
 .card-title {
   font-weight: 500;
   font-size: 1.25rem;
