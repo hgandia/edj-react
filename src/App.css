@@ -53,14 +53,12 @@ h6 {
   }
 }
 
-.btn.testamentButton,
-.btn.testamentButton:hover 
- {
-  color: #FFCA2C;
+.btn.testamentButton {
+  color: #FAEED7;
   background-color: #00008B;
   font-family: papyrus, sans-serif;
-  font-weight: bold;
-  border: 3px solid #FFCA2C;
+  font-weight:900;
+  border: 3px solid #FAEED7;
   padding: 1rem;
 
   @media screen and (max-width: 576px){

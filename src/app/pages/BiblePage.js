@@ -58,12 +58,14 @@ const BiblePage = () => {
                     <Button
                             className='testamentButton' 
                             size='lg' 
+                            color='info'
                             onClick={() => setClickedOT(true)}>
                         Antiguo Testamento
                     </Button>{' '}
                     <Button 
                             className='testamentButton'
-                            size='lg' 
+                            size='lg'
+                            color='info' 
                             onClick={() => setClickedNT(true)}>
                         Nuevo Testamento
                     </Button>
@@ -78,7 +80,7 @@ const BiblePage = () => {
                                     return 0;
                                 }).map(book => (
                                     <Button 
-                                            color='warning' 
+                                            color='info' 
                                             key={book.order}
                                             onClick={() => {setSelectedBookName(book.name); setSelectedBook(book.id)}}
                                             style={{
@@ -102,7 +104,7 @@ const BiblePage = () => {
                                     return 0;
                                 }).map(book => (
                                     <Button
-                                            color='warning'
+                                            color='info'
                                             key={book.order} 
                                             onClick={() => {setSelectedBookName(book.name); setSelectedBook(book.id)}}
                                             style={{ 
@@ -129,10 +131,10 @@ const BiblePage = () => {
                                                     margin: '2px',  
                                                     padding: '5px 10px',
                                                     backgroundColor: '#00008B',
-                                                    color: '#FFCA2C', 
+                                                    color: '#FAEED7', 
                                                     fontFamily:'papyrus, sans-serif',
                                                     fontWeight: 'bold',
-                                                    border: '3px solid #FFCA2C'
+                                                    border: '3px solid #FAEED7'
                                 }}>
                                         {ch.chapter}
                                     </Button>
@@ -143,7 +145,7 @@ const BiblePage = () => {
             </Row>
             <Row>
                 <Col style={{ marginTop: '8rem', color: '#00008B'}}>
-                        <h1 style={{fontWeight: 'bold'}}>{selectedBookName}{' '}{chapter}</h1>
+                    <h1 style={{fontWeight: 'bold'}}>{selectedBookName}{' '}{chapter}</h1>
                 </Col>
             </Row>
             <Row>
@@ -152,7 +154,7 @@ const BiblePage = () => {
                             marginLeft:'', 
                             marginTop: '1rem',
                             color: '#00008B',
-                            backgroundColor: chapter ? '#FAEED7' : '',
+                            backgroundColor: chapter ? '#F5F5F5' : '',
                             fontSize: '20px',
                             border: chapter ? '10px double #00008B' : '',
                            
