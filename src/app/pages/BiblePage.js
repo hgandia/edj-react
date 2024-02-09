@@ -72,7 +72,7 @@ const BiblePage = () => {
                 </Col>
             </Row>
             <Row style={{marginTop:'4rem'}}>
-                <Col xs='12' md='6' style={{ textAlign: 'left'}}>
+                <Col xs='12' md='6' id='otBookLayout'>
                     {
                         clickedOT && otBooks.sort((b1, b2) => {
                                     if (b1.order < b2.order) return -1;
@@ -96,7 +96,7 @@ const BiblePage = () => {
                             ))
                     }
                 </Col>
-                <Col style={{ textAlign: 'right'}}>
+                <Col id='ntBookLayout'>
                     {
                         clickedNT && ntBooks.sort((b1, b2) => {
                                     if (b1.order < b2.order) return -1;
@@ -152,6 +152,8 @@ const BiblePage = () => {
                 <Col style={{
                             textAlign:'left', 
                             marginLeft:'', 
+                            paddingLeft: '3rem',
+                            paddingTop: '1rem',
                             marginTop: '1rem',
                             color: '#00008B',
                             backgroundColor: chapter ? '#F5F5F5' : '',

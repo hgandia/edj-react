@@ -33,24 +33,24 @@ const LeadersPage = () => {
                             </CardBody>
                         </Card>
                     </Row>
-                    <Row className='mt-3' style={{ flex: 1, justifyContent: 'center', fontSize: '20px', fontFamily: 'papyrus', color: 'darkblue', fontWeight: 'bold'}}>
+                    <Row className='mt-3 papyrus departmentText'>
                         {leader.leaderName}<br />{leader.leaderTitle}
                     </Row>
-                    <Row style={{ flex: 1, justifyContent: 'center', fontSize: '20px', fontFamily: 'papyrus', color: 'darkblue', fontWeight: 'bold'}}>
-                        <hr className='mt-5' style={{ justifyContent: 'center', border: 'solid 2px darkblue', width: '60%' }}/>
+                    <Row className='papyrus departmentText'>
+                        <hr className='mt-5' style={{ border: 'solid 2px darkblue', width: '60%' }} />
                     </Row>
                     <Row><h2><strong>Directiva</strong></h2></Row>
-                    <Row className='mt-3' style={{ flex: 1, justifyContent: 'center', fontSize: '20px', fontFamily: 'papyrus', color: 'darkblue', fontWeight: 'bold'}}>
+                    <Row className='mt-3 papyrus departmentText'>
                         {leader.vpName}<br />{leader.vpTitle}
                     </Row>
-                    <Row className='mt-5' style={{ flex: 1, justifyContent: 'center', fontSize: '20px', fontFamily: 'papyrus', color: 'darkblue', fontWeight: 'bold'}}>
+                    <Row className='mt-5 papyrus departmentText'>
                         {leader.secName}<br />{leader.secTitle}
                     </Row>
-                    <Row style={{ flex: 1, justifyContent: 'center', fontSize: '20px', fontFamily: 'papyrus', color: 'darkblue', fontWeight: 'bold'}}>
-                        <hr className='mt-4' style={{ justifyContent: 'center', border: 'solid 2px darkblue', width: '60%' }}/>
+                    <Row className='papyrus departmentText'>
+                        <hr className='mt-4' style={{ border: 'solid 2px darkblue', width: '60%' }} />
                     </Row>
                 </Col>
-                <Col sm='12' style={{ flex: 1, fontSize: '25px', fontFamily: 'papyrus', color: 'darkblue', fontWeight: 'bold', textAlign:'left'}}>
+                <Col sm='12' className='papyrus' style={{ flex: 1, fontSize: '25px', textAlign:'left'}}>
                     <p style={{ 
                                 flex: 1,
                                 textAlign:'center', 

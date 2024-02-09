@@ -7,13 +7,21 @@ import BiblePage from "./app/pages/BiblePage";
 import Header from "../src/components/Header";
 import Footer from "../src/components/Footer";
 import Events from "../src/app/pages/Events";
+import { useEffect } from "react";
 import "./App.css";
 
 function App() {
   let match = useMatch("/:pathname");
 
+  const ScrollToTopOnPageChange = () => {
+    useEffect( () => {
+      window.scrollTo(0, 0);
+    })
+  }
+
   return (
     <div className="App">
+      <ScrollToTopOnPageChange />
       <Header match={match} />
       <Navigator />
       <Routes>

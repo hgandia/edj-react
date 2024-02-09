@@ -2,18 +2,24 @@ body {
   background: url("../src/app/assets/img/3Crosses.jpg") no-repeat fixed center;
   background-size: 100% 100%;
   font-family: papyrus, sans-serif;
-  color: darkblue;
+  color: #00008B;
 }
 
 .papyrus {
   font-family: papyrus, sans-serif;
-  color: darkblue;
+  color: #00008B;
   font-weight: bold; 
+}
+
+.departmentText {
+  flex: 1;
+  justify-content: center;
+  font-size: 20px;
 }
 
 .jumbotron {
   background-image: linear-gradient(to right, #00008B, #D3D3D3, #F5FFFA);
-  color: darkblue;
+  color: #00008B;
 }
 
 h1,
@@ -21,6 +27,41 @@ h2,
 h3,
 .card-body > .card-title {
   font-family: papyrus, sans-serif;
+}
+
+#biLink {
+  margin: 1rem;
+  font-size: 5rem;
+  text-align: center;
+
+  @media screen and (max-width: 576px){
+    font-size: 2.3rem;
+    margin-top: 3rem;
+  }
+
+  @media screen and (min-width: 576.02px) and (max-width: 992px){
+    
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1200px){
+    
+  }
+}
+
+#bibleIcon {
+  width: 35%;
+
+  @media screen and (max-width: 576px){
+    width: 50%;
+  }
+
+  @media screen and (min-width: 576.02px) and (max-width: 992px){
+    
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1200px){
+    
+  }
 }
 
 h6 {
@@ -78,6 +119,46 @@ h6 {
   @media screen and (min-width: 1200px){
     margin: 4rem;
     font-size: 2rem;
+  }
+}
+
+#otBookLayout {
+  text-align: left;
+  
+  @media screen and (max-width: 576px){
+    text-align: center;
+  }
+
+  @media screen and (min-width: 576.02px) and (max-width: 992px){
+    
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1200px){
+    
+  }
+
+  @media screen and (min-width: 1200px){
+    
+  }
+}
+
+#ntBookLayout {
+  text-align: right;
+  
+  @media screen and (max-width: 576px){
+    text-align: center;
+  }
+
+  @media screen and (min-width: 576.02px) and (max-width: 992px){
+    
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1200px){
+    
+  }
+
+  @media screen and (min-width: 1200px){
+    
   }
 }
 
@@ -147,7 +228,7 @@ h2 {
 }
 
 #footerIcon {
-  color: darkblue;
+  color: #00008B;
 }
 
 #contact {
@@ -155,7 +236,7 @@ h2 {
   color: lightgray;
   font-family: Papyrus, 'Times New Roman', Times, serif;
   font-size: 20px;
-  background-color: darkblue;
+  background-color: #00008B;
   border-radius: 40px;
 }
 
@@ -163,7 +244,7 @@ h2 {
   margin: 0;
   padding: 0;
   background-image: linear-gradient(to right, #F5FFFA, #D3D3D3, #00008B);
-  color: darkblue;
+  color: #00008B;
 }
 
 #follow {
@@ -171,7 +252,7 @@ h2 {
 }
 
 .navbar .navbar-toggler:focus{
-  color: darkblue;
+  color: #00008B;
 }
 
 .picTitles {
@@ -179,7 +260,7 @@ h2 {
   justify-content: center;
   font-size: 20px;
   font-family: papyrus;
-  color: darkblue; 
+  color: #00008B; 
   font-weight: bold;
 }
 
@@ -188,7 +269,7 @@ h2 {
   justify-content: center; 
   font-size: 25px;
   font-family: papyrus; 
-  color: darkblue; 
+  color: #00008B; 
   font-weight: bold;
 }
 
