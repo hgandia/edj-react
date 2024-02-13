@@ -1,5 +1,6 @@
 import { Col, Row, CardImg, CardBody, CardText, Card, CardTitle } from 'reactstrap';
 import  OfficialsCarousel from '../../components/OfficialsCarousel';
+import DailyBibleVerse from '../../components/DailyBibleVerse';
 import BiblePortal from '../../components/BiblePortal';
 import BibleVerse from '../../components/BibleVerse';
 import { NAVPAGES } from '../shared/NAVPAGES';
@@ -200,6 +201,8 @@ const LeadersPage = () => {
                         return <p key={key}>{text}</p>;
                     })}
                     <BibleVerse />
+                    <hr />
+                    <DailyBibleVerse />
                 </Col> 
             </Row> 
         );
