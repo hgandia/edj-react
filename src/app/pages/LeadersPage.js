@@ -200,8 +200,6 @@ const LeadersPage = () => {
                     {leader.content.split('\n').map((text, key) => {
                         return <p key={key}>{text}</p>;
                     })}
-                    <BibleVerse />
-                    <hr />
                     <DailyBibleVerse />
                 </Col> 
             </Row> 

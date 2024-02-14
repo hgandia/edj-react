@@ -10,43 +10,54 @@ const DailyBibleVerse = () => {
     const dateTodayFormatted = formatDate(dateToday);
     const bibleArray = useSelector(state => state.bible.bibleArray);
     const newBibleArray = useSelector(state => state.bible.newBibleArray);
-    const [randomBibleObj, setRandomBibleObj] = useState([]);
-
-    useEffect( () => {
-        setRandomBibleObj(bibleArray[Math.floor(Math.random() * bibleArray.length)]);
-    }, [dateTodayFormatted]);
-
-  //  const randomBibleObj = bibleArray[Math.floor(Math.random() * bibleArray.length)];
-    const randomBibleBook = randomBibleObj?.name || '';
-    const randomBibleChapter = randomBibleObj?.chapters[Math.floor(Math.random() * randomBibleObj.chapters.length)]?.chapter || 0;
-   
-    const selectedBook = randomBibleObj?.id || '';
-    const chapter = randomBibleChapter;
-
-    console.log('randomBibleObj: ', randomBibleObj);
-    console.log('randomBibleBook: ', randomBibleBook);
-    console.log('randomBibleChapter: ', randomBibleChapter);
-    console.log('selectedBook: ', selectedBook);
-    console.log('chapter: ', chapter);
+    const [randomBibleObj, setRandomBibleObj] = useState({});
+    const [randomBibleChapter, setRandomBibleChapter] = useState(null);
+    const [randomBibleVerse, setRandomBibleVerse] = useState('');
 
     useEffect(() => {
         dispatch(fetchBibleBooks());
     }, [dispatch]);
 
     useEffect(() => {
+        if(bibleArray.length > 0){
+            setRandomBibleObj(bibleArray[Math.floor(Math.random() * bibleArray.length)]);
+        }
+    }, [dateTodayFormatted, bibleArray]);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setRandomBibleChapter(randomBibleObj?.chapters[Math.floor(Math.random() * randomBibleObj.chapters.length)]?.chapter);
+        }, 500);
+        
+    }, [randomBibleObj]);
+          
+    const selectedBook = randomBibleObj?.id || '';
+    const chapter = randomBibleChapter;
+
+    useEffect(() => {
         if(selectedBook && chapter){
             dispatch(fetchBibleBookChapter( {selectedBook, chapter} ));
         }
-
     }, [dispatch, selectedBook, chapter]);
 
     console.log('newBibleArray: ', newBibleArray);
 
+    useEffect(() => { 
+        if(newBibleArray.length > 0){
+            setRandomBibleVerse(newBibleArray[Math.floor(Math.random() * newBibleArray.length)]);
+        }
+     }, [ newBibleArray, chapter ]);
+
     return(
         <Container>
+            <hr className='mt-5' style={{ justifyContent: 'center', border: 'solid 2px darkblue', width: '100%' }} />
+            <br />
             <Row>
-                <Col>
-                    <p></p>
+                <Col style={{ backgroundColor: '#F5F5F5', border: '2px solid #00008B'}}>
+                    <p><em><u>Versiculo Bíblico del Día</u></em></p>
+                    <p>{randomBibleVerse.reference}</p>
+                    <div dangerouslySetInnerHTML={{__html: randomBibleVerse.text}} />
+                    <h6 style={{textAlign:'right'}}><em>~ RVA 1960</em></h6>
                 </Col>
             </Row>
         </Container>
