@@ -8,6 +8,7 @@ const DailyBibleVerse = () => {
     const dispatch = useDispatch();
     const dateToday = Date();
     const dateTodayFormatted = formatDate(dateToday);
+    const isLoading = useSelector(state => state.bible.isLoading);
     const bibleArray = useSelector(state => state.bible.bibleArray);
     const newBibleArray = useSelector(state => state.bible.newBibleArray);
     const [randomBibleObj, setRandomBibleObj] = useState({});
@@ -55,9 +56,14 @@ const DailyBibleVerse = () => {
             <Row>
                 <Col style={{ backgroundColor: '#F5F5F5', border: '2px solid #00008B'}}>
                     <p><em><u>Versiculo Bíblico del Día</u></em></p>
-                    <p>{randomBibleVerse.reference}</p>
-                    <div dangerouslySetInnerHTML={{__html: randomBibleVerse.text}} />
-                    <h6 style={{textAlign:'right'}}><em>~ RVA 1960</em></h6>
+                    {
+                        isLoading ? <p>Loading...</p> :
+                        <>
+                            <p>{randomBibleVerse.reference}</p>
+                            <div dangerouslySetInnerHTML={{__html: randomBibleVerse.text}} />
+                            <h6 style={{textAlign:'right'}}><em>~ RVA 1960</em></h6>
+                        </>
+                    }
                 </Col>
             </Row>
         </Container>
