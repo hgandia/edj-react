@@ -40,19 +40,19 @@ const Header = (props) => {
                     </Button>
                 </Col>
                 <Col sm='12' lg='8' style={{  flex: 1, fontFamily: 'papyrus', justifyContent: 'center' }}>
-                    <Row lg='8' style={{ flex: 1, justifyContent: 'center', fontSize: '73px', textAlign: 'center' }}>
+                    <Row lg='8' className='header' style={{ fontSize: '73px' }}>
                         {leader.title}
                     </Row>
-                    <Row lg='8' style={{ flex: 1, justifyContent: 'center', fontSize: '78px', textAlign: 'center' }}>
+                    <Row lg='8' className='header' style={{ fontSize: '78px' }}>
                         {leader.title1}
                     </Row>
-                    <Row lg='8' style={{ flex: 1, justifyContent: 'center', fontSize: '78px', textAlign: 'center' }}>
+                    <Row className='header' lg='8' style={{ fontSize: '78px' }}>
                         {leader.title2}
                     </Row>
-                    <Row lg='8' style={{ flex: 1, justifyContent: 'center', fontSize: '40px', textAlign: 'center' }}>
+                    <Row lg='8' className='header' style={{ fontSize: '40px' }}>
                             {leader.subTitle}
                     </Row>
-                    <Row lg='8' style={{ flex: 1, justifyContent: 'center', fontSize: '30px', textAlign: 'center' }}>
+                    <Row lg='8' className='header' style={{ fontSize: '30px' }}>
                             {leader.verse}
                     </Row>
                 </Col>   

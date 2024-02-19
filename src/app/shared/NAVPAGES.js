@@ -96,7 +96,7 @@ export const NAVPAGES = [
     {
         id: 5,
         navTitle: 'Escuela Dominical',
-        title: 'Departamento de Escuela Dominical',
+        title: 'Escuela Dominical',
         subTitle: 'para que andéis como es digno del Señor, agradándole en todo, llevando fruto en toda buena obra, y creciendo en el conocimiento de Dios;',
         verse: 'Colosenses 1:10',
         content:'El propósito de la Escuela Bíblica es instruir la palabra de Dios a todo aquel miembro del cuerpo de Jesucristo, con la finalidad de llegar a un crecimiento personal en su caminar en el evangelio, así mismo el poder entender e interpretar las escrituras a travez de la instrucción y la revelacion del Espíritu Santo.\nEso quiere decir que venir a la Escuela Bíblica hace una gran diferencia en la vida de las personas.\nBeneficios de la Escuela Bíbilca:\n○ Las personas vienen a los pies de Jesucristo.\n○ Interes y confraternidad:  Nuevas personas vienen a ser parte de nuestras vidas.\n○ Estudio de la Bíblia transforma a las personas y ellos experimentan crecimiento espiritual y desarrollo.\n○ Dones espirituales y habilidades son usados para beneficio de la iglesia.\n○ Los lazos familiares son unidos porque Jesus esta en sus vidas.',

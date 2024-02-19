@@ -17,9 +17,31 @@ body {
   font-size: 20px;
 }
 
+.header {
+  flex: 1;
+  justify-content: center;
+  text-align: center;
+}
+
 .jumbotron {
   background-image: linear-gradient(to right, #00008B, #D3D3D3, #F5FFFA);
   color: #00008B;
+
+  @media screen and (max-width: 576px){
+    background-image: linear-gradient( #00008B, #D3D3D3, #F5FFFA);
+  }
+
+  @media screen and (min-width: 576.02px) and (max-width: 992px){
+    
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1200px){
+   
+  }
+
+  @media screen and (min-width: 1200px){
+    
+  }
 }
 
 h1,
