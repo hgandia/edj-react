@@ -3,6 +3,8 @@ import ana from '../assets/img/anaGuevara.JPG';
 import anaLuz from '../assets/img/anaLuz.JPG';
 import yunid from '../assets/img/yunid2.jpg';
 import herbie from '../assets/img/herbie.jpg';
+import daniel from '../assets/img/daniel2.jpg';
+import noris from '../assets/img/noris.jpg';
 
 export const OFFICIALS = [
     {
@@ -38,6 +40,20 @@ export const OFFICIALS = [
         name: 'Herbert Gandia',
         title: '',
         picture: herbie,
+        altText: 'official'
+    },
+    {
+        id: 5,
+        name: 'Daniel Carrales',
+        title: '',
+        picture: daniel,
+        altText: 'official'
+    },
+    {
+        id: 6,
+        name: 'Noris Rodriguez',
+        title: '',
+        picture: noris,
         altText: 'official'
     }
 ]; 

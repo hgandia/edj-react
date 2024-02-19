@@ -2,7 +2,6 @@ import { Col, Row, CardImg, CardBody, CardText, Card, CardTitle } from 'reactstr
 import  OfficialsCarousel from '../../components/OfficialsCarousel';
 import DailyBibleVerse from '../../components/DailyBibleVerse';
 import BiblePortal from '../../components/BiblePortal';
-import BibleVerse from '../../components/BibleVerse';
 import { NAVPAGES } from '../shared/NAVPAGES';
 import { useParams } from 'react-router-dom';
 

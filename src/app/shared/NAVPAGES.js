@@ -54,7 +54,7 @@ export const NAVPAGES = [
         leaderName: 'Noris Rodriguez',
         vpName: 'Yanilda Rodriguez',
         vpTitle: 'Vice Presidenta',
-        secName: 'Gerolyn Membreño',
+        secName: 'Janie Collazo',
         secTitle: 'Secretaria',
         groupImage: damasGroupPic
     },
@@ -72,7 +72,7 @@ export const NAVPAGES = [
         leaderName: 'Dileny Veloz',
         vpName: 'Yanet Flores',
         vpTitle: 'Vice Presidenta',
-        secName: 'Nicauri',
+        secName: 'Jasmine Lopez',
         secTitle: 'Secretaria',
         groupImage: jovenesGroupPic
     },
