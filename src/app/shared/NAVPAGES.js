@@ -8,7 +8,7 @@ import caballerosGroupPic from '../assets/img/caballeros_2023.JPG';
 import damasGroupPic from '../assets/img/damas2023.jpg';
 import jovenesGroupPic from '../assets/img/jovenes2022.jpg';
 import ninosGroupPic from '../assets/img/bajoConstruccion2.jpg';
-import Superintendenta from '../assets/img/anaGuevara.JPG';
+import Superintendenta from '../assets/img/anita.jpg';
 
 export const NAVPAGES = [
     {

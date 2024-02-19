@@ -1,5 +1,5 @@
 import joyce from '../assets/img/joyce.jpg';
-import ana from '../assets/img/anaGuevara.JPG';
+import ana from '../assets/img/anita.jpg';
 import anaLuz from '../assets/img/anaLuz.JPG';
 import yunid from '../assets/img/yunid2.jpg';
 import herbie from '../assets/img/herbie.jpg';
