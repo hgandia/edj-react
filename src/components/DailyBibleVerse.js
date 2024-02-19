@@ -57,7 +57,7 @@ const DailyBibleVerse = () => {
                 <Col style={{ backgroundColor: '#F5F5F5', border: '2px solid #00008B'}}>
                     <p><em><u>Versiculo Bíblico del Día</u></em></p>
                     {
-                        isLoading ? <p>Loading...</p> :
+                        isLoading ? <p style={{ textAlign: 'center', fontSize: '3rem'}}>Loading...</p> :
                         <>
                             <p>{randomBibleVerse.reference}</p>
                             <div dangerouslySetInnerHTML={{__html: randomBibleVerse.text}} />

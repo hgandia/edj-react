@@ -1,7 +1,7 @@
 import pastorsPic from '../assets/img/pastorsAltar1.jpg';
-import caballerosPresidentPic from '../assets/img/yunid.jpg';
-import damasPresidentPic from '../assets/img/isabel3.jpg';
-import jovenesPresidentPic from '../assets/img/javier2.jpg';
+import caballerosPresidentPic from '../assets/img/daniel2.jpg';
+import damasPresidentPic from '../assets/img/noris.jpg';
+import jovenesPresidentPic from '../assets/img/dileny.jpg';
 import ninosPresidentPic from '../assets/img/bajoConstruccion1.jpg';
 import churchPic from '../assets/img/churchFront.jpg';
 import caballerosGroupPic from '../assets/img/caballeros_2023.JPG';
@@ -30,11 +30,11 @@ export const NAVPAGES = [
         title: 'Sociedad de Caballeros',
         subTitle: 'Procura con diligencia presentarte a Dios aprobado, como obrero que no tiene de qué avergonzarse, que usa bien la palabra de verdad.',
         verse: '~ 2 Timoteo 2:15',
-        content: 'Reciban saludos de nuestra socided de caballeros, Heraldos de Cristo.\nNuestra sociedad esta compuesta de hombres de diferentes antecedentes, hombres imperfectos, que hemos sido alcanzado por la gracia y misericordia de Dios, quien nos ha dado nueva vida y vida en abundancia.\nCada día vivimos tratando de avanzar más en cumplir con la gran comisión de "ir por el mundo y predicar el evangelio a toda criatura," ofreciéndole al mundo la única esperanza que hay para los seres humanos. Reconocemos el peso de responsabildad que cae sobre nosotros en una sociedad carente de hombres de carárter y valores cristianos, que representen a Dios en este mundo perverso, herido y necesitado de la misericordia y gracia de nuestro Dios.\nSi quieres ser parte de este ejército de hombres que día tras día tratamos de hacer una diferencia en este mundo, siendo luz en medio de las tinieblas y sirviendo como sal, dándole sabor a través de nuestra influencia en el mundo, te invito a nuestra congragación, donde vas a ser bienvenido, y dónde recibiras el apoyo y la preparación por medio de la palabra de Dios y la enseñanza de nuestros maestros y pastores para marcar la diferencia en este mundo; y como meta final un día estar eternamente en la presencia de Dios.',
+        content: 'Reciban un abrazo cordial de parte de la Sociedad de Caballeros "Heraldos de Cristo."\nUna sociedad de hombres que estamos dedicados a predicar la palabra que nuestro Señor Jesucristo nos ha instruido y queremos que cada caballero sepa el gran valor y compromiso que Dios a dado a su vidas.\nDel mismo modo que cada uno de nosotros estamos creciendo día a día en la fe, la hermandad y el servicio, buscamos hombres cansados de vivir en un mundo donde los valores que forman el núcleo familiar están en decadencia.\nHacemos un llamado para unirse a nosostros los dias de semana para escuchar la palabra de Dios que traerán paz y descanso a las almas sedientas de amor y paz.  Recuerda que hoy más que nunca el mundo necesita hombres de fe, valor y compromiso.\nLas puertas de la iglesia estan abiertas y nosotros estaremos muy contentos de saludarle personalmente.\nDios le bendiga!',
         image: caballerosPresidentPic,
         path:'/caballeros',
         leaderTitle: 'Presidente de Caballeros',
-        leaderName: 'Yunid Tavarez',
+        leaderName: 'Daniel Carrales',
         vpName: 'David Membreño',
         vpTitle: 'Vice Presidente',
         secName: 'Jose Rodriguez',
@@ -47,12 +47,12 @@ export const NAVPAGES = [
         title: 'Sociedad de Damas',
         subTitle: 'Engañosa es la gracia, y vana la hermosura; la mujer que teme a Jehova, esa sera alabada.',
         verse: '~ Proverbios 31:30',
-        content:'Eres bienvenida a adorar al Señor con tu familia y tus hermanos y hermanas en Cristo.\nCreemos que cada mujer debe tener la oportunidad de alcanzar su potenical dado por Dios en la socidedad de damas. Por lo tanto, brindamos oportunidades durante todo el año para que las damas se reúnan para compartir, orar, llegar a la comunidad, retiros, conferencias y mucho más.\nNuestro objetivo es que las mujeres de Dios marquen una diferencia en el mundo. Creemos que Dios quiere que tomemos el lugar que nos corresponde. Al desarrollar valores fundamentales de oración, estudio de la biblía y una vida justa.\nTodo el mundo ha pecado y necesita salvación. La salvación viene por gracia mediante la fe basada en el sacrificio expiatorio de Jesucristo.\nSi no puede venir, puede unirse a nosotros virtualmente a través de nuestras transmisiones en vivo por Youtube y Facbook Live.\nEsperamos verte pronto y que Dios te bendiga.',
+        content:'Por este medio la sociedad de damas le quiere dar la más cordial bienvenida a nuestra iglesia, la cual rebosa de mujeres que al igual que usted, ama al Señor y a su obra.  Mujeres reformadas y transformadas por la obra de Jesucristo.\nCreemos firememente en que la mujer aparte de ser esposa, madre, amiga y sierva del Señor, con esfuerzo y dedicación puede llevar un equilibrio entre cada uno de estos roles.  Dios nos ha dotado de virtudes y talentos que quiere que pongamos a su disposición y a su servicio para así multiplicarlos, desarrollarlos, para que sean de bendición en la iglesia del Señor.  Por lo tanto, brindamos oportunidades durante todo el año para que las damas se reúnan para compartir, orar, llegar a la comunidad, retiros, conferencias y mucho más.\nCada mujer que le sirve al Señor tiene un carácter modelado por valores y principios arraigados en su ser, para que el mundo pueda ver que aun en estos tiempos todavia hay mujeres que apartadas para el Señor producen cambios a su alrededor.\nEstos cambios son producidos por el Espíritu Santo el cual recibimos el día que confesamos a Jesucristo como nuestro salvador.  Te invitamos a conocerlo si aún no lo has recibido.\nTómese la libertad de visitarnos cuando quiera, estamos ansiosas de tenerle con nosotros.\nSi no puede venir, puede unirse a nosotros virtualmente a través de nuestras transmisiones en vivo.\nEsperamos verle pronto y que Dios le bendiga.  ',
         image: damasPresidentPic,
         path:'/damas',
         leaderTitle: 'Presidenta de Damas',
-        leaderName: 'Isabel Cosme',
-        vpName: 'Mariluz Carrales',
+        leaderName: 'Noris Rodriguez',
+        vpName: 'Yanilda Rodriguez',
         vpTitle: 'Vice Presidenta',
         secName: 'Gerolyn Membreño',
         secTitle: 'Secretaria',
@@ -64,15 +64,15 @@ export const NAVPAGES = [
         title: 'Sociedad de Jovenes',
         subTitle: 'Porque tú, oh Señor Jehová, eres mi esperenza, seguridad mia desde mi juventud.',
         verse: '~ Salmos 71:5',
-        content:'El camino que nuestra juventud toma hoy determina el futuro que viviremos mañana.\nNuestro objetivo es buscar al Señor con toda nuestra fuerza, nuestra mente y nuestro corazón, con la esperanza de impactar al mundo de una manera positiva. Nosotros nos oponemos contra las maldades de este mundo, predicando las buenas nuevas de salvación atravez de nuestro testimonio. Llvaremos estas buenas nuevas a toda parte del mundo, anunciando la segunda venida de Cristo.\nYa es tiempo que Dios tome control sobre nuestras casas, nuestras sociedad, y nuestra nacion. La juventud de Estrella de Jacob esta unidos para levantar esta generacion y para traer cambio a este mundo. Vamos a dejar al mundo saber que Cristo no es un camino a la salvacion, sino que Cristo es el UNICO camino a la salvacion y a la vida eterna. Cristo no es una salavacion a nuestros problemas y pecados, Cristo ES la unica salvacion a nuestros problemas y pecados. El es el unico que nos puede librar del pecado.\nJoel profetizo que Dios derramaria de su Espiritu Santo en los ultimos tiempos, el cual fue confirmado en el dia de pentecostes y ha seguido a cumplirse en nosotros.\nAnhelamos que usted se una a nosotros, porque el fin se acerca!!',
-        content2: 'The path that the youth of today take will determine the future we live in tomorrow. This is the reason we have made it our mission to seek the Lord with all of our strength, with all of our mind and with all of our hearts, with the hope of bringing a positive impact to world. We stand against all the wickedness the wolrd has to offer and spread the good news of salvation through our lifestyle and testimony. We are committed to preach the good news and announce the coming of Christ to all corners of the world. It is time for God to, once again, take contraol of our society, our families and our nation. The youth of Star of Jacob has united itself to lift this generation up and bring change to this world. We will let the world know that Christ is not a way to salvation, he is THE way to salvation and eternal life. Christ is not a solution to our sins and our problems, he is THE ONLY solution that can solve our problems and free us of our sins. Joel prophesied an outpouring of the Holy Spirit, which was confirmed on pentecost and has continued to confirm and fulfill itself through us. We would like for you to join us!',
+        content:'Nuestro objetivoes levantar jóvenes que puedan mantener una relacion genuina con el Señor.  Jóvenes que busquen al Señor con toda sus fuerzas, mente y corazón para impactar al mundo de una manera positiva.  Estamos viviendo en tiempos de tanta maldades pero solo en Cristo podemos obtener la esperanza y seguridad de ser la luz en medio de las tinieblas.\nEste mundonecesita ver la gloria y poder de Dios y oramos que la juventud puedan tomar parte en la obra de Dios.  Que Dios nos llene del Espíritu Santo!  Desamos que los dones y milagros se manifiesten en los jovenes para que el mundo sepa que Dios todavia hace prodigios, que es poderoso y que no hat NADA imposible para el.\nEs tiempo de que la juventud se levante y den testimonio de quien es nuestro Dios.\nDios les bendiga! ',
+        content2: '',
         image: jovenesPresidentPic,
         path:'/jovenes',
         leaderTitle: 'Presidente de Jovenes',
-        leaderName: 'Javier Rivera Jr.',
-        vpName: 'Dileny Veloz',
+        leaderName: 'Dileny Veloz',
+        vpName: 'Yanet Flores',
         vpTitle: 'Vice Presidenta',
-        secName: 'Yanet Flores',
+        secName: 'Nicauri',
         secTitle: 'Secretaria',
         groupImage: jovenesGroupPic
     },
@@ -97,9 +97,9 @@ export const NAVPAGES = [
         id: 5,
         navTitle: 'Escuela Dominical',
         title: 'Departamento de Escuela Dominical',
-        subTitle: 'Un versiculo',
-        verse: 'Texto',
-        content:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio exercitationem nulla doloribus, vel perspiciatis maiores animi praesentium. Officiis reprehenderit assumenda quam amet mollitia repudiandae iusto, dignissimos quos. Totam, eaque vel. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio exercitationem nulla doloribus, vel perspiciatis maiores animi praesentium. Officiis reprehenderit assumenda quam amet mollitia repudiandae iusto, dignissimos quos. Totam, eaque vel. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio exercitationem nulla doloribus, vel perspiciatis maiores animi praesentium. Officiis reprehenderit assumenda quam amet mollitia repudi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio exercitationem nulla doloribus, vel perspiciatis maiores animi praesentium. Officiis reprehenderit assumenda quam amet mollitia repudiandae iusto, dignissimos quos. Totam, eaque vel. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio exercitationem nulla doloribus, vel perspiciatis maiores animi praesentium. Officiis reprehenderit assumenda quam amet mollitia repudiandae iusto, dignissimos quos. Totam, eaque vel.',
+        subTitle: 'para que andéis como es digno del Señor, agradándole en todo, llevando fruto en toda buena obra, y creciendo en el conocimiento de Dios;',
+        verse: 'Colosenses 1:10',
+        content:'El propósito de la Escuela Bíblica es instruir la palabra de Dios a todo aquel miembro del cuerpo de Jesucristo, con la finalidad de llegar a un crecimiento personal en su caminar en el evangelio, así mismo el poder entender e interpretar las escrituras a travez de la instrucción y la revelacion del Espíritu Santo.\nEso quiere decir que venir a la Escuela Bíblica hace una gran diferencia en la vida de las personas.\nBeneficios de la Escuela Bíbilca:\n○ Las personas vienen a los pies de Jesucristo.\n○ Interes y confraternidad:  Nuevas personas vienen a ser parte de nuestras vidas.\n○ Estudio de la Bíblia transforma a las personas y ellos experimentan crecimiento espiritual y desarrollo.\n○ Dones espirituales y habilidades son usados para beneficio de la iglesia.\n○ Los lazos familiares son unidos porque Jesus esta en sus vidas.',
         image: Superintendenta,
         path:'/escueladominical',
         leaderTitle: 'Superintendenta',
