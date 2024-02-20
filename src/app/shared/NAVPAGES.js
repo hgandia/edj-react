@@ -106,7 +106,7 @@ export const NAVPAGES = [
         leaderName: 'Ana Guevara',
         vpName: 'Daniel Carrales',
         vpTitle: 'Sub-Superintendente',
-        secName: 'Thais Tavarez',
+        secName: 'Genoveva Cajigas',
         secTitle: 'Secretaria',
         groupImage: ninosGroupPic
     },
