@@ -4,9 +4,9 @@ import damasPresidentPic from '../assets/img/noris.jpg';
 import jovenesPresidentPic from '../assets/img/dileny.jpg';
 import ninosPresidentPic from '../assets/img/bajoConstruccion1.jpg';
 import churchPic from '../assets/img/churchFront.jpg';
-import caballerosGroupPic from '../assets/img/caballeros_2023.JPG';
+import caballerosGroupPic from '../assets/img/caballeros_2023_retouched.JPG';
 import damasGroupPic from '../assets/img/damas2023.jpg';
-import jovenesGroupPic from '../assets/img/jovenes2022.jpg';
+import jovenesGroupPic from '../assets/img/youthGroup.jpg';
 import ninosGroupPic from '../assets/img/bajoConstruccion2.jpg';
 import Superintendenta from '../assets/img/anita.jpg';
 
@@ -68,7 +68,7 @@ export const NAVPAGES = [
         content2: '',
         image: jovenesPresidentPic,
         path:'/jovenes',
-        leaderTitle: 'Presidente de Jovenes',
+        leaderTitle: 'Presidenta de Jovenes',
         leaderName: 'Dileny Veloz',
         vpName: 'Yanet Flores',
         vpTitle: 'Vice Presidenta',
