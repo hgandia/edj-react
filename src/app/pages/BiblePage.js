@@ -152,7 +152,7 @@ const BiblePage = () => {
                 <Col style={{
                             textAlign:'left', 
                             marginLeft:'', 
-                            paddingLeft: '3rem',
+                            paddingLeft: '1rem',
                             paddingTop: '1rem',
                             marginTop: '1rem',
                             color: '#00008B',
