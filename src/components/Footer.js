@@ -14,7 +14,7 @@ const Footer = () => {
                     <a className='btn btn-link btn-lg' href='mailto:la1raestrelladejacob@gmail.com' id='footerIcon'><i className='fa fa-envelope-o align-self-center' /></a>
                     <a className='btn btn-link' href='mailto:la1raestrelladejacob@gmail.com' id='contact'>E Mail</a><br /><br />
                     <a className='btn btn-link btn-lg' href='tel:+1-718-733-9714' id='footerIcon'><i className='fa fa-phone align-self-center' /></a>
-                    <a className='btn btn-link' href='tel:1+718-733-9714' id='contact'>Telefono</a><br />
+                    <a className='btn btn-link' href='tel:+1-718-733-9714' id='contact'>Telefono</a><br />
                 </Col>
                 <Col className='text-center'>
                     <h4 className='papyrus'>Siganos por:</h4><br />
