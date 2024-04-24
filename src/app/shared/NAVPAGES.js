@@ -5,7 +5,7 @@ import jovenesPresidentPic from '../assets/img/dileny2.jpeg';
 import ninosPresidentPic from '../assets/img/bajoConstruccion1.jpg';
 import churchPic from '../assets/img/churchFront.jpg';
 import caballerosGroupPic from '../assets/img/caballeros_2023_retouched.JPG';
-import damasGroupPic from '../assets/img/damas2023.jpg';
+import damasGroupPic from '../assets/img/damas2024.JPG';
 import jovenesGroupPic from '../assets/img/youthGroup.jpg';
 import ninosGroupPic from '../assets/img/bajoConstruccion2.jpg';
 import Superintendenta from '../assets/img/anita.jpg';
@@ -104,7 +104,7 @@ export const NAVPAGES = [
         path:'/escueladominical',
         leaderTitle: 'Superintendenta',
         leaderName: 'Ana Guevara',
-        vpName: 'Daniel Carrales',
+        vpName: 'Yunid Tavarez',
         vpTitle: 'Sub-Superintendente',
         secName: 'Genoveva Cajigas',
         secTitle: 'Secretaria',

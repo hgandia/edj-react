@@ -1,5 +1,6 @@
 import UserLoginForm from '../features/users/UserLoginForm';
-import churchLogo from '../app/assets/img/churchlogo1.png';
+//import churchLogo from '../app/assets/img/churchlogo1.png';
+import churchLogo from '../app/assets/img/churchlogo.svg'
 import { NAVPAGES } from '../app/shared/NAVPAGES';
 import { Row, Col, Button } from 'reactstrap';
 import { useState } from 'react';
