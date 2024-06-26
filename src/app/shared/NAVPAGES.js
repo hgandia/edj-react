@@ -4,7 +4,7 @@ import damasPresidentPic from '../assets/img/noris.jpg';
 import jovenesPresidentPic from '../assets/img/dileny2.jpeg';
 import ninosPresidentPic from '../assets/img/bajoConstruccion1.jpg';
 import churchPic from '../assets/img/churchFront.jpg';
-import caballerosGroupPic from '../assets/img/caballeros_2023_retouched.JPG';
+import caballerosGroupPic from '../assets/img/caballeros2024.JPG';
 import damasGroupPic from '../assets/img/damas2024.JPG';
 import jovenesGroupPic from '../assets/img/youthGroup.jpg';
 import ninosGroupPic from '../assets/img/bajoConstruccion2.jpg';

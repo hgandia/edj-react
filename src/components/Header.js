@@ -1,5 +1,4 @@
 import UserLoginForm from '../features/users/UserLoginForm';
-//import churchLogo from '../app/assets/img/churchlogo1.png';
 import churchLogo from '../app/assets/img/churchlogo.svg'
 import { NAVPAGES } from '../app/shared/NAVPAGES';
 import { Row, Col, Button } from 'reactstrap';
@@ -22,10 +21,6 @@ const Header = (props) => {
         const slashPathname = '/'.concat(pathname);
 
         return slashPathname === path;
-        
-        // return +leaderId === id;
-        //The + sign does the same thing as the ParseInt function.
-        //This was used when I destructred leaderId from props.match.params when using the id of the leader. 
     });
 
     const toggleUserLoginModal = () => {
